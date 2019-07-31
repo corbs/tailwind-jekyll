@@ -1,0 +1,62 @@
+<script type="application/ld+json">
+{
+"@context": "http://www.schema.org",
+"@type": "Person",
+"@id": "https://corbin.nz/#about",
+"name": "Corbin Featherstone",
+"alternateName": "Corbs",
+"nationality": "New Zealand",
+"birthPlace" : {
+	"@type": "Place",
+    "address": {
+  		"@type": "PostalAddress",
+		"addressLocality": "Wellington",
+        "addressCountry": "NZ"
+	}
+},
+"alumniOf": [
+	{
+	 "@type": "CollegeOrUniversity",
+	 "name": "Victoria University of Wellington",
+	 "sameAs": "https://www.victoria.ac.nz"
+	},
+	{
+	 "@type": "CollegeOrUniversity",
+	 "name": "NZCOPA",
+ 	 "sameAs": "https://www.whitireia.ac.nz"
+	}
+],
+"gender": "Male",
+"Description": "Graphic Designer",
+"disambiguatingDescription": "Digital design, print, website, social media, branding, products",
+"jobTitle": "Senior Graphic Designer",
+"worksFor": [
+	{
+		"@type": "Organization",
+		"name": "Agworld Pty Ltd",
+		"sameAs": [
+			"https://www.facebook.com/AgworldPlatform",
+			"https://www.linkedin.com/company/agworld-pty-ltd",
+			"https://twitter.com/Agworld",
+			"https://www.instagram.com/agworldplatform",
+			"https://www.youtube.com/user/agworldsystem"
+		]
+	}
+],
+"url": "https://corbin.nz",
+"image": "",
+"address": {
+	"@type": "PostalAddress",
+	"addressLocality": "Hastings",
+	"addressRegion": "Hawkes Bay",
+	"addressCountry": "New Zealand"
+},
+"sameAs": [
+	"https://twitter.com/corbsoup",
+	"https://pinterest.nz/corbsoup",
+	"https://instagram.com/corbsoup",
+	"https://linkedin.com/in/corbinfeatherstone",
+	"https://www.youtube.com/channel/UCMV12m7v4HB_5u6qK8Pmv4g"
+	]
+}
+</script>
