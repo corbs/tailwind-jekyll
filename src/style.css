@@ -3,3 +3,6 @@
 @tailwind components;
 
 @tailwind utilities;
+
+div {color: #3D2B09;}
+a {color: #FEC82A;}
