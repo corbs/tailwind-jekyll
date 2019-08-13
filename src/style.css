@@ -6,3 +6,8 @@
 
 div {color: #3D2B09;}
 a {color: #FEC82A;}
+
+.h5 {
+  @apply text-xs tracking-widest uppercase;
+  font-family: 'Montserrat', sans-serif;
+}

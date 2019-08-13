@@ -2,7 +2,7 @@
 {
 "@context": "http://www.schema.org",
 "@type": "Person",
-"@id": "https://corbin.nz/#about",
+"@id": "https://corbin.nz/about",
 "name": "Corbin Featherstone",
 "alternateName": "Corbs",
 "nationality": "New Zealand",
@@ -27,7 +27,7 @@
 	}
 ],
 "gender": "Male",
-"Description": "Graphic Designer",
+"Description": "Senior Graphic Designer",
 "disambiguatingDescription": "Digital design, print, website, social media, branding, products",
 "jobTitle": "Senior Graphic Designer",
 "worksFor": [
