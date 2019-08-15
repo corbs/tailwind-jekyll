@@ -1,6 +1,6 @@
 {
-    "name": "Corbin",
-    "short_name": "Corbin",
+    "name": "",
+    "short_name": "",
     "icons": [
         {
             "src": "/assets/favicons/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#fec82a",
-    "background_color": "#fec82a",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "display": "standalone"
 }
