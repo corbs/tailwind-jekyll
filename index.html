@@ -2,14 +2,21 @@
 layout: default
 ---
 
-<div class="w-full lg:w-1/2 px-8">
+<div
+  class="h-screen w-full"
+  style="background: #FEC82A;  /* fallback for old browsers */
+/* background: -webkit-linear-gradient(to top left, #F37335, #FDC830);  Chrome 10-25, Safari 5.1-6 */
+/* background: linear-gradient(to top left, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+
+{% include menu.html %}
+
+<div class="container mx-auto px-4">
+
 <h1 class="text-4xl leading-tight font-bold mb-4" style="font-family: 'Roboto Slab', serif;">Improve your brand recognition with a distinct, consistent visual identity.</h1>
 <p style="font-family: 'Roboto Slab', serif;" class="mb-8">Building a recognizable brand presence is key to customer retention. An <span class="font-bold">experienced graphic designer</span> will protect your brand and deliver the very best <span class="font-bold">persistent visuals</span> for your business, across <span class="font-bold">multiple platforms.</span></p>
 <a class="inline-block bg-black rounded px-8 py-4 text-xs tracking-widest uppercase" href="/contact" style="font-family: 'Montserrat', sans-serif;">Contact</a>
 
-<!--
-<img class="mt-20" src="{{ site.baseurl }}/assets/img/test.jpg?nf_resize=smartcrop&w=300&h=200" alt="Farm top down view, fields from central NSW, Australia">
--->
-
+<img src="{{ site.url }}/assets/img/bad_juju.web.jpg">
 
 </div>

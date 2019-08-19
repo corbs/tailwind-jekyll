@@ -1,27 +1,27 @@
 <picture>
   <source
-    data-srcset="{{ site.baseurl }}/assets/img/{{ path }}?nf_resize=smartcrop&w={{ xl-w }}&h={{ xl-h }} 1x,
-                {{ site.baseurl }}/assets/img/{{ path }}?nf_resize=smartcrop&w={{ xl-2w }}&h={{ xl-2h }} 2x"
+    data-srcset="{{ site.url }}/assets/img/{% path %}?nf_resize=smartcrop&w={% xl-w %}&h={% xl-h %} 1x,
+                {{ site.url }}/assets/img/{% path %}?nf_resize=smartcrop&w={% xl-w %}&h={% xl-h %} 2x"
     media="(min-width: 1200px)"
-    alt="{{ alt }}"
-    class="align-bottom {{ class }}"
+    alt="{% alt %}"
+    class="align-bottom {% class %}"
   >
   <source
-    data-srcset="{{ site.baseurl }}/assets/img/{{ path }}?nf_resize=smartcrop&w={{ lg-w }}&h={{ lg-h }} 1x,
-                {{ site.baseurl }}/assets/img/{{ path }}?nf_resize=smartcrop&w={{ lg-2w }}&h={{ lg-2h }} 2x"
+    data-srcset="{{ site.url }}/assets/img/{% path %}?nf_resize=smartcrop&w={% lg-w %}&h={% lg-h %} 1x,
+                {{ site.url }}/assets/img/{% path %}?nf_resize=smartcrop&w={% lg-w %}&h={% lg-h %} 2x"
     media="(min-width: 992px)"
-    alt="{{ alt }}"
-    class="align-bottom {{ class }}"
+    alt="{% alt %}"
+    class="align-bottom {% class %}"
   >
   <source
-    data-srcset="{{ site.baseurl }}/assets/img/{{ path }}?nf_resize=smartcrop&w={{ md-w }}&h={{ md-h }} 1x,
-                {{ site.baseurl }}/assets/img/{{ path }}?nf_resize=smartcrop&w={{ md-2w }}&h={{ md-2h }} 2x"
+    data-srcset="{{ site.url }}/assets/img/{% path %}?nf_resize=smartcrop&w={% md-w %}&h={% md-h %} 1x,
+                {{ site.url }}/assets/img/{% path %}?nf_resize=smartcrop&w={% md-w %}&h={% md-h %} 2x"
     media="(min-width: 768px)"
-    alt="{{ alt }}"
-    class="align-bottom {{ class }}"
+    alt="{% alt %}"
+    class="align-bottom {% class %}"
   >
-  <img data-src="{{ site.baseurl }}/assets/img/{{ path }}?nf_resize=smartcrop&w={{ xl-w }}&h={{ xl-h }}"
-    alt="{{ alt }}"
-    class="lazyload align-bottom {{ class }}"
+  <img data-src="{{ site.url }}/assets/img/{% path %}?nf_resize=smartcrop&w={% xl-w %}&h={% xl-h %}"
+    alt="{% alt %}"
+    class="lazyload align-bottom {% class %}"
   >
 </picture>
