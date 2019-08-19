@@ -2,21 +2,22 @@
 layout: default
 ---
 
-<div
-  class="h-screen w-full"
-  style="background: #FEC82A;  /* fallback for old browsers */
-/* background: -webkit-linear-gradient(to top left, #F37335, #FDC830);  Chrome 10-25, Safari 5.1-6 */
-/* background: linear-gradient(to top left, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-">
+<div class="h-screen w-full" style="background: #FEC82A;">
 
 {% include menu.html %}
 
-<div class="container mx-auto px-4">
+<div class="absolute top-0 right-0 mr-32 -mt-10 z-0">
+{% include part_img.html path="bad_juju_web3.jpg" xl-w="940" xl-h="980" lg-w="350" lg-h="350" md-w="300" md-h="300" alt="Homepage image test" class=" overflow-hidden" %}
+</div>
 
+<div class="container mx-auto px-4 z-40">
+
+<div class="w-full lg:w-1/2">
 <h1 class="text-4xl leading-tight font-bold mb-4" style="font-family: 'Roboto Slab', serif;">Improve your brand recognition with a distinct, consistent visual identity.</h1>
 <p style="font-family: 'Roboto Slab', serif;" class="mb-8">Building a recognizable brand presence is key to customer retention. An <span class="font-bold">experienced graphic designer</span> will protect your brand and deliver the very best <span class="font-bold">persistent visuals</span> for your business, across <span class="font-bold">multiple platforms.</span></p>
 <a class="inline-block bg-black rounded px-8 py-4 text-xs tracking-widest uppercase" href="/contact" style="font-family: 'Montserrat', sans-serif;">Contact</a>
+</div>
 
-{% include part_img.html path="bad_juju_web2.jpg" xl-w="800" xl-h="1080" lg-w="350" lg-h="350" md-w="300" md-h="300" alt="Homepage image test" class="" %}
+</div>
 
 </div>

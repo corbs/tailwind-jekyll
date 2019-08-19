@@ -4,24 +4,24 @@
                 {{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.xl-w }}&h={{ include.xl-h }} 2x"
     media="(min-width: 1200px)"
     alt="{{ include.alt }}"
-    class="align-bottom {{ include.class }}"
+    class="{{ include.class }}"
   >
   <source
     data-srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ lg-w }}&h={{ include.lg-h }} 1x,
                 {{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ lg-w }}&h={{ include.lg-h }} 2x"
     media="(min-width: 992px)"
     alt="{{ include.alt }}"
-    class="align-bottom {{ include.class }}"
+    class="{{ include.class }}"
   >
   <source
     data-srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.md-w }}&h={{ include.md-h }} 1x,
                 {{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.md-w }}&h={{ include.md-h }} 2x"
     media="(min-width: 768px)"
     alt="{{ include.alt }}"
-    class="align-bottom {{ include.class }}"
+    class="{{ include.class }}"
   >
   <img src="{{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.xl-w }}&h={{ include.xl-h }}"
     alt="{{ include.alt }}"
-    class="lazyload align-bottom {{ include.class }}"
+    class="{{ include.class }}"
   >
 </picture>
