@@ -14,9 +14,13 @@ a {color: #FEC82A;}
 }
 
 .menu a {
-  @apply text-black px-4 py-10 text-sm tracking-widest uppercase ;
+  @apply text-black py-2 mx-4 text-sm tracking-wider uppercase ;
+}
+
+.menu a:hover {
+  @apply border-black border-b-4 ;
 }
 
 .menu li.active a {
-  @apply border;
+  @apply border-black border-b-4;
 }
