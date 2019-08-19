@@ -4,9 +4,14 @@
 
 @tailwind utilities;
 
+body {
+  font-family: 'Roboto Slab', serif;
+  @apply text-black;
+}
 
-div {color: #3D2B09;}
-a {color: #FEC82A;}
+#clogo {
+  fill: white;
+}
 
 .h5 {
   font-family: 'Montserrat', sans-serif;
