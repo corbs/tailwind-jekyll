@@ -7,7 +7,7 @@
     class="{{ include.class }}"
   >
   <source
-    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ lg-w }}&h={{ include.lg-h }} 1x,
+    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.lg-w }}&h={{ include.lg-h }} 1x,
                 {{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ lg-w }}&h={{ include.lg-h }} 2x"
     media="(min-width: 1024px)"
     alt="{{ include.alt }}"
