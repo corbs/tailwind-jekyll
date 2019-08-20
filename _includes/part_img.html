@@ -1,22 +1,22 @@
 <picture>
   <source
     srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.xl-w }}&h={{ include.xl-h }} 1x,
-                {{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.xl-w }}&h={{ include.xl-h }} 2x"
-    media="(min-width: 1280px)"
+            {{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.xl-w }}&h={{ include.xl-h }} 2x"
+    media="(min-width: 1025px)"
     alt="{{ include.alt }}"
     class="{{ include.class }}"
   >
   <source
     srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.lg-w }}&h={{ include.lg-h }} 1x,
-                {{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ lg-w }}&h={{ include.lg-h }} 2x"
-    media="(min-width: 1024px)"
+            {{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.lg-w }}&h={{ include.lg-h }} 2x"
+    media="(max-width: 1024px)"
     alt="{{ include.alt }}"
     class="{{ include.class }}"
   >
   <source
     srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.md-w }}&h={{ include.md-h }} 1x,
-                {{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.md-w }}&h={{ include.md-h }} 2x"
-    media="(min-width: 768px)"
+            {{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.md-w }}&h={{ include.md-h }} 2x"
+    media="(max-width: 768px)"
     alt="{{ include.alt }}"
     class="{{ include.class }}"
   >
