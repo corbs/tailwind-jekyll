@@ -13,6 +13,10 @@ body {
   fill: white;
 }
 
+h2 {
+  @apply text-4xl leading-tight font-bold mb-2 mt-3;
+}
+
 .h5 {
   font-family: 'Montserrat', sans-serif;
   @apply text-xs tracking-widest uppercase font-bold;

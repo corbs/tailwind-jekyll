@@ -2,7 +2,11 @@
 layout: default
 ---
 
-<div class="w-full lg:w-1/2 px-8">
+<div class="h-screen w-full relative bg-primary">
+
+    {% include menu.html %}
+
+  <div class="container mx-auto px-4 h-full ">
 
   <form class="w-full" name="contact" netlify>
 
@@ -40,5 +44,7 @@ layout: default
       <button class="mt-6 inline-block bg-black rounded px-8 py-4 text-xs tracking-widest uppercase text-white" style="font-family: 'Montserrat', sans-serif;" type="submit" name="submit">Submit</button>
 
     </form>
+
+</div>
 
 </div>
