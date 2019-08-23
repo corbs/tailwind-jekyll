@@ -1,7 +1,7 @@
 module.exports = {
   theme: {
     colors: {
-      primary: '#FEC82A',
+      primary: '#FFCA2E',
       black: '#261E07',
     },
     screens: {
