@@ -3,6 +3,7 @@ module.exports = {
     colors: {
       primary: '#FFCA2E',
       black: '#261E07',
+      white: '#fff',
     },
     screens: {
       'md': '768px',

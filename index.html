@@ -6,35 +6,36 @@ layout: default
 
     {% include menu.html %}
 
-  <div class="container mx-auto px-4 flex flex-wrap items-center">
+  <div class="container h-full mx-auto px-4 flex flex-wrap items-center relative">
 
-    <div class="w-full lg:w-1/3 z-20">
-      <h2 class="lg:-mr-20">Stand out from the crowd with a unique identity.</h2>
-      <p class="mb-8 lg:-mr-20">An <span class="font-bold">experienced graphic designer</span> will protect your brand and deliver the very best <span class="font-bold">persistent visuals</span> for your business, across <span class="font-bold">multiple platforms.</span></p>
-      {% include part_btn.html
-        url="/contact"
-        text="contact"
-      %}
+    <div class="w-full my-40 lg:w-1/4 z-20">
+      <h2 class="">Stand out from the crowd with a unique identity.</h2>
+      <p class="">An <span class="font-bold">experienced graphic designer</span> will protect your brand and deliver the very best <span class="font-bold">persistent visuals</span> for your business, across <span class="font-bold">multiple platforms.</span></p>
     </div>
 
-    <div class="w-full h-full lg:w-2/3 z-0 lg:-mr-40 overflow-hidden">
-      {% include part_img.html
+    <div class="h-full lg:w-3/4 z-0 overflow-hidden">
+      {% include part/img.html
       path="bad_juju_web4.jpg"
-      xl-w="2524" xl-h="2700"
-      lg-w="1200" lg-h="1100"
-      md-w="200" md-h="200"
-      sm-w="50" sm-h="50"
+      resize="fit"
+      xl="h=1900"
+      lg="h=1800"
+      md="h=1038"
+      sm="h=1038"
       alt="Bad Juju, beer brand by Corbin Featherstone"
-      class="lg:-my-20" %}
+      class="lg:-my-5" %}
     </div>
 
   </div>
 
 </div>
 
+<!--
   <div class="container mx-auto px-4 h-screen">
     <div class="block mx-auto = lg:w-1/2">
     <h2 class="text-center">"...the truth is, it's not the idea, it's never the idea, it's always what you do with it."</h2>
     <h5 class="text-center">Neil Gaiman</h5>
     </div>
   </div>
+-->
+
+  {% include schema_personal.json %}

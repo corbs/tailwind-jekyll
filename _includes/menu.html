@@ -13,7 +13,7 @@
     <!-- Main Menu -->
     <div class="">
       <ul class="flex menu" style="font-family: 'Montserrat', sans-serif;">
-      {% for item in site.data.menu.list %}
+      {% for item in site.data.menu_non.list %}
         <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ item.url }}">{{ item.title }}</a></li>
       {% endfor %}
       </ul>

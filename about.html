@@ -12,7 +12,10 @@ layout: default
 <h1 class="text-6xl leading-tight font-bold mb-4" style="font-family: 'Roboto Slab', serif;"><i class=""></i> Hello</h1>
 <p style="font-family: 'Roboto Slab', serif;" class="mb-8">My name is <span class="font-bold">Corbin Featherstone</span>, I'm a multi-disciplinary <span class="font-bold">Senior Graphic Designer</span> with over a decade of hard <span class="font-bold">industry experience</span>.</p>
 </div>
-
+{% include part/btn.html
+  url="/contact"
+  text="contact"
+%}
 <ul>
   {% for post in site.posts %}
     <li>
@@ -21,7 +24,12 @@ layout: default
   {% endfor %}
 </ul>
 
-{% include schema_personal.json %}
+<div class="">
+{% include part/vimeo.html
+  class="lg:w-1/2 p-2 bg-white"
+  id="395584623"
+%}
+</div>
 
 </div>
 
