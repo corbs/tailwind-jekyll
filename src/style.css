@@ -20,7 +20,7 @@ h2, .h2 {
 
 h5, .h5 {
   font-family: 'Montserrat', sans-serif;
-  @apply text-xs tracking-widest uppercase font-bold;
+  @apply text-xs tracking-widest uppercase;
 }
 
 .menu a {
