@@ -1,20 +1,20 @@
 <!-- ### MENU ### -->
 
 <!-- Top-menu -->
-<nav id="navbar" class="fixed px-3 py-2 z-50 w-full">
+<nav id="navbar" class="sticky px-4 z-50 w-full">
 
   <div class="flex items-center justify-between ">
 
     <!-- Logos -->
-    <div class="">
-    <a href="/"><img class="w-32" src="/assets/logo.svg" alt="Corbin Featherstone, New Zealand Graphic Design" aria-label="Corbin Featherstone, Senior Graphic Designer, New Zealand."></a>
+    <div class="p-10 bg-black">
+    <a href="/"><img class="w-32" src="/assets/alignleft_logo.svg" alt="Corbin Featherstone, Graphic Designer, Hawkes Bay, New Zealand" aria-label="Corbin Featherstone, Graphic Designer, Hawkes Bay, New Zealand."></a>
     </div>
 
     <!-- Main Menu -->
     <div class="">
-      <ul class="flex menu" style="font-family: 'Montserrat', sans-serif;">
+      <ul class="flex menu">
       {% for item in site.data.menu_non.list %}
-        <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ item.url }}">{{ item.title }}</a></li>
+        <li class="h5 {% if item.url == page.url %}active{% endif %}"><a href="{{ item.url }}">{{ item.title }}</a></li>
       {% endfor %}
       </ul>
     </div>
