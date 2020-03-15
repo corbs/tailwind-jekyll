@@ -1,9 +1,6 @@
+<div class="clearfix block relative h-0 w-full" style="padding-top: {{ include.ratio }}%;">
 
-<div class="relative" style="background-image: url({{ site.url }}/assets/img/{{ include.path }}?nf_resize=fit&w=20); background-size: cover;">
-
-  <div class="" style="padding-top: {{ include.ratio }}%;">
-
-    <picture class="">
+    <picture class="" style="background-image: url({{ site.url }}/assets/img/{{ include.path }}?nf_resize=fit&w=20); background-size: cover;">
       <source
         srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.xl }} 1x,
                 {{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.xl }} 2x"
@@ -26,8 +23,7 @@
       >
       <img src="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.xl }}"
         alt="{{ include.alt }}"
-        class=""
+        class="position:absolute; top:0; left:0; width:100%; height:100%;"
       >
     </picture>
-</div>
 </div>
