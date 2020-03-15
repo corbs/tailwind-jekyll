@@ -1,7 +1,9 @@
-<div style="position: relative; background-image: url({{ site.url }}/assets/img/{{ include.path }}?nf_resize=fit&w=20); background-size: cover;">
-  <div style="padding-top: {{100.0 / aspectRatio}}%;">
+<div class="relative" style="background-image: url({{ site.url }}/assets/img/{{ include.path }}?nf_resize=fit&w=20); background-size: cover;">
 
-    <picture style="position: absolute; left: 0; top: 0; width: 100%">
+  <div class="pt-full">
+  <!-- <div style="padding-top: {{100.0 / aspectRatio}}%;"> Idea for resizing frame dynamically. Should probably set up a fixed set of dimensions for a specific gallery size, then link to a data file. -->
+
+    <picture class="absolute left-0 top-0 w-full">
       <source
         srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.xl }} 1x,
                 {{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.xl }} 2x"
