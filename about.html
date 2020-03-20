@@ -2,31 +2,33 @@
 layout: default
 ---
 
-<div class="w-full relative bg-primary">
+<div class="h-screen w-full bg-primary">
 
-    {% include menu.html %}
+  {% include menu.html %}
 
-<div class="container mx-auto px-4">
+  <div class="container mx-auto px-4">
 
-<div class="w-full lg:w-1/2">
-<h1 class="text-6xl leading-tight font-bold mb-4" style="font-family: 'Roboto Slab', serif;"><i class=""></i> Hello</h1>
-<p style="font-family: 'Roboto Slab', serif;" class="mb-8">My name is <span class="font-bold">Corbin Featherstone</span>, I'm a multi-disciplinary <span class="font-bold">Senior Graphic Designer</span> with over a decade of hard <span class="font-bold">industry experience</span>.</p>
+    <span class="h1">Hello</span>
+    <p style="font-family: 'Roboto Slab', serif;" class="mb-8">My name is <span class="font-bold">Corbin Featherstone</span>, I'm a multi-disciplinary <span class="font-bold">Senior Graphic Designer</span> with over a decade of hard <span class="font-bold">industry experience</span>.</p>
+
+    {% include part/btn.html
+      url="/contact"
+      text="contact"
+      ico="arrow-right"
+    %}
+
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+  </div>
+
 </div>
-{% include part/btn.html
-  url="/contact"
-  text="contact"
-%}
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
 
-</div>
-
-</div>
 
 <div class="container mx-auto px-4">
 

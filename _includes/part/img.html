@@ -1,22 +1,18 @@
 <picture>
   <source
-    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.xl }} 1x,
-            {{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.xl }} 2x"
+    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.xl }},
     media="(min-width: 1280px)"
   >
   <source
-    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.lg }} 1x,
-            {{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.lg }} 2x"
+    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.lg }},
     media="(min-width: 1024px)"
   >
   <source
-    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.md }} 1x,
-            {{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.md }} 2x"
+    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.md }},
     media="(min-width: 769px)"
   >
   <source
-    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.sm }} 1x,
-            {{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.sm }} 2x"
+    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.sm }},
     media="(max-width: 768px)"
   >
   <img src="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.xl }}"

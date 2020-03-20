@@ -10,8 +10,8 @@ body {
   @apply text-black;
 }
 
-#clogo {
-  fill: white;
+h1, .h1 {
+  @apply text-6xl leading-tight font-bold mb-2 mt-4;
 }
 
 h2, .h2 {
