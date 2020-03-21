@@ -1,0 +1,22 @@
+<picture>
+  <source
+    srcset="{{ site.url }}/assets/img/{{ portfolio.img }}?nf_resize={{ include.resize }}&{{ include.xl }},
+    media="(min-width: 1280px)"
+  >
+  <source
+    srcset="{{ site.url }}/assets/img/{{ portfolio.img }}?nf_resize={{ include.resize }}&{{ include.lg }},
+    media="(min-width: 1024px)"
+  >
+  <source
+    srcset="{{ site.url }}/assets/img/{{ portfolio.img }}?nf_resize={{ include.resize }}&{{ include.md }},
+    media="(min-width: 769px)"
+  >
+  <source
+    srcset="{{ site.url }}/assets/img/{{ portfolio.img }}?nf_resize={{ include.resize }}&{{ include.sm }},
+    media="(max-width: 768px)"
+  >
+  <img src="{{ site.url }}/assets/img/{{ portfolio.img }}?nf_resize={{ include.resize }}&{{ include.xl }}"
+    alt="{{ portfolio.imgalt }}"
+    class="{{ include.class }}"
+  >
+</picture>

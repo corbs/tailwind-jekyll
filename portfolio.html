@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<div class="h-screen w-full bg-primary">
+
+  {% include menu.html %}
+
+  <div class="container mx-auto px-4">
+
+    <span class="h1">Portfolio</span>
+
+    <ul>
+      {% for portfolio in site.portfolio %}
+        <li>
+          <a href="{{ portfolio.url }}">{{ portfolio.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+
+<div class="flex flex-wrap">
+    {% for portfolio in site.portfolio %}
+      <div class="w-1/4">
+        <a href="{{ portfolio.url }}">
+          {% include part/imgal_portfolio.html
+          resize="smartcrop"
+          xl="w=200&h=200"
+          lg="w=200&h=200"
+          md="w=200&h=200"
+          sm="w=200&h=200"
+          class="p-2 rounded m-2 bg-white shadow"
+          %}
+        </a>
+      </div>
+    {% endfor %}
+</div>
+
+
+  </div>
+
+</div>
+
+
+<div class="container mx-auto px-4">
+
+{% include part/img_compare.html %}
+
+</div>

@@ -1,7 +1,7 @@
 ---
 layout: portfolio
-title: Kitsch
-img: img_02.jpg
+title: Bad Juju
+img: img_01.jpg
 ---
 
 ** Hello world
