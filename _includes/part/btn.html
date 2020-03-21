@@ -1,1 +1,1 @@
-<a class="h5 inline-block bg-black rounded px-8 py-4 text-primary" href="{{ include.url }}">{{ include.text }}{% if include.ico %}<i class="ml-5 fas fa-{{ include.ico }}" data-fa-transform="grow-4">{% endif %}</i></a>
+<a class="h5 inline-block rounded px-8 py-4 border-solid border-2 border-black hover:shadow-md {% if include.alt %}hover:bg-black hover:text-primary {% else %}bg-black text-primary{% endif %} {{ include.style }}" href="{{ include.url }}">{{ include.text }}{% if include.ico %}<i class="ml-5 fas fa-{{ include.ico }}" data-fa-transform="grow-4">{% endif %}</i></a>
