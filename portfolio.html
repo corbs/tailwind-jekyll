@@ -21,17 +21,18 @@ layout: default
 
 <div class="flex flex-wrap">
     {% for portfolio in site.portfolio %}
-
-        <a href="{{ portfolio.url }}" class="w-1/4 block">
+      <div class="w-full md:w-1/2 xl:w-1/4">
+        <a href="{{ portfolio.url }}">
           {% include part/imgall_portfolio.html
-          xlh="400" xlw="400"
-          lgh="400" lgw="400"
-          mdh="400" mdw="400"
-          smh="400" smw="400"
-          class="block p-2 rounded m-6 bg-white shadow"
+            resize="fit"
+            xl="w=200&h=200"
+            lg="w=200&h=200"
+            md="w=200&h=200"
+            sm="w=200&h=200"
+            class="p-2 bg-white"
           %}
         </a>
-
+      </div>
     {% endfor %}
 </div>
 
@@ -42,7 +43,5 @@ layout: default
 
 
 <div class="container mx-auto px-4">
-
-{% include part/img_compare.html %}
 
 </div>

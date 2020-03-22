@@ -3,8 +3,19 @@
 
 {% include header.html %}
 
+<div class="w-full bg-primary">
 
+  {% include menu.html%}
+
+  <div class="container mx-auto px-4">
+  <h1 class="py-10">{{ page.title }}</h1>
+  </div>
+
+</div>
+
+<div class="container mx-auto px-4">
 {{ content }}
+</div>
 
 
 {% include footer.html %}

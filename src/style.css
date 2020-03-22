@@ -11,11 +11,11 @@ body {
 }
 
 h1, .h1 {
-  @apply text-6xl leading-tight font-bold mb-2 mt-4;
+  @apply text-6xl leading-tight font-bold mb-2 mt-4 inline-block;
 }
 
 h2, .h2 {
-  @apply text-4xl leading-tight font-bold mb-2 mt-3;
+  @apply text-4xl leading-tight font-bold mb-2 mt-3 inline-block;
 }
 
 h5, .h5 {
