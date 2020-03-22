@@ -1,10 +1,10 @@
 ---
 layout: portfolio
-title: Galileo
-img: img_03.jpg
+title: Unplugged
+img: img_05.jpg
 imgalt: test3
 code: true
-categories: [one]
+categories: [two]
 ---
 
 ** Hello world

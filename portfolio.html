@@ -11,16 +11,18 @@ layout: default
     <span class="h1">Portfolio</span>
 
     <ul>
-      {% for portfolio in site.portfolio %}
+      {% assign rando = site.portfolio | sample:2 %}
+      {% for portfolio in rando %}
         <li>
-          <a href="{{ portfolio.url }}">{{ portfolio.title }}</a>
+          <a href="{{ portfolio.url }}">{{ portfolio.title }} </a>
         </li>
       {% endfor %}
     </ul>
 
 
 <div class="flex flex-wrap">
-    {% for portfolio in site.portfolio %}
+
+    {% for portfolio in categories[one] %}
         <a href="{{ portfolio.url }}">
           {% include part/imgall_portfolio.html
             resize="fit"
@@ -34,6 +36,12 @@ layout: default
     {% endfor %}
 </div>
 
+<div class="">
+  {% assign posts = site.posts | sample:3 %}
+  {% for post in posts %}
+  <h2 class="p2">{{ post.title }}</h2>
+  {% endfor %}
+</div>
 
   </div>
 

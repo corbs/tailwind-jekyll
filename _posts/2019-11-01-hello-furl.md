@@ -1,7 +1,6 @@
 ---
 layout: default
-title: Hello World
-category: one
+title: Hello Furl
 ---
 
 ** Hello world

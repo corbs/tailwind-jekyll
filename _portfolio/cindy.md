@@ -1,7 +1,7 @@
 ---
 layout: portfolio
-title: Galileo
-img: img_03.jpg
+title: Cindy
+img: img_06.jpg
 imgalt: test3
 code: true
 categories: [one]
