@@ -2,6 +2,7 @@
 layout: portfolio
 title: Galileo
 img: img_03.jpg
+imgalt: test3
 ---
 
 ** Hello world

@@ -1,21 +1,25 @@
 <picture>
   <source
-    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.xl }},
+    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.xlw }}&h={{ include.xlh}} 1x,
+            {{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ 2 x include.xlw }}&h={{ 2 x include.xlh}} 2x"
     media="(min-width: 1280px)"
   >
   <source
-    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.lg }},
+    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.lgw }}&h={{ include.lgh}} 1x,
+            {{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ 2 x include.lgw }}&h={{ 2 x include.lgh}} 2x"
     media="(min-width: 1024px)"
   >
   <source
-    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.md }},
+    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.mdw }}&h={{ include.mdh}} 1x,
+            {{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ 2 x include.mdw }}&h={{ 2 x include.mdh}} 2x"
     media="(min-width: 769px)"
   >
   <source
-    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.sm }},
+    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ include.smw }}&h={{ include.smh}} 1x,
+            {{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&w={{ 2 x include.smw }}&h={{ 2 x include.smh}} 2x"
     media="(max-width: 768px)"
   >
-  <img src="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.xl }}"
+  <img src="{{ site.url }}/assets/img/{{ include.path }}?nf_resize=smartcrop&h=20&w=20"
     alt="{{ include.alt }}"
     class="{{ include.class }}"
   >

@@ -2,6 +2,7 @@
 layout: portfolio
 title: Kitsch
 img: img_02.jpg
+imgalt: test2
 ---
 
 ** Hello world

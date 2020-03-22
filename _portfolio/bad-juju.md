@@ -2,6 +2,7 @@
 layout: portfolio
 title: Bad Juju
 img: img_01.jpg
+imgalt: test1
 ---
 
 ** Hello world
