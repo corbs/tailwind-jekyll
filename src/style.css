@@ -7,11 +7,16 @@
 body {
   font-family: 'Roboto Slab', serif;
   background: #eee;
-  @apply text-black;
+  @apply text-black leading-relaxed;
 }
 
+p a {
+  @apply font-bold;
+}
+p a:hover {text-decoration: underline;}
+
 h1, .h1 {
-  @apply text-6xl leading-tight font-bold mb-2 mt-4 inline-block;
+  @apply text-6xl leading-none font-bold mb-2 mt-4 inline-block;
 }
 
 h2, .h2 {

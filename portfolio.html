@@ -21,18 +21,16 @@ layout: default
 
 <div class="flex flex-wrap">
     {% for portfolio in site.portfolio %}
-      <div class="w-full md:w-1/2 xl:w-1/4">
         <a href="{{ portfolio.url }}">
           {% include part/imgall_portfolio.html
             resize="fit"
-            xl="w=200&h=200"
+            xl="w=400&h=400"
             lg="w=200&h=200"
             md="w=200&h=200"
             sm="w=200&h=200"
-            class="p-2 bg-white"
+            class="p-2 m-4 bg-white"
           %}
         </a>
-      </div>
     {% endfor %}
 </div>
 

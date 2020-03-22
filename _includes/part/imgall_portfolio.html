@@ -1,21 +1,21 @@
 <picture>
   <source
-    srcset="{{ site.url }}/assets/img/{{ portfolio.img }}?nf_resize={{ include.resize }}&{{ include.xl }}"
+    srcset="{{ site.url }}/assets/img/portfolio/{{ portfolio.img }}?nf_resize={{ include.resize }}&{{ include.xl }}"
     media="(min-width: 1280px)"
   >
   <source
-    srcset="{{ site.url }}/assets/img/{{ portfolio.img }}?nf_resize={{ include.resize }}&{{ include.lg }}"
+    srcset="{{ site.url }}/assets/img/portfolio/{{ portfolio.img }}?nf_resize={{ include.resize }}&{{ include.lg }}"
     media="(min-width: 1024px)"
   >
   <source
-    srcset="{{ site.url }}/assets/img/{{ portfolio.img }}?nf_resize={{ include.resize }}&{{ include.md }}"
+    srcset="{{ site.url }}/assets/img/portfolio/{{ portfolio.img }}?nf_resize={{ include.resize }}&{{ include.md }}"
     media="(min-width: 769px)"
   >
   <source
-    srcset="{{ site.url }}/assets/img/{{ portfolio.img }}?nf_resize={{ include.resize }}&{{ include.sm }}"
+    srcset="{{ site.url }}/assets/img/portfolio/{{ portfolio.img }}?nf_resize={{ include.resize }}&{{ include.sm }}"
     media="(max-width: 768px)"
   >
-  <img src="{{ site.url }}/assets/img/{{ portfolio.img }}?nf_resize=fit&h=20&w=20"
+  <img src="{{ site.url }}/assets/img/portfolio/{{ portfolio.img }}?nf_resize=fit&h=20&w=20"
     alt="{% if portfolio.imgalt %}{{ portfolio.imgalt }}{% else %}Graphic Design Portfolio Work by Corbin Featherstone{% endif %}"
     class="{{ include.class }}"
   >
