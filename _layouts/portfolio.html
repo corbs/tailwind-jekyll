@@ -8,7 +8,7 @@
   {% include menu.html%}
 
   <div class="container mx-auto px-4">
-  <h1 class="py-10">{{ page.title }}</h1>
+  <h1 class="pt-8 pb-20">{{ page.title }}</h1>
   </div>
 
 </div>
@@ -17,5 +17,18 @@
 {{ content }}
 </div>
 
-
+<div class="flex flex-wrap">
+    {% for portfolio in site.portfolio %}
+        <a href="{{ portfolio.url }}">
+          {% include part/imgall_portfolio.html
+            resize="fit"
+            xl="w=300&h=300"
+            lg="w=300&h=300"
+            md="w=300&h=300"
+            sm="w=300&h=300"
+            class="p-2 m-4 bg-white"
+          %}
+        </a>
+    {% endfor %}
+</div>
 {% include footer.html %}
