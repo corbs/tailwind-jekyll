@@ -1,9 +1,9 @@
 ---
 layout: portfolio
 title: Kitsch
-img: img_02.jpg
+img: kitsch.jpg
 imgalt: test2
-categories: [two]
+category: two
 ---
 
 ** Hello world

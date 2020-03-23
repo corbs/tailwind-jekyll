@@ -1,9 +1,9 @@
 ---
 layout: portfolio
 title: Bad Juju
-img: img_01.jpg
+img: bad-juju.jpg
 imgalt: test1
-categories: [one]
+category: one
 ---
 
 ** Hello world

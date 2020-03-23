@@ -13,22 +13,75 @@
 
 </div>
 
+<!-- Hero Image -->
+<div class="container mx-auto px4">
+  <picture>
+    <source
+      srcset="{{ site.url }}/assets/img/portfolio/{{ page.img }}?nf_resize={{ include.resize }}&{{ include.xl }}"
+      media="(min-width: 1280px)"
+    >
+    <source
+      srcset="{{ site.url }}/assets/img/portfolio/{{ page.img }}?nf_resize={{ include.resize }}&{{ include.lg }}"
+      media="(min-width: 1024px)"
+    >
+    <source
+      srcset="{{ site.url }}/assets/img/portfolio/{{ page.img }}?nf_resize={{ include.resize }}&{{ include.md }}"
+      media="(min-width: 769px)"
+    >
+    <source
+      srcset="{{ site.url }}/assets/img/portfolio/{{ page.img }}?nf_resize={{ include.resize }}&{{ include.sm }}"
+      media="(max-width: 768px)"
+    >
+    <img src="{{ site.url }}/assets/img/portfolio/{{ page.img }}?nf_resize=fit&w=20"
+      alt="{% if include.imgalt %}{{ include.imgalt }}{% else %}Graphic Design Portfolio Work by Corbin Featherstone{% endif %}"
+      class="{{ include.class }}"
+    >
+  </picture>
+</div>
+<!-- Close Hero image -->
+
 <div class="container mx-auto px-4">
-{{ content }}
+
+<div class="flex flex-wrap my-10">
+<div class="w-3/4">
+  <div class="mr-10">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus imperdiet nulla malesuada pellentesque elit eget gravida. Nibh tortor id aliquet lectus. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Amet nulla facilisi morbi tempus iaculis urna id. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Tellus in hac habitasse platea. Penatibus et magnis dis parturient montes nascetur ridiculus. Pellentesque habitant morbi tristique senectus et netus et. Ut tortor pretium viverra suspendisse potenti. Vestibulum sed arcu non odio euismod lacinia at quis risus. Consequat id porta nibh venenatis cras sed. Id neque aliquam vestibulum morbi blandit cursus risus at ultrices.</p>
+
+  <p>Magna fermentum iaculis eu non. Vel eros donec ac odio tempor orci dapibus ultrices in. Ac tincidunt vitae semper quis lectus nulla. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Lacus vestibulum sed arcu non. Massa eget egestas purus viverra. Eget nunc scelerisque viverra mauris in aliquam sem. Laoreet sit amet cursus sit amet. Augue lacus viverra vitae congue eu consequat ac. Vulputate dignissim suspendisse in est ante in. Sit amet aliquam id diam maecenas. Quis eleifend quam adipiscing vitae proin. Ultrices in iaculis nunc sed augue. Suspendisse interdum consectetur libero id faucibus nisl tincidunt. Augue ut lectus arcu bibendum.</p>
+
+  <p>Morbi blandit cursus risus at ultrices mi. Amet est placerat in egestas erat imperdiet sed euismod. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Eget velit aliquet sagittis id consectetur.</p>
+  </div>
+</div>
+<div class="w-1/4">
+  <h6 class="font-bold text-md">Lorem Ipsum Doler</h6>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <h6 class="font-bold text-md">Lorem Ipsum Doler</h6>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <h6 class="font-bold text-md">Lorem Ipsum Doler</h6>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
 </div>
 
-<div class="flex flex-wrap">
-    {% for portfolio in site.portfolio %}
-        <a href="{{ portfolio.url }}">
-          {% include part/imgall_portfolio.html
-            resize="fit"
-            xl="w=300&h=300"
-            lg="w=300&h=300"
-            md="w=300&h=300"
-            sm="w=300&h=300"
-            class="p-2 m-4 bg-white"
-          %}
-        </a>
-    {% endfor %}
+  {{ content }}
+
+<!-- More Portfolio Links -->
+  <div class="flex flex-wrap">
+    {% assign more = site.portfolio | sample:4 %}
+    {% for portfolio in more %}
+          <a href="{{ portfolio.url }}">
+            {% include part/img_port_gallery.html
+              resize="smartcrop"
+              xl="w=220&h=220"
+              lg="w=220&h=220"
+              md="w=220&h=220"
+              sm="w=220&h=220"
+              class="p-2 m-4 bg-white"
+            %}
+          </a>
+      {% endfor %}
+  </div>
+<!-- Close More Portfolio Links -->
+
 </div>
+
 {% include footer.html %}

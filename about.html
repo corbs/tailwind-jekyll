@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="h-screen w-full bg-primary">
+<div class="pb-48 w-full bg-primary">
 
   {% include menu.html %}
 
@@ -33,74 +33,36 @@ layout: default
 
 <div class="container mx-auto px-4">
 
+  <div class="flex flex-wrap my-32">
+    <div class="w-1/2"><h2 class="mr-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2></div>
+    <div class="w-1/2"><p class="ml-6 pt-4"> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+  </div>
+
+
+  <div class="flex flex-wrap mb-32">
+    <div class="w-1/3 text-center">
+      <div class="bg-white mx-4 shadow-md p-10"><i class="fas fa-drafting-compass text-4xl text-grey-dark pb-3"></i><h6 class="pb-2 font-bold">Lorem Ipsum doler est</h6><p class="text-sm">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+    </div>
+    <div class="w-1/3 text-center">
+      <div class="bg-white mx-4 shadow-md p-10"><i class="fas fa-drafting-compass text-4xl text-grey-dark pb-3"></i><h6 class="pb-2 font-bold">Lorem Ipsum doler est</h6><p class="text-sm">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+    </div>
+    <div class="w-1/3 text-center">
+      <div class="bg-white mx-4 shadow-md p-10"><i class="fas fa-drafting-compass text-4xl text-grey-dark pb-3"></i><h6 class="pb-2 font-bold">Lorem Ipsum doler est</h6><p class="text-sm">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+    </div>
+  </div>
+
 </div>
 
-<div class="container mx-auto px-4">
-<p>This is some text</p>
-  {% include part/img.html
-  path="portfolio/img_01.jpg"
-  resize="smartcrop"
-  xl="w=3000&h=3000"
-  lg="w=3000&h=3000"
-  md="w=3000&h=3000"
-  sm="w=3000&h=3000"
-  alt=""
-  class="p-2 rounded m-8 bg-white shadow"
-  %}
-<p>This is some text</p>
-  {% include part/img.html
-  path="portfolio/img_02.jpg"
-  resize="smartcrop"
-  xl="w=3000&h=3000"
-  lg="w=3000&h=3000"
-  md="w=3000&h=3000"
-  sm="w=3000&h=3000"
-  alt=""
-  class="p-2 rounded m-8 bg-white shadow"
-  %}
-<p>This is some text</p>
-  {% include part/img.html
-  path="portfolio/img_03.jpg"
-  resize="smartcrop"
-  xl="w=3000&h=3000"
-  lg="w=3000&h=3000"
-  md="w=3000&h=3000"
-  sm="w=3000&h=3000"
-  alt=""
-  class="p-2 rounded m-8 bg-white shadow"
-  %}
-<p>This is some text</p>
-  {% include part/img.html
-  path="portfolio/img_04.jpg"
-  resize="smartcrop"
-  xl="w=3000&h=3000"
-  lg="w=3000&h=3000"
-  md="w=3000&h=3000"
-  sm="w=3000&h=3000"
-  alt=""
-  class="p-2 rounded m-8 bg-white shadow"
-  %}
-<p>This is some text</p>
-  {% include part/img.html
-  path="portfolio/img_05.jpg"
-  resize="smartcrop"
-  xl="w=3000&h=3000"
-  lg="w=3000&h=3000"
-  md="w=3000&h=3000"
-  sm="w=3000&h=3000"
-  alt=""
-  class="p-2 rounded m-8 bg-white shadow"
-  %}
-<p>This is some text</p>
-  {% include part/img.html
-  path="portfolio/img_06.jpg"
-  resize="smartcrop"
-  xl="w=3000&h=3000"
-  lg="w=3000&h=3000"
-  md="w=3000&h=3000"
-  sm="w=3000&h=3000"
-  alt=""
-  class="p-2 rounded m-8 bg-white shadow"
-  %}
-<p>This is some text</p>
+
+<div class="flex my-32 items-center">
+  <div class="w-1/2">
+    <div class="px-64">
+    <h2 class="">Printed Magazine Spreads</h2><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <a class="inline-block py-3" href="*">View All <i class="fas fa-arrow-right"></i></a>
+    <p>(image links to specific portfolio items)</p>
+    </div>
+  </div>
+  <div class="w-1/2">
+    {% include part/img.html path="portfolio/unplugged.jpg" resize="smartcrop" xl="w=2800&h=2800" lg="w=2800&h=2800" md="w=2800&h=2800" sm="w=2800&h=2800" alt="" class="" %}
+  </div>
 </div>
