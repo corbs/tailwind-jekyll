@@ -3,7 +3,6 @@ layout: portfolio
 title: Old Man
 img: old-man.jpg
 imgalt: test3
-code: true
 category: two
 ---
 

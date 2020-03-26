@@ -3,7 +3,6 @@ layout: portfolio
 title: Unplugged
 img: unplugged.jpg
 imgalt: test3
-code: true
 category: two
 ---
 
