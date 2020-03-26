@@ -41,8 +41,8 @@
 
 /* Drag handle (circle) */
 .images-compare-handle {
-    height: 38px;
-    width: 38px;
+    height: 44px;
+    width: 44px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -74,13 +74,13 @@
 .images-compare-left-arrow {
     border-right: 6px solid white;
     left: 50%;
-    margin-left: -17px;
+    margin-left: -20px;
 }
 
 .images-compare-right-arrow {
     border-left: 6px solid white;
     right: 50%;
-    margin-right: -17px;
+    margin-right: -20px;
 }
 
 /* Label */
