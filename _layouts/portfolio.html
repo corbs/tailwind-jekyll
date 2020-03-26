@@ -9,19 +9,9 @@
 
 </div>
 
-{% if page.categories contains "beforeafter" %}
-  <!-- BEFOREAFTER -->
-  <div id="myImageCompare">
-      <!-- The first div will be the front element, to prevent FOUC add a style="display: none;" -->
-      <div style="display: none;">
-          <img src="{{ site.url }}/assets/img/portfolio/img_01.jpg" alt="Before">
-      </div>
-      <!-- This div will be the back element -->
-      <div>
-          <img src="{{ site.url }}/assets/img/portfolio/img_06.jpg" alt="After">
-      </div>
-  </div>
-  <!-- Close BEFOREAFTER -->
+{% if page.categories contains "compare" %}
+
+{% include part/img_compare.html resize="" xl="w=" lg="w=" md="w=" sm="w=" alt="" class="" %}
 
 {% else %}
 
