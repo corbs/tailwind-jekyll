@@ -1,7 +1,7 @@
 ---
 layout: portfolio
 title: Unplugged
-img: unplugged.jpg
+imghero: portfolio/unplugged.jpg
 imgalt: test3
 category: two
 ---

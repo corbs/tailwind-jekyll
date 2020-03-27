@@ -1,7 +1,7 @@
 ---
 layout: portfolio
 title: Old Man
-img: old-man.jpg
+imghero: portfolio/old-man.jpg
 imgalt: test3
 category: two
 ---
