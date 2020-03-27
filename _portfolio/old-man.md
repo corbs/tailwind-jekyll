@@ -4,8 +4,8 @@ title: Old Man
 imghero: portfolio/oldman-final.jpg
 imgalt: test3
 categories: compare
-before: portfolio/oldman-original.jpg
-after: portfolio/oldman-final.jpg
+before: portfolio/oldman-before.jpg
+after: portfolio/oldman-after.jpg
 tags: portfolio
 ---
 
