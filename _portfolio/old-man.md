@@ -1,7 +1,7 @@
 ---
 layout: portfolio
 title: Old Man
-imghero: portfolio/oldman.jpg
+imghero: portfolio/oldman-final.jpg
 imgalt: test3
 categories: compare
 before: portfolio/oldman-original.jpg
