@@ -3,8 +3,9 @@ module.exports = {
     colors: {
       primary: '#FFCA2E',
       black: '#261E07',
-      grey_dark: '#333',
-      white: '#fff',
+      dark: '#333',
+      offwhite: '#FAFAFA',
+      white: '#FFF',
     },
     screens: {
       'md': '768px',
