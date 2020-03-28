@@ -8,21 +8,22 @@ layout: default
 
   <div class="container h-screen mx-auto px-4 flex items-center">
 
-    <div class="w-full my-40 lg:w-1/4 lg:-mr-40 lg:ml-20 z-20">
+    <div class="w-full my-40 xl:w-1/4 xl:-mr-40 xl:ml-20 md:w-2/3 z-20">
+      <a class="h5 bg-black text-primary inline-block border rounded px-4 py-2" href="/discord">Covid-19 response <i class="fas fa-arrow-alt-right ml-4"></i></a>
       <h1 class="">Stand out from the crowd.</h1>
       <p class="">An <span class="font-bold">experienced graphic designer</span> will protect your brand and deliver the very best <span class="font-bold">persistent visuals</span> for your business, across <span class="font-bold">multiple platforms.</span></p>
-      <div class="flex flex-wrap">
+      <div class="flex flex-wrap items-center">
         {% include part/btn.html
-          url="/contact"
-          text="contact"
-          icopost="arrow-right"
+          url="assets/file/corbin_featherstone.pdf"
+          text="portfolio"
           alt="true"
           style="my-4"
         %}
+        <a href="/contact" class="h5 block ml-10">Contact <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
 
-    <div class="h-full hidden lg:block lg:w-3/4 z-0 overflow-hidden">
+    <div class="h-full hidden xl:block xl:w-3/4 z-0 overflow-hidden">
       {% include part/img.html
       path="bad_juju_web4.jpg"
       resize="fit"
