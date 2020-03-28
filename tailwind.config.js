@@ -12,6 +12,14 @@ module.exports = {
       'lg': '1024px',
       'xl': '1280px',
     },
+    letterSpacing: {
+      tighter: '-.05em',
+      tight: '-.025em',
+      normal: '0',
+      wide: '.025em',
+      wider: '.05em',
+      widest: '.2em',
+    },
   },
   variants: {},
   plugins: []
