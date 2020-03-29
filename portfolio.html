@@ -20,8 +20,7 @@ layout: default
     </ul>
 
     <div class="flex flex-wrap">
-
-        {% assign portcat = site.portfolio | where: "category", "two" | sample:2 %}
+        {% assign portcat = site.portfolio | where: "tags", "portfolio" | sample:3 %}
         {% for portfolio in portcat %}
             <a href="{{ portfolio.url }} ">
               {% include part/img.html

@@ -2,29 +2,21 @@
 layout: default
 ---
 
-<div class="pb-48 w-full bg-primary">
+<div class="w-full bg-primary">
 
   {% include menu.html %}
 
-  <div class="container mx-auto px-4">
+  <div class="container mx-auto px-4 py-48">
 
     <span class="h1">Hello</span>
     <p style="font-family: 'Roboto Slab', serif;" class="mb-8">My name is <span class="font-bold">Corbin Featherstone</span>, I'm a multi-disciplinary <span class="font-bold">Senior Graphic Designer</span> with over a decade of hard <span class="font-bold">industry experience</span>.</p>
 
     {% include part/btn.html
-      url="/contact"
+      url="contact"
       text="contact"
-      ico="arrow-right"
+      icopost="arrow-right"
       alt="true"
     %}
-
-    <ul>
-      {% for post in site.posts %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
 
   </div>
 
@@ -34,8 +26,8 @@ layout: default
 <div class="container mx-auto px-4">
 
   <div class="flex flex-wrap my-32">
-    <div class="md:w-1/2"><h2 class="mr-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2></div>
-    <div class="md:w-1/2"><p class="md:ml-6 pt-4"> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+    <div class="lg:w-1/3 lg:border-r-4"><h2 class="mr-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2></div>
+    <div class="lg:w-2/3"><p class="lg:ml-20 lg:pt-4"> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
   </div>
 
 
@@ -53,16 +45,52 @@ layout: default
 
 </div>
 
+<!-- hero -->
+<div class="flex flex-wrap flex-row-reverse my-32 mx-4 md:mx-0 shadow-md md:shadow-none items-center bg-white">
 
-<div class="flex flex-wrap my-32 items-center">
-  <div class="lg:w-1/2">
-    <div class="lg:w-1/2 mx-auto">
+  <div class="md:w-1/2">
+    {% include part/img.html path="portfolio/oldman-after.jpg" resize="fit" xl="w=1300" lg="w=1300" md="w=1300" sm="w=1300" alt="" class="" %}
+  </div>
+
+  <div class="md:w-1/2">
+    <div class="lg:w-1/2 mx-auto p-8">
     <h2 class="">Printed Magazine Spreads</h2><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     <a class="inline-block py-3" href="*">View All <i class="fas fa-arrow-right"></i></a>
     <p>(image links to specific portfolio items)</p>
     </div>
   </div>
-  <div class="lg:w-1/2">
-    {% include part/img.html path="portfolio/unplugged.jpg" resize="smartcrop" xl="w=2800&h=2800" lg="w=2800&h=2800" md="w=2800&h=2800" sm="w=2800&h=2800" alt="" class="" %}
-  </div>
+
+</div>
+
+<!-- portfolio thumbnail list -->
+<div class="container mx-auto px-4 my-32">
+<div class="flex flex-wrap">
+    {% assign portcat = site.portfolio | where: "tags", "portfolio" | sample:6 %}
+    {% for portfolio in portcat %}
+        <a href="{{ portfolio.url }} ">
+          {% include part/img.html
+            path=portfolio.imghero
+            resize="smartcrop"
+            xl="w=390&h=390"
+            lg="w=390&h=390"
+            md="w=390&h=390"
+            sm="w=390&h=390"
+            class="m-2 border border-white shadow-lg"
+          %}
+        </a>
+    {% endfor %}
+</div>
+</div>
+
+<!-- post text list -->
+<div class="container mx-auto px-4 my-32">
+
+<div class="">
+  {% for post in site.posts %}
+    <div class="border-t-2 flex flex justify-between items-center">
+       <h2><a class="ml-3" href="{{ post.url }}">{{ post.title }}</a></h2><i class="mr-3 fas fa-arrow-alt-circle-right"></i>
+    </div>
+  {% endfor %}
+</div>
+
 </div>
