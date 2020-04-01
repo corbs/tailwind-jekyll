@@ -22,16 +22,14 @@
 
 {% endif %}
 
-<!-- Body Content -->
+<!-- Main Content -->
 <div class="container mx-auto px-4">
 
-<!-- Title -->
-  <h1 class="py-4">{{ page.title }}</h1>
 
-  <div class="flex flex-wrap lg:flex-row-reverse">
 
+  <div class="flex flex-wrap lg:flex-row">
 <!-- Sidebar -->
-    <div class="w-full lg:w-1/4 my-4 lg:-my-20 ">
+    <div class="w-full lg:w-1/4 my-4 ">
       <div class="bg-white p-8 shadow-md">
       <p class="font-bold text-lg">Lorem ipsum</p>
       <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -42,29 +40,34 @@
       </div>
     </div>
 
-<!-- Main Body -->
+<!-- Body -->
     <div class="w-full lg:w-3/4">
-      <div class="leading-loose lg:pr-10">
+      <div class="lg:ml-6">
+      <!-- Title -->
+      <h1 class="py-2">{{ page.title }}</h1>
+          <div class="leading-loose lg:pr-10">
 
         {{ content }}
+
+          </div>
+
+      <!-- More Portfolio Links -->
+      <h2 class="mt-10">Portfolio</h2>
+        <div class="flex flex-wrap mb-20">
+          {% assign more = site.portfolio | sample:4 %}
+          {% for portfolio in more %}
+            <a href="{{ portfolio.url }}">
+              {% include part/img.html path=portfolio.imghero resize="smartcrop" xl="w=160&h=200" lg="w=160&h=200" md="w=160&h=200" sm="w=160&h=200" alt="" class="p-2 rounded bg-white mr-6 shadow-md" %}
+            </a>
+          {% endfor %}
+        </div>
 
       </div>
     </div>
 
 
+    </div>
 
-  </div>
-
-<!-- More Portfolio Links -->
-<h2 class="mt-10">Portfolio</h2>
-  <div class="flex flex-wrap mb-20">
-    {% assign more = site.portfolio | sample:4 %}
-    {% for portfolio in more %}
-      <a href="{{ portfolio.url }}">
-        {% include part/img.html path=portfolio.imghero resize="smartcrop" xl="w=160&h=200" lg="w=160&h=200" md="w=160&h=200" sm="w=160&h=200" alt="" class="p-2 rounded bg-white mr-6 shadow-md" %}
-      </a>
-    {% endfor %}
-  </div>
 
 
 </div> <!-- /content container -->
