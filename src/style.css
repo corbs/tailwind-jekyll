@@ -39,3 +39,34 @@ h5, .h5 {
 .menu li.active a {
   @apply border-black border-b-4;
 }
+
+/* https://elfsight.com/social-media-share-buttons/examples/ */
+.page-hero {
+    background-image: linear-gradient(225deg, #ffc63f 0%, #fd3358 49%, #bc35d8 100%);
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    padding: 76px 0;
+  }
+.page-hero:before {
+    width: 1538px;
+    height: 1538px;
+    background-image: radial-gradient(circle 935px at 73.95% 7.83%, #ffff4f 0%, rgba(254,255,39,0) 100%);
+    top: -4px;
+}
+.page-hero:after {
+    width: 942px;
+    height: 942px;
+    background-image: radial-gradient(circle 548px at 89.05% 41.15%, #ffff4f 0%, rgba(254,255,39,0) 100%);
+    top: calc(100% - 94px);
+}
+.page-hero:before, .page-hero:after {
+    content: '';
+    opacity: 0.2;
+    position: absolute;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 1;
+}

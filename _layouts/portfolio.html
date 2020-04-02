@@ -27,29 +27,30 @@
 
 
 
-  <div class="flex flex-wrap lg:flex-row">
+  <div class="flex flex-wrap">
 <!-- Sidebar -->
-    <div class="w-full lg:w-1/4 my-4 ">
+    <div class="w-full lg:w-1/5 mt-6">
       <div class="bg-white p-8 shadow-md">
       <p class="font-bold text-lg">Lorem ipsum</p>
       <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       <p class="font-bold text-lg pt-2">Lorem ipsum</p>
       <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="font-bold text-lg pt-2">Lorem ipsum</p>
-      <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <!-- tags -->
+      {% for tag in page.tags %}
+        <a href="{{ site.url }}/tag/{{ tag }}" class="my-1 inline-block text-xs text-grey rounded px-3 py-1 border border-grey-light bg-white shadow">{{ tag }}</a>
+      {% endfor %}
+
       </div>
     </div>
 
 <!-- Body -->
-    <div class="w-full lg:w-3/4">
+    <div class="w-full lg:w-4/5">
       <div class="lg:ml-6">
-      <!-- Title -->
-      <h1 class="py-2">{{ page.title }}</h1>
-          <div class="leading-loose lg:pr-10">
 
-        {{ content }}
+    <!-- Title -->
+    <div class="h1 py-2">{{ page.title }}</div>
 
-          </div>
+      {{ content }}
 
       <!-- More Portfolio Links -->
       <h2 class="mt-10">Portfolio</h2>
@@ -61,6 +62,10 @@
             </a>
           {% endfor %}
         </div>
+
+      </div>
+
+
 
       </div>
     </div>
