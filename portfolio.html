@@ -23,7 +23,7 @@ layout: default
         {% assign portcat = site.portfolio | where: "tags", "portfolio" | sample:3 %}
         {% for portfolio in portcat %}
             <a href="{{ portfolio.url }} ">
-              {% include part/img.html
+              {% include partial/img.html
                 path=portfolio.imghero
                 resize="smartcrop"
                 xl="w=200&h=200"
@@ -40,7 +40,7 @@ layout: default
 
     {% for portfolio in site.portfolio %}
         <a href="{{ portfolio.url }}">
-          {% include part/img.html
+          {% include partial/img.html
             path=portfolio.imghero
             resize="smartcrop"
             xl="w=230&h=230"

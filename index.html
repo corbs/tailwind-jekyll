@@ -9,11 +9,14 @@ layout: default
   <div class="container h-screen mx-auto px-4 flex items-center">
 
     <div class="w-full my-40 xl:w-1/4 xl:-mr-40 xl:ml-20 md:w-2/3 z-20">
-      <a class="h5 inline-block border-2 rounded px-4 py-2 hover:bg-black hover:text-primary" href="/discord">Covid-19 response <i class="fas fa-arrow-alt-right ml-4"></i></a>
+      <!-- Covid link -->
+      <a class="h5 inline-block border-2 border-black rounded-md px-4 py-2 hover:bg-black hover:text-primary" href="/discord">Covid-19 response <i class="fas fa-arrow-alt-right ml-4"></i></a>
+
+      <!-- Main Headline -->
       <h1 class="">Stand out from the crowd.</h1>
       <p class="">An <span class="font-bold">experienced graphic designer</span> will protect your brand and deliver the very best <span class="font-bold">persistent visuals</span> for your business, across <span class="font-bold">multiple platforms.</span></p>
       <div class="flex flex-wrap items-center">
-        {% include part/btn.html
+        {% include partial/btn.html
           url="assets/file/corbin_featherstone.pdf"
           text="portfolio"
           style="my-4"
@@ -23,7 +26,7 @@ layout: default
     </div>
 
     <div class="h-full hidden xl:block xl:w-3/4 w-full z-0 overflow-hidden">
-      {% include part/img.html
+      {% include partial/img.html
       path="bad_juju_web4.jpg"
       resize="fit"
       xl="w=1350"
@@ -40,7 +43,7 @@ layout: default
 </div>
 
 <div class="container mx-auto px-4 h-screen flex items-center">
-  {% include part/quote-lg.html
+  {% include partial/quote-lg.html
   quote="...the truth is, it's not the idea, it's never the idea, it's always what you do with it."
   attribute="Neil Gaiman"
   %}

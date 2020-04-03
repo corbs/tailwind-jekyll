@@ -10,14 +10,14 @@
 <!-- Compare Image -->
 {% if page.categories contains "compare" and page.before and page.after %}
 <div class="container mx-auto px-4 -mt-32">
-  {% include part/img-compare.html resize="fit" xl="w=1300" lg="w=1100" md="w=900" sm="w=800" alt="" class="" %}
+  {% include partial/img-compare.html resize="fit" xl="w=1300" lg="w=1100" md="w=900" sm="w=800" alt="" class="" %}
 </div>
 
 {% else %}
 
 <!-- Hero Image -->
 <div class="container mx-auto px-4 -mt-32">
-  {% include part/img.html path=page.imghero resize="smartcrop" xl="h=650&w=1300" lg="h=650&w=1100" md="h=1200&w=1100" sm="h=1600&w=800" alt=page.imgalt class="" %}
+  {% include partial/img.html path=page.imghero resize="smartcrop" xl="h=650&w=1300" lg="h=650&w=1100" md="h=1200&w=1100" sm="h=1600&w=800" alt=page.imgalt class="" %}
 </div>
 
 {% endif %}
@@ -58,7 +58,7 @@
           {% assign more = site.portfolio | sample:4 %}
           {% for portfolio in more %}
             <a href="{{ portfolio.url }}">
-              {% include part/img.html path=portfolio.imghero resize="smartcrop" xl="w=160&h=200" lg="w=160&h=200" md="w=160&h=200" sm="w=160&h=200" alt="" class="p-2 rounded bg-white mr-6 shadow-md" %}
+              {% include partial/img.html path=portfolio.imghero resize="smartcrop" xl="w=160&h=200" lg="w=160&h=200" md="w=160&h=200" sm="w=160&h=200" alt="" class="p-2 rounded bg-white mr-6 shadow-md" %}
             </a>
           {% endfor %}
         </div>
