@@ -16,6 +16,6 @@ exclude:
 url: https://corbin.nz
 
 collections:
-  portfolio:
+  work:
     output: true
     permalink: /:collection/:name
