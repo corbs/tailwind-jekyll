@@ -1,12 +1,12 @@
 ---
-layout: portfolio
+layout: work
 title: Old Man
-imghero: portfolio/oldman-final.jpg
+imghero: work/oldman-final.jpg
 imgalt: test3
 categories: compare
-before: portfolio/oldman-before.jpg
-after: portfolio/oldman-after.jpg
-tags: portfolio
+before: work/oldman-before.jpg
+after: work/oldman-after.jpg
+tags: work
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus imperdiet nulla malesuada pellentesque elit eget gravida. Nibh tortor id aliquet lectus. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Amet nulla facilisi morbi tempus iaculis urna id. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Tellus in hac habitasse platea. Penatibus et magnis dis parturient montes nascetur ridiculus. Pellentesque habitant morbi tristique senectus et netus et. Ut tortor pretium viverra suspendisse potenti. Vestibulum sed arcu non odio euismod lacinia at quis risus. Consequat id porta nibh venenatis cras sed. Id neque aliquam vestibulum morbi blandit cursus risus at ultrices.

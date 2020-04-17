@@ -8,23 +8,23 @@ layout: default
 
   <div class="container mx-auto px-4">
 
-    <span class="h1">Portfolio</span>
+    <span class="h1">Work</span>
 
     <ul>
-      {% assign rando = site.portfolio | sample:2 %}
-      {% for portfolio in rando %}
+      {% assign rando = site.work | sample:2 %}
+      {% for work in rando %}
         <li>
-          <a href="{{ portfolio.url }}">{{ portfolio.title }} </a>
+          <a href="{{ work.url }}">{{ work.title }} </a>
         </li>
       {% endfor %}
     </ul>
 
     <div class="flex flex-wrap">
-        {% assign portcat = site.portfolio | where: "tags", "portfolio" | sample:3 %}
-        {% for portfolio in portcat %}
-            <a href="{{ portfolio.url }} ">
+        {% assign portcat = site.work | where: "tags", "work" | sample:3 %}
+        {% for work in portcat %}
+            <a href="{{ work.url }} ">
               {% include partial/img.html
-                path=portfolio.imghero
+                path=work.imghero
                 resize="smartcrop"
                 xl="w=200&h=200"
                 lg="w=200&h=200"
@@ -38,10 +38,10 @@ layout: default
 
 <div class="flex flex-wrap">
 
-    {% for portfolio in site.portfolio %}
-        <a href="{{ portfolio.url }}">
+    {% for work in site.work %}
+        <a href="{{ work.url }}">
           {% include partial/img.html
-            path=portfolio.imghero
+            path=work.imghero
             resize="smartcrop"
             xl="w=230&h=230"
             lg="w=230&h=230"

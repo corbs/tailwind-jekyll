@@ -49,27 +49,27 @@ layout: default
 <div class="flex flex-wrap flex-row-reverse my-32 mx-4 md:mx-0 shadow-md md:shadow-none items-center bg-white">
 
   <div class="md:w-1/2">
-    {% include partial/img.html path="portfolio/oldman-after.jpg" resize="fit" xl="w=1300" lg="w=1300" md="w=1300" sm="w=1300" alt="" class="" %}
+    {% include partial/img.html path="work/oldman-after.jpg" resize="fit" xl="w=1300" lg="w=1300" md="w=1300" sm="w=1300" alt="" class="" %}
   </div>
 
   <div class="md:w-1/2">
     <div class="lg:w-1/2 mx-auto p-8">
     <h2 class="">Printed Magazine Spreads</h2><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     <a class="inline-block py-3" href="*">View All <i class="fas fa-arrow-right"></i></a>
-    <p>(image links to specific portfolio items)</p>
+    <p>(image links to specific work items)</p>
     </div>
   </div>
 
 </div>
 
-<!-- portfolio thumbnail list -->
+<!-- Work thumbnail list -->
 <div class="container mx-auto px-4 my-32">
 <div class="flex flex-wrap">
-    {% assign portcat = site.portfolio | where: "tags", "portfolio" | sample:6 %}
-    {% for portfolio in portcat %}
-        <a href="{{ portfolio.url }} ">
+    {% assign portcat = site.work | where: "tags", "work" | sample:6 %}
+    {% for work in portcat %}
+        <a href="{{ work.url }} ">
           {% include partial/img.html
-            path=portfolio.imghero
+            path=work.imghero
             resize="smartcrop"
             xl="w=390&h=390"
             lg="w=390&h=390"

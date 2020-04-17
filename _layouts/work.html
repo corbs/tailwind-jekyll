@@ -51,13 +51,13 @@
 
       {{ content }}
 
-      <!-- More Portfolio Links -->
-      <h2 class="mt-10">Portfolio</h2>
+      <!-- More Work Links -->
+      <h2 class="mt-10">Work</h2>
         <div class="flex flex-wrap mb-20">
-          {% assign more = site.portfolio | sample:4 %}
-          {% for portfolio in more %}
-            <a href="{{ portfolio.url }}">
-              {% include partial/img.html path=portfolio.imghero resize="smartcrop" xl="w=160&h=200" lg="w=160&h=200" md="w=160&h=200" sm="w=160&h=200" alt="" class="p-2 rounded bg-white mr-6 shadow-md" %}
+          {% assign more = site.work | sample:4 %}
+          {% for work in more %}
+            <a href="{{ work.url }}">
+              {% include partial/img.html path=work.imghero resize="smartcrop" xl="w=160&h=200" lg="w=160&h=200" md="w=160&h=200" sm="w=160&h=200" alt="" class="p-2 rounded bg-white mr-6 shadow-md" %}
             </a>
           {% endfor %}
         </div>
