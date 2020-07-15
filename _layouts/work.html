@@ -3,75 +3,65 @@
 
 {% include header.html %}
 
-<div class="w-full bg-primary pb-64">
+<div class="w-full page-hero -z-10">
   {% include menu.html%}
+  <!-- Title -->
+  <section class="container py-32">
+    <div class="lg:w-1/2">
+      <h5><a href="{{ base:url }}/work">Work <i class="fas fa-arrow-right"></i></a></h5>
+      <h1 class="mt-2 mb-6">{{ page.title }}</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </section>
 </div>
-
-<!-- Compare Image -->
-{% if page.categories contains "compare" and page.before and page.after %}
-<div class="container mx-auto px-4 -mt-32">
-  {% include partial/img-compare.html resize="fit" xl="w=1300" lg="w=1100" md="w=900" sm="w=800" alt="" class="" %}
-</div>
-
-{% else %}
-
-<!-- Hero Image -->
-<div class="container mx-auto px-4 -mt-32">
-  {% include partial/img.html path=page.imghero resize="smartcrop" xl="h=650&w=1300" lg="h=650&w=1100" md="h=1200&w=1100" sm="h=1600&w=800" alt=page.imgalt class="" %}
-</div>
-
-{% endif %}
 
 <!-- Main Content -->
-<div class="container mx-auto px-4 flex flex-wrap">
+<div class="container flex flex-wrap">
+  <!-- Body -->
+  <div class="w-full lg:w-3/4">
+    <div class="lg:mr-10">
+    <!-- Compare Image -->
+      {% if page.categories contains "compare" and page.before and page.after %}
+        <div class="-mt-20 mb-4">
+        {% include partial/img-compare.html resize="fit" xl="w=1300" lg="w=1100" md="w=900" sm="w=800" alt="" class="" %}
+        </div>
+      {% else %}
+        <!-- Hero Image -->
+        <div class="-mt-20 border border-white shadow-md mb-6">
+        {% include partial/img.html path=page.imghero resize="smartcrop" xl="h=650&w=1300" lg="h=650&w=1100" md="h=1200&w=1100" sm="h=1600&w=800" alt=page.imgalt class="" %}
+        </div>
+      {% endif %}
 
-<!-- Sidebar -->
-    <div class="w-full lg:w-1/5 mt-6">
-      <div class="bg-white p-8 shadow-md">
-      <p class="font-bold text-lg">Client</p>
-      <p class="text-sm">Lorem ipsum dolor sit amet,</p>
-      <p class="font-bold text-lg pt-2">Goal</p>
-      <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="font-bold text-lg pt-2">Solution</p>
-      <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <!-- tags -->
-      {% for tag in page.tags %}
-        <a href="{{ site.url }}/tag/{{ tag }}" class="my-1 inline-block text-xs text-grey rounded px-3 py-1 border border-grey-light bg-white shadow">{{ tag }}</a>
-      {% endfor %}
-
-      </div>
-    </div>
-
-<!-- Body -->
-    <div class="w-full lg:w-3/5 md:w-3/4">
-      <div class="lg:mx-10">
-
-    <!-- Title -->
-    <div class="h1 py-2">{{ page.title }}</div>
-
-      {{ content }}
+        {{ content }}
 
       <!-- More Work Links -->
-      <h2 class="mt-10">Work</h2>
-        <div class="flex flex-wrap mb-20">
-          {% assign more = site.work | sample:4 %}
-          {% for work in more %}
-            <a href="{{ work.url }}">
-              {% include partial/img.html path=work.imghero resize="smartcrop" xl="w=160&h=200" lg="w=160&h=200" md="w=160&h=200" sm="w=160&h=200" alt="" class="p-2 rounded bg-white mr-6 shadow-md" %}
-            </a>
-          {% endfor %}
-        </div>
-
+      <h2 class="mt-10">More Work</h2>
+      <div class="flex flex-wrap mb-20">
+        {% assign more = site.work | sample:4 %}
+        {% for work in more %}
+        <a href="{{ work.url }}">
+          {% include partial/img.html path=work.imghero resize="smartcrop" xl="w=160&h=200" lg="w=160&h=200" md="w=160&h=200" sm="w=160&h=200" alt="" class="border border-white hover:border-dark hover:shadow-lg mr-6 shadow-md" %}
+        </a>
+        {% endfor %}
       </div>
     </div>
-
-<!-- Sidebar Right -->
-    <div class="mt-6 w-full md:w-1/4 lg:w-1/5">
-      <div class="w-full p-6 border-dotted border-t-4 border-b-4">Lorem Ipsum doler est</div>
+  </div>
+  <!-- Sidebar -->
+  <div class="w-full lg:w-1/4 mt-6">
+    <div class="bg-white p-8 shadow-md sticky top-0">
+    <p class="font-bold text-lg">Client</p>
+    <p class="text-sm">Lorem ipsum dolor sit amet,</p>
+    <p class="font-bold text-lg pt-2">Goal</p>
+    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p class="font-bold text-lg pt-2">Solution</p>
+    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <!-- tags -->
+    {% for tag in page.tags %}
+      <a href="{{ site.url }}/tag/{{ tag }}" class="my-1 inline-block text-xs text-grey rounded px-3 py-1 border border-grey-light bg-white shadow">{{ tag }}</a>
+    {% endfor %}
     </div>
-
+  </div>
 </div> <!-- /Main Content -->
-
 </div> <!-- /content container -->
 
 {% include footer.html %}

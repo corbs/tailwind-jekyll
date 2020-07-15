@@ -13,8 +13,9 @@ exclude:
   - src
   - tailwind.config.js
   - netlify.toml
-  
+
 url: https://corbin.nz
+permalink: /:title
 
 collections:
   work:

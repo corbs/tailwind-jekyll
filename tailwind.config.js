@@ -25,6 +25,16 @@ module.exports = {
       wider: '.05em',
       widest: '.2em',
     },
+    container: {
+      center: true,
+      padding: '2rem',
+    },
+    extend: {
+      zIndex: {
+     '-10': '-10',
+     '-20': '-20',
+      },
+    },
   },
   variants: {},
   plugins: [],
