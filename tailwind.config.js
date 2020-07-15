@@ -1,4 +1,5 @@
 module.exports = {
+  purge: [`_site/**/*.html`],
   theme: {
     colors: {
       primary: '#FFCA2E',
@@ -26,5 +27,5 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: []
-}
+  plugins: [],
+};
