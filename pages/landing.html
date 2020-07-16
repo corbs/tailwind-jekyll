@@ -2,131 +2,89 @@
 layout: default
 permalink: /landing
 ---
+{% include menu.html%}
+<div class="bg-primary py-32">
+  <div class="container">
+    <h1 class="">Lorem Ipsum Doler Est</h1>
+    <p class="mt-4">
+      This is a simple example of a Landing Page you can build using Tailwind Starter Kit. It features multiple CSS components based on the Tailwindcss design system.
+    </p>
+  </div>
+</div>
 
-    <main>
-      <div
-        class="relative pt-16 pb-32 flex content-center items-center justify-center"
-        style="min-height: 75vh;">
-        <div
-          class="absolute top-0 w-full h-full bg-center bg-cover"
-          style='background-image: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80");'>
-          <span class="w-full h-full absolute opacity-75 bg-black"></span>
-        </div>
-        <div class="container relative">
-          <div class="items-center flex flex-wrap">
-            <div class="w-full lg:w-5/12 px-4 ml-auto mr-auto">
-              <div class="pr-12">
-                <h1 class="text-white font-semibold text-5xl">
-                  Your story starts with us.
-                </h1>
-                <p class="mt-4 text-lg text-white">
-                  This is a simple example of a Landing Page you can build using
-                  Tailwind Starter Kit. It features multiple CSS components
-                  based on the Tailwindcss design system.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-{% include divider-diagonal.html
-  colour="primary"
-%}
+<section class="relative pb-20 bg-light">
+  {% include divider-diagonal.html
+  colour="light"
+  %}
+  <div class="container">
+    <div class="flex flex-wrap justify-between">
+      <div class="w-full lg:w-n1/3 lg:-mt-20 mt-6 bg-white pt-10 pb-6 px-12 shadow-lg text-center z-50">
+        {% include partial/icon-box.html
+          icon="award"
+        %}
+        <h5>Awarded Agency</h5>
+        <p class="mt-2 mb-4 text-gray-600">
+          Divide details about your product or agency work into parts.
+          A paragraph describing a feature will be enough.
+        </p>
       </div>
-      <section class="pb-20 bg-primary -mt-24">
-        <div class="container">
-          <div class="flex flex-wrap">
-            <div class="w-full md:w-4/12 px-4 text-center">
-              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg">
-                <div class="px-4 py-5 flex-auto">
-                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 rounded-md bg-darker">
-                    <i class="fas fa-award"></i>
-                  </div>
-                  <h6 class="text-xl font-semibold">Awarded Agency</h6>
-                  <p class="mt-2 mb-4 text-gray-600">
-                    Divide details about your product or agency work into parts.
-                    A paragraph describing a feature will be enough.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="w-full md:w-4/12 px-4 text-center">
-              <div
-                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg">
-                <div class="px-4 py-5 flex-auto">
-                  <div
-                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 rounded-md bg-darker">
-                    <i class="fas fa-retweet"></i>
-                  </div>
-                  <h6 class="text-xl font-semibold">Free Revisions</h6>
-                  <p class="mt-2 mb-4 text-gray-600">
-                    Keep you user engaged by providing meaningful information.
-                    Remember that by this time, the user is curious.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="w-full md:w-4/12 px-4 text-center">
-              <div
-                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg"
-              >
-                <div class="px-4 py-5 flex-auto">
-                  <div
-                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 rounded-md bg-darker"
-                  >
-                    <i class="fas fa-fingerprint"></i>
-                  </div>
-                  <h6 class="text-xl font-semibold">Verified Company</h6>
-                  <p class="mt-2 mb-4 text-gray-600">
-                    Write a few lines about each one. A paragraph describing a
-                    feature will be enough. Keep you user engaged!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-wrap items-center mt-32">
-            <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
-              <div
-                class="p-3 text-center inline-flex text-2xl items-center justify-center w-16 h-16 mb-6 shadow-md rounded-md text-white bg-darker"
-              >
-                <i class="fas fa-user-friends"></i>
-              </div>
-              <h3 class="text-3xl mb-2 font-semibold leading-normal">
-                Working with us is a pleasure
-              </h3>
-              <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-black">
-                Don't let your uses guess by attaching tooltips and popoves to
-                any element. Just make sure you enable them first via
-                JavaScript.
-              </p>
-              <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-black">
-                The kit comes with three pre-built pages to help you get started
-                faster. You can change the text and images and you're good to
-                go. Just make sure you enable them first via JavaScript.
-              </p>
-            </div>
-            <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
-              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg">
-                <img
-                  alt="..."
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
-                  class="w-full align-middle rounded-t-lg"
-                />
-                <blockquote class="relative p-8 mb-4">
-                  <h4 class="text-xl font-bold">
-                    Top Notch Services
-                  </h4>
-                  <p class="text-md font-light mt-2">
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens.
-                  </p>
-                </blockquote>
-              </div>
-            </div>
-          </div>
+      <div class="w-full lg:w-n1/3 lg:-mt-20 mt-6 bg-white pt-10 pb-6 px-12 shadow-lg text-center z-50">
+        {% include partial/icon-box.html
+          icon="retweet"
+        %}
+        <h5>Free Revisions</h5>
+        <p class="mt-2 mb-4 text-gray-600">
+          Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious.
+        </p>
+      </div>
+      <div class="w-full lg:w-n1/3 lg:-mt-20 mt-6 bg-white pt-10 pb-6 px-12 shadow-lg text-center z-50">
+        {% include partial/icon-box.html
+          icon="fingerprint"
+        %}
+        <h5>Verified Company</h5>
+        <p class="mt-2 mb-4 text-gray-600">
+          Write a few lines about each one. A paragraph describing a feature will be enough. Keep you user engaged!
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center mt-32">
+      <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
+        <div class="p-3 text-center inline-flex text-2xl items-center justify-center w-16 h-16 mb-6 shadow-md rounded-md text-white bg-darker" >
+          <i class="fas fa-user-friends"></i>
         </div>
-      </section>
+        <h3 class="text-3xl mb-2 font-semibold leading-normal">
+          Working with us is a pleasure
+        </h3>
+        <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-black">
+          Don't let your uses guess by attaching tooltips and popoves to any element. Just make sure you enable them first via JavaScript.
+        </p>
+        <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-black">
+          The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go. Just make sure you enable them first via JavaScript.
+        </p>
+      </div>
+      <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
+        <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg">
+          <img
+            alt="..."
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
+            class="w-full align-middle rounded-t-lg"
+          />
+          <blockquote class="relative p-8 mb-4">
+            <h4 class="text-xl font-bold">
+              Top Notch Services
+            </h4>
+            <p class="text-md font-light mt-2">
+              The Arctic Ocean freezes every winter and much of the
+              sea-ice then thaws every summer, and that process will
+              continue whatever happens.
+            </p>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       <section class="relative py-20 bg-lightest">
 {% include divider-diagonal.html
   colour="lightest"

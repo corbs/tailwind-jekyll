@@ -2,11 +2,11 @@
 ---
 
 {% include header.html %}
+{% include menu.html%}
 
-<div class="w-full page-hero -z-10">
-  {% include menu.html%}
+<div class="w-full bg-primary -z-20">
   <!-- Title -->
-  <section class="container py-32">
+  <section class="container py-32 z-20">
     <div class="lg:w-1/2">
       <h5><a href="/work">Work <i class="fas fa-arrow-right"></i></a></h5>
       <h1 class="mt-2 mb-6">{{ page.title }}</h1>
@@ -16,7 +16,7 @@
 </div>
 
 <!-- Main Content -->
-<div class="container flex flex-wrap">
+<div class="container flex flex-wrap z-30">
   <!-- Body -->
   <div class="w-full lg:w-3/4">
     <div class="lg:mr-10">
@@ -27,7 +27,7 @@
         </div>
       {% else %}
         <!-- Hero Image -->
-        <div class="-mt-20 border border-white shadow-md mb-6">
+        <div class="-mt-20 border border-white shadow-md bg-lighter mb-6">
         {% include partial/img.html path=page.imghero resize="smartcrop" xl="h=650&w=1300" lg="h=650&w=1100" md="h=1200&w=1100" sm="h=1600&w=800" alt=page.imgalt class="" %}
         </div>
       {% endif %}

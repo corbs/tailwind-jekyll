@@ -4,21 +4,14 @@ permalink: /contact
 ---
 
 <div class="h-screen w-full relative bg-primary">
-
-    {% include menu.html %}
-
-  <div class="container h-screen flex items-center">
-
-  <div style="">
-
-  <h2 class="mb-5">I'm unavailable for work as I'm part of the exceptional <a href="https://agworld.com" class="border-b-4">Agworld</a> team.</h2>
-
-<!-- Contact Form -->
-    <form class="w-full" name="contact" netlify action="/success">
-
+  {% include menu.html %}
+  <div class="container h-screen flex justify-center items-center">
+    <div class="w-full lg:w-2/3">
+      <h2 class="mb-5">I'm unavailable for work as I'm part of the exceptional <a href="https://agworld.com" class="border-b-4">Agworld</a> team.</h2>
+      <!-- Contact Form -->
+      <form class="w-full" name="contact" netlify action="/success">
       <!-- Hidden fields -->
       <input type=hidden name="retURL" value="https://corbin.nz/success">
-
       <!-- Visible fields -->
       <div class="flex flex-wrap -mx-3">
         <div class="w-full md:w-1/2 px-3 mb-0">
@@ -36,13 +29,8 @@ permalink: /contact
           <input class="appearance-none block w-full border py-3 px-4 leading-tight focus:outline-none text-black border-black rounded focus:bg-white focus:border-black" id="body" maxlength="360" name="body" size="20" type="text" placeholder=""/>
         </div>
       </div>
-
-      <button class="mt-6 inline-block bg-black rounded px-8 py-4 text-xs h5 text-primary" type="submit" name="submit">Submit</button>
-
-    </form>
-
+        <button class="mt-6 inline-block bg-black rounded px-8 py-4 text-xs h5 text-primary" type="submit" name="submit">Submit</button>
+      </form>
+    </div>
   </div>
-
-</div>
-
 </div>

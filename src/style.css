@@ -12,68 +12,74 @@ body {
 
 p a {
   @apply font-bold;
-}
+  }
+
 p a:hover {text-decoration: underline;}
 
 h1, .h1 {
   @apply text-6xl leading-none font-bold mb-4 mt-6 inline-block;
-}
+  }
 
 h2, .h2 {
   @apply text-4xl leading-tight font-bold mb-3 mt-5 inline-block;
-}
+  }
 
 h5, .h5 {
   font-family: 'Montserrat', sans-serif;
   @apply text-xs tracking-widest uppercase;
-}
+  }
 
 .menu a {
   @apply text-black py-2 mx-4 text-sm tracking-wider uppercase ;
-}
+  }
 
 .menu a:hover {
   @apply border-black border-b-4 ;
-}
+  }
 
 .menu li.active a {
   @apply border-black border-b-4;
-}
+  }
 
 /* https://elfsight.com/social-media-share-buttons/examples/ */
 .page-hero {
-    background-image: linear-gradient(225deg, #ffc63f 0%, #fd3358 49%, #bc35d8 100%);
-    color: #fff;
-    position: relative;
-    overflow: hidden;
+  background-image: linear-gradient(225deg, #bc35d8 0%, #fd3358 49%, #FFCA2E 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  @apply -z-20
   }
-.page-hero:before {
-    width: 1538px;
-    height: 1538px;
-    background-image: radial-gradient(circle 935px at 73.95% 7.83%, #ffff4f 0%, rgba(254,255,39,0) 100%);
-    top: -4px;
-}
-.page-hero:after {
-    width: 942px;
-    height: 942px;
-    background-image: radial-gradient(circle 548px at 89.05% 41.15%, #ffff4f 0%, rgba(254,255,39,0) 100%);
-    top: calc(100% - 94px);
-}
-.page-hero:before, .page-hero:after {
-    content: '';
-    opacity: 0.2;
-    position: absolute;
-    border-radius: 50%;
-    transform: translateX(-50%);
-    left: 50%;
-}
 
+.page-hero:before {
+  width: 1538px;
+  height: 1538px;
+  background-image: radial-gradient(circle 935px at 73.95% 7.83%, #ffff4f 0%, rgba(254,255,39,0) 100%);
+  top: -4px;
+  }
+
+.page-hero:after {
+  width: 942px;
+  height: 942px;
+  background-image: radial-gradient(circle 548px at 89.05% 41.15%, #ffff4f 0%, rgba(254,255,39,0) 100%);
+  top: calc(100% - 394px);
+  }
+
+.page-hero:before, .page-hero:after {
+  content: '';
+  opacity: 0.2;
+  position: absolute;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  left: 50%;
+  @apply -z-20
+  }
 
 /* Modal styles https://www.tailwindtoolbox.com/components/modal */
 .modal {
   transition: opacity 0.25s ease;
-}
+  }
+
 body.modal-active {
   overflow-x: hidden;
   overflow-y: visible !important;
-}
+  }
