@@ -1,6 +1,5 @@
 title: Corbin Featherstone | Graphic Design & Brand Development
 description: Senior Graphic Designer working in digital and print.
-
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -13,10 +12,8 @@ exclude:
   - src
   - tailwind.config.js
   - netlify.toml
-
 url: https://corbin.nz
 permalink: /:title
-
 collections:
   work:
     output: true
