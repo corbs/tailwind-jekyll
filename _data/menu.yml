@@ -1,5 +1,7 @@
 list:
-  - title: contact
-    url: contact
+  - title: about
+    url: about
   - title: work
     url: work
+  - title: contact
+    url: contact

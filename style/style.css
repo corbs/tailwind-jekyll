@@ -85,24 +85,19 @@ body.modal-active {
   }
 
 
-
-  /* Button testing: https://jsfiddle.net/qm1pqunz/53/ */
-
-  .hamburger {
-    transition: all 0.3s ease-out;
+/* Responsive Hamburder menu   https://jsfiddle.net/qm1pqunz/53/ */
+.hamburger {
+  transition: all 0.3s ease-out;
   }
-  
-  .overlay {
-    @apply fixed top-0 bottom-0 left-0 right-0 bg-primary;
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
+.overlay {
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
   }
-  .overlay:target {
-    visibility: visible;
-    opacity: 1;
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
   }
-
-  .popup .close {
-    transition: all 200ms;
+.popup .close {
+  transition: all 200ms;
   }
