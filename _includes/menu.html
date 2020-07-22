@@ -2,17 +2,32 @@
 <!-- Top-menu -->
 <nav id="navbar" class="fixed top-0 px-4 z-40 w-full">
   <div class="flex items-center justify-between ">
-    <!-- Logos -->
-    <a class="inline-block ml-4 px-5 pt-12 pb-5 bg-black" href="/">
+    <!-- Logo -->
+    <a class="cursor-pointer inline-block ml-4 px-5 pt-12 pb-5 bg-black" href="/">
       <img class="" style="width:36px;" src="/assets/alignleft_logo.svg" alt="Align Left, graphic design logo" aria-label="Align Left, graphic design logo.">
     </a>
-    <!-- Main Menu -->
-    <div class="">
-      <ul class="flex menu">
-      {% for item in site.data.menu_non.list %}
-        <li class="h5 {% if item.url == page.url %}active{% endif %}"><a href="{{ item.url }}">{{ item.title }}</a></li>
-      {% endfor %}
-      </ul>
+    <!-- Hamburger Menu -->
+    <div>
+      <div class="box">
+        <a class="p-5 cursor-pointer hamburger text-4xl" href="#menu"><i class="fas fa-bars fa-fw"></i></a>
+      </div>
+      <!-- Overlay -->
+      <div id="menu" class="overlay z-50 px-4">
+        <div class="flex items-center justify-between">
+          <!-- Overlay Logo -->
+          <a class="cursor-pointer inline-block ml-4 px-5 pt-12 pb-5 bg-black" href="/">
+          <img class="" style="width:36px;" src="/assets/alignleft_logo.svg" alt="Align Left, graphic design logo" aria-label="Align Left, graphic design logo.">
+          </a>
+          <!-- Close menu icon -->
+          <a class="close p-5 cursor-pointer text-4xl" href="#"><i class="fas fa-times fa-fw" data-fa-transform="grow-2"></i></a>
+        </div>
+        <!-- Menu items -->
+        <div class="items-center pt-20">
+          {% for item in site.data.menu.list %}
+            <h1 class="w-full text-center hover:underline"><a href="{{ item.url }}">{{ item.title }}</a></h1>
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
 </nav>
