@@ -1,3 +1,27 @@
-<div class="{{ include.style }} relative w-full h-0" style="padding-bottom: 56.25%;">
-  <iframe class="w-full h-full absolute p-t p-l" src="https://www.youtube.com/embed/{{ include.id }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div  
+  class="{{ include.class }} relative w-full h-0" 
+  style="padding-bottom: 56.25%;"
+>
+
+<iframe
+  class="w-full h-full absolute top-0 left-0 cursor-pointer"
+  src="https://www.youtube.com/embed/{{ include.id }}"
+  srcdoc="
+  <style>
+    *{padding:0;margin:0;overflow:hidden}
+    html,body{height:100%}
+    img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
+    span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
+  </style>
+  <a href=https://www.youtube.com/embed/{{ include.id }}?autoplay=1>
+    <img src=https://img.youtube.com/vi/{{ include.id }}/hqdefault.jpg alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'>
+    <span>▶</span>
+  </a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="The Dark Knight Rises: What Went Wrong? – Wisecrack Edition"
+  loading="lazy"
+></iframe>
+
 </div>
