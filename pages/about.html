@@ -9,7 +9,7 @@ permalink: /about
     <div class="w-full my-40 xl:w-1/4 xl:-mr-40 xl:ml-20 md:w-2/3 z-20">
       <!-- Main Headline -->
       <h1 class="text-6xl">Hello.</h1>
-      <p class="">My name is <span class="font-bold">Corbin Featherstone</span>, I'm a multi-disciplinary <span class="font-bold">Senior Graphic Designer</span> with over a decade of rugged <span class="font-bold">industry experience</span>.</p>
+      <p class="">My name is <span class="font-bold">Corbin Featherstone</span>, I'm a multi-disciplinary <span class="font-bold">Senior Graphic Designer</span> with over a decade of industry experience communicating visually.</span>.</p>
       <div class="flex flex-wrap items-center">
         {% include partial/btn.html
           url="contact"
@@ -45,18 +45,18 @@ permalink: /about
 
 <!-- Work thumbnail list -->
 <div class="container my-32">
-  <div class="flex flex-wrap">
-    {% assign portcat = site.work | where: "tags", "work" | sample:6 %}
+  <div class="flex flex-wrap justify-between -mx-4">
+    {% assign portcat = site.work | where: "tags", "work" | sample:5 %}
     {% for work in portcat %}
       <a href="{{ work.url }} ">
         {% include partial/img.html
           path=work.imghero
           resize="smartcrop"
-          xl="w=220&h=220"
-          lg="w=220&h=220"
-          md="w=220&h=220"
-          sm="w=220&h=220"
-          class="m-2 border border-white shadow-lg"
+          xl="h=220&w=220"
+          lg="h=220&w=220"
+          md="h=220&w=220"
+          sm="h=220&w=220"
+          class="m-4 border border-white shadow-lg flex-1"
         %}
       </a>
     {% endfor %}
@@ -134,7 +134,7 @@ permalink: /about
 <div class="container my-32">
   <div class="">
     {% for post in site.posts %}
-      <div class="border-t-2 flex flex justify-between items-center">
+      <div class="border-t-2 flex justify-between items-center">
       <h2><a class="ml-3" href="{{ post.url }}">{{ post.title }}</a></h2><i class="mr-3 fas fa-arrow-alt-circle-right"></i>
       </div>
     {% endfor %}
