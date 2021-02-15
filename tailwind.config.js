@@ -12,11 +12,6 @@ module.exports = {
       lightest: '#F5F5F5',
       white: '#FFF',
     },
-    screens: {
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px',
-    },
     letterSpacing: {
       tighter: '-.05em',
       tight: '-.025em',
