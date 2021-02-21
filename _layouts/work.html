@@ -4,25 +4,41 @@
 {% include header.html %}
 {% include menu.html%}
 
-<div class="w-full bg-primary -z-20">
-  <!-- Title -->
-  <div class="container py-32 z-20">
-    <div class="lg:w-1/2">
-      <h5><a href="/work">Work <i class="fas fa-arrow-right"></i></a></h5>
-      <h1 class="mt-2 mb-6">{{ page.title }}</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<div class="w-full -z-20 pt-32">
+  <!-- Work information -->
+  <div class="container xl:py-20 lg:py-10 py-5 z-20 flex flex-wrap justify-between items-center">
+  
+  <!-- Breadcrumbs, tags and blurb-->
+    <div class="w-full lg:w-1/2">
+        <!-- tags -->
+        <ul class="-ml-3 breadcrumbs flex flex-wrap">
+        {% for tag in page.tags %}
+          <li><a href="{{ site.url }}/tag/{{ tag }}" class="my-1 text-mid text-sm px-3 py-1 hover:underline">{{ tag }}</a></li>
+        {% endfor %}
+        </ul>
+      <h1 class="my-2">{{ page.title }}</h1>
+      <h5 class="my-2"><i class="far fa-clock"></i> 6hr</h5>
+      
+    </div>
+
+    <!-- Details -->
+    <div class="w-full lg:w-1/2">    
+      <div class="lg:border-l lg:pl-20 py-8">
+        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
     </div>
   </div>
+
 </div>
 
 <!-- Main Content -->
 <div class="container flex flex-wrap z-30">
   <!-- Body -->
-  <div class="w-full lg:w-3/4">
-    <div class="lg:mr-10">
+  <div class="w-full">
+    <div class="">
     <!-- Compare Image -->
       {% if page.categories contains "compare" and page.before and page.after %}
-        <div class="-mt-20 mb-4">
+        <div class="mb-4">
         {% include partial/img-compare.html resize="fit" xl="w=1300" lg="w=1100" md="w=900" sm="w=800" alt="" class="" %}
         </div>
       {% else %}
@@ -46,21 +62,7 @@
       </div>
     </div>
   </div>
-  <!-- Sidebar -->
-  <div class="w-full lg:w-1/4 mt-6">
-    <div class="bg-white p-8 shadow-md sticky top-0">
-    <p class="font-bold text-lg">Client</p>
-    <p class="text-sm">Lorem ipsum dolor sit amet,</p>
-    <p class="font-bold text-lg pt-2">Goal</p>
-    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <p class="font-bold text-lg pt-2">Solution</p>
-    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <!-- tags -->
-    {% for tag in page.tags %}
-      <a href="{{ site.url }}/tag/{{ tag }}" class="my-1 inline-block text-xs text-grey rounded px-3 py-1 border border-grey-light bg-white shadow">{{ tag }}</a>
-    {% endfor %}
-    </div>
-  </div>
+
 </div> <!-- /Main Content -->
 </div> <!-- /content container -->
 
