@@ -10,7 +10,7 @@ html {
 
 body {
   font-family: 'Roboto Slab', serif;
-  @apply text-darker leading-relaxed;
+  @apply text-black leading-relaxed;
 }
 
 p a {
@@ -33,11 +33,11 @@ h5, .h5 {
   }
 
 .menu a {
-  @apply text-darker py-2 mx-4 text-sm tracking-wider uppercase ;
+  @apply text-black py-2 mx-4 text-sm tracking-wider uppercase ;
   }
 
 .menu a:hover {
-  @apply border-darker border-b-4 ;
+  @apply border-black border-b-4 ;
   }
 
 .breadcrumbs li::after {
