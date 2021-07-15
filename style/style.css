@@ -48,6 +48,15 @@ h5, .h5 {
   content: none;
 }
 
+/* Homepage hero image */
+.hero {
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  left: 50%;
+  top: 51%;
+}
 
 /* Responsive Hamburder menu   https://jsfiddle.net/qm1pqunz/53/ */
 .hamburger {
