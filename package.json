@@ -40,7 +40,7 @@
     "access": "public"
   },
   "dependencies": {
-    "alpinejs": "^2.5.0",
+    "alpinejs": "^3.4.0",
     "ruby": "^0.6.1"
   }
 }
