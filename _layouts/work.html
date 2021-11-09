@@ -37,16 +37,12 @@
   <div class="w-full">
     <div class="">
     <!-- Compare Image -->
-      {% if page.categories contains "compare" and page.before and page.after %}
-        <div class="mb-4">
-        {% include partial/img-compare.html resize="fit" xl="w=1300" lg="w=1100" md="w=900" sm="w=800" alt="" class="" %}
-        </div>
-      {% else %}
+
         <!-- Hero Image -->
         <div class="-mt-20 border border-white shadow-md bg-lighter mb-6">
         {% include partial/img.html path=page.imghero resize="smartcrop" xl="h=650&w=1300" lg="h=650&w=1100" md="h=1200&w=1100" sm="h=1600&w=800" alt=page.imgalt class="" %}
         </div>
-      {% endif %}
+
 
         {{ content }}
 

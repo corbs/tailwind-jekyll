@@ -1,20 +1,9 @@
 
 <div class="bg-black">
-  <div class="container text-right py-3">
-    <span class="text-white text-xs">&copy; Corbin Featherstone {{ 'now' | date: "%Y" }}</span>
+  <div class="container text-right py-3 text-white">
+    <span class=" text-xs">&copy; Corbin Featherstone {{ 'now' | date: "%Y" }}</span>
   </div>
 </div>
-
-<!-- Compare Images JS: sylvaincombes/jquery-images-compare -->
-{% if page.categories contains "compare" %}
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery.images-compare.min.js"></script>
-
-<!-- Activate Compare Images script -->
-<script type="text/javascript"> $('#myImageCompare').imagesCompare(); </script>
-
-{% endif %}
 
 </body>
 
