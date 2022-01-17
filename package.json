@@ -38,7 +38,7 @@
     "access": "public"
   },
   "dependencies": {
-    "alpinejs": "^2.5.0",
+    "alpinejs": "^3.8.1",
     "netlify-cli": "^6.14.18",
     "ruby": "^0.6.1"
   }
