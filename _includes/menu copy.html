@@ -6,41 +6,6 @@
           <img class="w-6 md:w-9" src="/assets/alignleft_logo.svg" alt="Align Left, graphic design logo" aria-label="Align Left, graphic design logo.">
         </a>
     
-        <nav 
-        class="p-5 bg-white"
-        x-data="{ open: false }"
-        x-bind:class="! open ? 'bg-slate-500' : 'bg-red-500'"
-        >
-          <button 
-          @click="open = !open"
-          x-bind:class="! open ? 'bg-slate-500' : 'bg-red-500'"
-          >
-          <i x-show="!open">Open</i>
-          <i x-show="open">Close</i>
-         </button>
-        
-          <span 
-          x-show="open"
-          class="block">
-            <ul
-            class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center"
-          >
-          {% for item in site.data.menu.list %}
-          <li>
-          <a 
-          class="p-6" 
-          href="{{ item.url }}"
-          @click="isNavOpen = false"
-          >
-          {{ item.title }}
-          </a>
-        </li>
-        {% endfor %}
-          </ul>
-          </span>
-
-        </nav>
-
         <nav
         class="bg-indigo-900 flex items-center justify-between flex-wrap p-6"
         x-data="{ isNavOpen: false }"
