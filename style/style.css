@@ -32,6 +32,11 @@ h5, .h5 {
   @apply text-xs tracking-widest uppercase font-medium;
   }
 
+h6, .h6 {
+  font-family: 'Montserrat', sans-serif;
+  @apply text-sm font-semibold;
+  }
+
 .menu a {
   @apply text-black py-2 mx-4 text-sm tracking-wider uppercase ;
   }
@@ -58,19 +63,3 @@ h5, .h5 {
   top: 51%;
 }
 
-/* Responsive Hamburder menu   https://jsfiddle.net/qm1pqunz/53/ */
-.hamburger {
-  transition: all 0.3s ease-out;
-  }
-.overlay {
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-  }
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-  }
-.popup .close {
-  transition: all 200ms;
-  }

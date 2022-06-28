@@ -1,33 +1,69 @@
 
-<!-- Top-menu -->
-<nav id="navbar" class="fixed top-0 px-4 z-40 w-full">
-  <div class="flex items-center justify-between ">
-    <!-- Logo -->
-    <a class="cursor-pointer inline-block lg:ml-4 px-4 lg:px-5 pt-8 md:pt-10 lg:pt-12 pb-4 lg:pb-5 bg-black" href="/">
-      <img class="w-6 md:w-9" src="/assets/alignleft_logo.svg" alt="Align Left, graphic design logo" aria-label="Align Left, graphic design logo.">
-    </a>
-    <!-- Hamburger Menu -->
-    <div>
-      <div class="box">
-        <a class="p-2 lg:p-5 cursor-pointer hamburger text-2xl md:text-3xl lg:text-4xl" href="#menu"><i class="fas fa-bars fa-fw"></i></a>
-      </div>
-      <!-- Overlay -->
-      <div id="menu" class="overlay z-50 px-4 fixed top-0 bottom-0 left-0 right-0 bg-primary" >
-        <div class="flex items-center justify-between">
-          <!-- Overlay Logo -->
-          <a class="cursor-pointer inline-block lg:ml-4 px-4 lg:px-5 pt-8 md:pt-10 lg:pt-12 pb-4 lg:pb-5 bg-black" href="/">
-            <img class="w-6 md:w-9" src="/assets/alignleft_logo.svg" alt="Align Left, graphic design logo" aria-label="Align Left, graphic design logo.">
-          </a>
-          <!-- Close menu icon -->
-          <a class="close p-2 lg:p-5 cursor-pointer text-2xl md:text-3xl lg:text-4xl" href="#"><i class="fas fa-times fa-fw" data-fa-transform="grow-2"></i></a>
-        </div>
-        <!-- Menu items -->
-        <div class="items-center pt-20">
+  <header class="bg-rose-300 flex justify-between items-center"
+  x-data="{ isNavOpen: false }"
+  @keydown.escape="isNavOpen = false"
+  :class="{ 'shadow-lg bg-indigo-900' : isNavOpen , '' : !isNavOpen}"
+  >
+    
+        <!-- Logo -->
+        <a class="cursor-pointer block lg:ml-12 ml-5 px-4 lg:px-5 pt-8 md:pt-10 lg:pt-12 pb-4 lg:pb-5 bg-black" href="/">
+          <img class="w-6 md:w-9" src="/assets/alignleft_logo.svg" alt="Align Left, graphic design logo" aria-label="Align Left, graphic design logo.">
+        </a>
+    
+        <nav
+        class="flex items-center justify-between flex-wrap p-6 w-full z-10"
+      >
+  
+        <!--Toggle button (hidden on large screens)-->
+        <button
+          @click="isNavOpen = !isNavOpen"
+          type="button"
+          class="block lg:hidden px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white"
+          :class="{ 'transition transform-180': isNavOpen }"
+        >
+          <svg
+            class="h-6 w-6 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              x-show="isNavOpen"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+            />
+            <path
+              x-show="!isNavOpen"
+              fill-rule="evenodd"
+              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+            />
+          </svg>
+        </button>
+  
+        <!--Menu           x-show.transition="true"  -->
+        <div
+          class="w-full flex-grow lg:flex lg:items-center lg:w-auto"
+          :class="{ 'block': isNavOpen, 'hidden': !isNavOpen }"
+          @click.away="isNavOpen = false"
+        >
+          <ul
+            class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center"
+          >
           {% for item in site.data.menu.list %}
-            <h1 class="w-full text-center hover:underline"><a href="{{ item.url }}">{{ item.title }}</a></h1>
-          {% endfor %}
+          <li>
+          <a 
+          class="p-6" 
+          href="{{ item.url }}"
+          @click="isNavOpen = false"
+          >
+          {{ item.title }}
+          </a>
+        </li>
+        {% endfor %}
+          </ul>
         </div>
-      </div>
-    </div>
-  </div>
-</nav>
+      </nav>
+</header>
+
+
+

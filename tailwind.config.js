@@ -1,17 +1,6 @@
 module.exports = {
   purge: [`_site/**/*.html`],
   theme: {
-    colors: {
-      primary: '#FFCA2E',
-      black: '#1E1C1A',
-      darker: '#2A2A2A',
-      dark: '#363636',
-      mid: '#595959',
-      light: '#D3D3D3',
-      lighter: '#E3E3E3',
-      lightest: '#F5F5F5',
-      white: '#FFF',
-    },
     letterSpacing: {
       tighter: '-.05em',
       tight: '-.025em',
@@ -25,6 +14,9 @@ module.exports = {
       padding: '1rem',
     },
     extend: {
+      colors: {
+        primary: '#FFCA2E',
+      },
       zIndex: {
      '-10': '-10',
      '-20': '-20',
