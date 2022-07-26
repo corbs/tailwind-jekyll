@@ -37,12 +37,8 @@ h6, .h6 {
   @apply text-sm font-semibold;
   }
 
-.menu a {
-  @apply text-black py-2 mx-2 tracking-wider font-medium ;
-  }
-
 .menu a:hover {
-  @apply border-black border-b-4 ;
+  @apply border-black  ;
   }
 
 .breadcrumbs li::after {
@@ -53,4 +49,11 @@ h6, .h6 {
   content: none;
 }
 
-
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}

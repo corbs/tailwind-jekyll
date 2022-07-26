@@ -3,7 +3,12 @@
     
         <!-- Logo -->
         <a class="cursor-pointer block lg:ml-12 ml-5 px-4 lg:px-5 pt-8 md:pt-10 lg:pt-12 pb-4 lg:pb-5 bg-black" href="/">
-          <img class="w-6 md:w-9" src="/assets/alignleft_logo.svg" alt="Align Left, graphic design logo" aria-label="Align Left, graphic design logo.">
+          <img
+          class="w-6 md:w-9"
+          src="/assets/alignleft_logo.svg"
+          alt="Align Left, graphic design logo"
+          aria-label="Align Left, graphic design logo."
+          >
         </a>
 
         <!-- Navigation -->
@@ -16,6 +21,8 @@
         <button
           x-on:click="isNavOpen = !isNavOpen"
           type="button"
+          label="Navigation menu popup button"
+          name="Navigation menu popup button"
           class="flex md:hidden p-2 focus:outline-none"
         >
           <svg
@@ -37,16 +44,17 @@
           </svg>
         </button>
   
-        <!-- Menu x-show.transition="true"  -->
+        <!-- Menu  -->
         <div
           class="md:flex"
           x-bind:class="!isNavOpen ? 'hidden' : 'absolute right-0 top-0 left-0 shadow-xl bg-primary mt-20 py-12'"
         >
           <ul
-            class="md:flex"
+          class="md:flex"
           >
           {% for item in site.data.menu.list %}
-          <li class="m-4"
+          <li
+          class="m-4"
           x-bind:class="!isNavOpen ? '' : 'text-3xl text-center py-3 font-bold'"
           >
           <a 
@@ -56,8 +64,8 @@
           >
           {{ item.title }}
           </a>
-        </li>
-        {% endfor %}
+          </li>
+          {% endfor %}
           </ul>
         </div>
       </nav>
