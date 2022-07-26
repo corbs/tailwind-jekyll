@@ -1,58 +1,22 @@
 
-  <header class="bg-rose-300 flex justify-between items-center">
+  <header class="z-40 flex justify-between items-center bg-primary">
     
         <!-- Logo -->
         <a class="cursor-pointer block lg:ml-12 ml-5 px-4 lg:px-5 pt-8 md:pt-10 lg:pt-12 pb-4 lg:pb-5 bg-black" href="/">
           <img class="w-6 md:w-9" src="/assets/alignleft_logo.svg" alt="Align Left, graphic design logo" aria-label="Align Left, graphic design logo.">
         </a>
-    
-        <nav 
-        class="p-5 bg-white"
-        x-data="{ open: false }"
-        x-bind:class="! open ? 'bg-slate-500' : 'bg-red-500'"
-        >
-          <button 
-          @click="open = !open"
-          x-bind:class="! open ? 'bg-slate-500' : 'bg-red-500'"
-          >
-          <i x-show="!open">Open</i>
-          <i x-show="open">Close</i>
-         </button>
-        
-          <span 
-          x-show="open"
-          class="block">
-            <ul
-            class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center"
-          >
-          {% for item in site.data.menu.list %}
-          <li>
-          <a 
-          class="p-6" 
-          href="{{ item.url }}"
-          @click="isNavOpen = false"
-          >
-          {{ item.title }}
-          </a>
-        </li>
-        {% endfor %}
-          </ul>
-          </span>
 
-        </nav>
-
+        <!-- Navigation -->
         <nav
-        class="bg-indigo-900 flex items-center justify-between flex-wrap p-6"
+        class="pr-6"
         x-data="{ isNavOpen: false }"
-        x-bind:class="! isNavOpen ? 'bg-slate-500' : 'bg-red-500'"
         >
   
-        <!--Toggle button (hidden on large screens)-->
+        <!-- Menu button -->
         <button
           x-on:click="isNavOpen = !isNavOpen"
           type="button"
-          class="block lg:hidden px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white"
-          x-bind:class="!isNavOpen ? 'p-5 bg-green-300' : 'bg-purple-700'"
+          class="flex md:hidden p-2 focus:outline-none"
         >
           <svg
             class="h-6 w-6 fill-current"
@@ -73,19 +37,20 @@
           </svg>
         </button>
   
-        <!--Menu x-show.transition="true"  -->
+        <!-- Menu x-show.transition="true"  -->
         <div
-          class="w-full flex-grow lg:flex lg:items-center lg:w-auto"
-          x-bind:class="{ 'block': isNavOpen, 'hidden': !isNavOpen }"
-          @click.away="isNavOpen = false"
+          class="md:flex"
+          x-bind:class="!isNavOpen ? 'hidden' : 'absolute right-0 top-0 left-0 shadow-xl bg-primary mt-20 py-12'"
         >
           <ul
-            class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center"
+            class="md:flex"
           >
           {% for item in site.data.menu.list %}
-          <li>
+          <li class="m-4"
+          x-bind:class="!isNavOpen ? '' : 'text-3xl text-center py-3 font-bold'"
+          >
           <a 
-          class="p-6" 
+          class="p-2 tracking-wider border-current hover:border-b-4" 
           href="{{ item.url }}"
           @click="isNavOpen = false"
           >

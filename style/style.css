@@ -38,7 +38,7 @@ h6, .h6 {
   }
 
 .menu a {
-  @apply text-black py-2 mx-4 text-sm tracking-wider uppercase ;
+  @apply text-black py-2 mx-2 tracking-wider font-medium ;
   }
 
 .menu a:hover {
@@ -53,13 +53,4 @@ h6, .h6 {
   content: none;
 }
 
-/* Homepage hero image */
-.hero {
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  position: relative;
-  left: 50%;
-  top: 51%;
-}
 

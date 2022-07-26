@@ -25,7 +25,8 @@
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
   <!-- JS -->
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="//unpkg.com/alpinejs" defer></script>
+
   {% if page.categories contains "compare" %}
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/jstyles/images-compare.css">
   {% endif %}
@@ -42,4 +43,4 @@
   <meta name="theme-color" content="#fec82a">
 
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
