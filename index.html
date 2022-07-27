@@ -4,16 +4,24 @@ layout: default
 
 <section class="bg-primary">
   <div class="container flex items-center">
-    <div class="w-full lg:w-1/3 lg:-mr-40 lg:ml-20 py-12 z-10">
+    <div class="w-full lg:w-1/3 lg:-mr-40 lg:ml-20 py-16 z-10">
       <!-- Main Headline -->
       <h1 class="">Stand out from the crowd.</h1>
       <p class="">Protect your brand and deliver the best <span class="font-bold">consistent visuals</span> for your business, across <span class="font-bold">multiple platforms.</span></p>
+      <div class="py-4">
+        {% include partial/btn.html
+          url="assets/file/corbin_featherstone.pdf"
+          text="Get in touch"
+          style="my-2 mr-4 border-gray-900 bg-gray-900 text-primary hover:text-primaryLight"
+        %}
         {% include partial/btn.html
           url="assets/file/corbin_featherstone.pdf"
           text="My work"
-          style="my-4 border-black hover:bg-black hover:text-primary"
+          style="my-2 border-gray-900 hover:bg-gray-900 hover:text-primary"
           icopost="arrow-right"
         %}
+
+      </div>
     </div>
     <div class="hidden lg:block">
       {% include partial/img.html
@@ -30,13 +38,23 @@ layout: default
   </div>
 </section>
 
+<section class="container -mt-12 ">
+  <p class="text-2xl lg:ml-20">
+    <a href="*" class="p-2"><i class="fab fa-twitter"></i></a>
+    <a href="*" class="p-2"><i class="fab fa-behance"></i></a>
+    <a href="*" class="p-2"><i class="fab fa-dribbble"></i></a>
+    <a href="*" class="p-2"><i class="fab fa-instagram"></i></a>
+    <a href="*" class="p-2"><i class="fab fa-youtube"></i></a>
+  </p>
+</section>
+
 <section class="container flex flex-wrap justify-between items-center py-20 ">
     <div class="w-full lg:w-5/12 mx-auto">
       {% include partial/icon-box.html
         icon="user-friends"
         style="block"
       %}
-      <h2>Print portfolio</h2>
+      <h2>Print & digital layout</h2>
       <p class="text-lg">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
       </p>
@@ -62,11 +80,92 @@ layout: default
     </div>
 </section>
 
-<section class="container flex items-center py-36">
+<section class="container flex flex-row-reverse flex-wrap justify-between items-center py-20 ">
+  <div class="w-full lg:w-5/12 mx-auto">
+    {% include partial/icon-box.html
+      icon="user-friends"
+      style="block"
+    %}
+    <h2>Branding</h2>
+    <p class="text-lg">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+    </p>
+    {% include partial/btn.html
+      url="assets/file/corbin_featherstone.pdf"
+      text="More print examples"
+      style="my-4 border-black hover:bg-black hover:text-primary"
+      icopost="arrow-right"
+    %}
+  </div>
+  <div class="w-full md:w-1/2">
+    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg">
+      <img
+        alt="..."
+        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
+        class="w-full align-middle rounded-t-lg"
+      />
+        <p class="text-md font-light mt-2">
+          The Arctic Ocean freezes every winter and much of the
+          sea-ice then thaws every summer.
+        </p>
+    </div>
+  </div>
+</section>
+
+<section class="container flex flex-wrap justify-between items-center py-20 ">
+  <div class="w-full lg:w-5/12 mx-auto">
+    {% include partial/icon-box.html
+      icon="user-friends"
+      style="block"
+    %}
+    <h2>Website front-end</h2>
+    <p class="text-lg">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+    </p>
+    {% include partial/btn.html
+      url="assets/file/corbin_featherstone.pdf"
+      text="More print examples"
+      style="my-4 border-black hover:bg-black hover:text-primary"
+      icopost="arrow-right"
+    %}
+  </div>
+  <div class="w-full md:w-1/2">
+    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg">
+      <img
+        alt="..."
+        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
+        class="w-full align-middle rounded-t-lg"
+      />
+        <p class="text-md font-light mt-2">
+          The Arctic Ocean freezes every winter and much of the
+          sea-ice then thaws every summer.
+        </p>
+    </div>
+  </div>
+</section>
+
+<section class="py-36 border-y w-full bg-gray-50">
+  <div class="container flex items-center ">
   {% include partial/quote-lg.html
   quote="...the truth is, it's not the idea, it's never the idea, it's always what you do with it."
   attribute="Neil Gaiman "
   %}
+  </div>
 </section>
+
+<div class="container">
+
+<h2>Website portfolio</h2>
+<h2>Colour processing portfolio</h2>
+<h2>Video creation portfolio</h2>
+<h2>Motion graphics portfolio</h2>
+<h2>Illustration portfolio</h2>
+<h2>Traditional artwork portfolio</h2>
+<h2>Packaging portfolio</h2>
+<h2>Image compositing portfolio</h2>
+<h2>Presentations portfolio</h2>
+</div>
+
+
 
   {% include schema_personal.json %}

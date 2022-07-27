@@ -5,12 +5,12 @@
 @tailwind utilities;
 
 html {
-  background: #F5F5F5;
+  background: #F4F6F9;
 }
 
 body {
   font-family: 'Roboto Slab', serif;
-  @apply text-black leading-relaxed;
+  @apply text-gray-900 leading-relaxed;
 }
 
 p a {
@@ -20,11 +20,11 @@ p a {
 p a:hover {text-decoration: underline;}
 
 h1, .h1 {
-  @apply text-6xl leading-none font-bold mb-4 mt-6 inline-block;
+  @apply text-6xl leading-none font-bold mb-4 mt-6;
   }
 
 h2, .h2 {
-  @apply text-4xl leading-tight font-bold mb-3 mt-5 inline-block;
+  @apply text-4xl leading-tight font-bold mb-3 mt-5;
   }
 
 h4, .h4 {
