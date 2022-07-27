@@ -4,13 +4,10 @@ permalink: /about
 ---
 
 <div class="bg-primary h-screen">
-  {% include menu.html %}
-  <div class="container h-screen mx-auto px-4 flex items-center">
-    <div class="w-full my-40 xl:w-1/4 xl:-mr-40 xl:ml-20 md:w-2/3 z-20">
+  <div class="container">
       <!-- Main Headline -->
       <h1 class="text-6xl">Hello, my name is Corbin</h1>
       <p class="">I'm a multi-disciplinary <span class="font-bold">Senior Graphic Designer</span> with over a decade of industry experience communicating visually.</span>.</p>
-      <div class="flex flex-wrap items-center">
         {% include partial/btn.html
           url="contact"
           text="Contact"
@@ -18,20 +15,6 @@ permalink: /about
           style="my-4"
           icopost="arrow-right"
         %}
-      </div>
-    </div>
-    <div class="h-full hidden xl:block xl:w-3/4 w-full overflow-hidden">
-      {% include partial/img.html
-      path="bad_juju_web4.jpg"
-      resize="fit"
-      xl="w=1350"
-      lg="w=1200"
-      md="w=20"
-      sm="w=20"
-      alt="Bad Juju, beer brand by Corbin Featherstone"
-      class="-z-10"
-      %}
-    </div>
   </div>
 </div>
 

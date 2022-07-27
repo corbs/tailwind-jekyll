@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<section class="bg-primary">
+  <div class="container flex items-center">
+    <div class="w-full lg:w-1/3 lg:-mr-40 lg:ml-20 py-12 z-10">
+      <!-- Main Headline -->
+      <h1 class="">Stand out from the crowd.</h1>
+      <p class="">Protect your brand and deliver the best <span class="font-bold">consistent visuals</span> for your business, across <span class="font-bold">multiple platforms.</span></p>
+        {% include partial/btn.html
+          url="assets/file/corbin_featherstone.pdf"
+          text="My work"
+          style="my-4 border-black hover:bg-black hover:text-primary"
+          icopost="arrow-right"
+        %}
+    </div>
+    <div class="hidden lg:block">
+      {% include partial/img.html
+      path="bad_juju_web4.jpg"
+      resize="fit"
+      xl="w=900"
+      lg="w=600"
+      md="w=20"
+      sm="w=20"
+      alt="Bad Juju, beer brand by Corbin Featherstone"
+      class=""
+      %}
+    </div>
+  </div>
+</section>
+
+<section class="container flex items-center py-36">
+  {% include partial/quote-lg.html
+  quote="...the truth is, it's not the idea, it's never the idea, it's always what you do with it."
+  attribute="Neil Gaiman "
+  %}
+</section>
+
+  {% include schema_personal.json %}

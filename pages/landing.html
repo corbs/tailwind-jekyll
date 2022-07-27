@@ -2,7 +2,6 @@
 layout: default
 permalink: /landing
 ---
-{% include menu.html%}
 <div class="bg-primary py-32">
   <div class="container">
     <h1 class="">Lorem Ipsum Doler Est</h1>
@@ -13,9 +12,7 @@ permalink: /landing
 </div>
 
 <section class="relative pb-20 bg-light">
-  {% include divider-diagonal.html
-  colour="light"
-  %}
+
   <div class="container">
     <div class="flex flex-wrap justify-between">
       <div class="w-full lg:w-n1/3 lg:-mt-20 mt-6 bg-white pt-10 pb-6 px-12 shadow-lg text-center z-50">
@@ -49,7 +46,7 @@ permalink: /landing
     </div>
     <div class="flex flex-wrap items-center mt-32">
       <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
-        <div class="p-3 text-center inline-flex text-2xl items-center justify-center w-16 h-16 mb-6 shadow-md rounded-md text-white bg-darker" >
+        <div class="p-3 text-center inline-flex text-2xl items-center justify-center w-16 h-16 mb-6 shadow-md rounded-md text-white bg-gray-800" >
           <i class="fas fa-user-friends"></i>
         </div>
         <h3 class="text-3xl mb-2 font-semibold leading-normal">
@@ -85,9 +82,7 @@ permalink: /landing
 </section>
 
       <section class="relative py-20 bg-lightest">
-{% include divider-diagonal.html
-  colour="lightest"
-%}
+
         <div class="container">
           <div class="items-center flex flex-wrap">
             <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
@@ -100,7 +95,7 @@ permalink: /landing
             <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
               <div class="md:pr-12">
                 <div
-                  class="p-3 text-center inline-flex text-2xl items-center text-white justify-center w-16 h-16 mb-6 shadow-md rounded-md bg-darker"
+                  class="p-3 text-center inline-flex text-2xl items-center text-white justify-center w-16 h-16 mb-6 shadow-md rounded-md bg-gray-800"
                 >
                   <i class="fas fa-rocket"></i>
                 </div>
@@ -160,161 +155,12 @@ permalink: /landing
       </section>
       <section class="pt-20 pb-48 bg-lightest">
         <div class="container">
-          <div class="flex flex-wrap justify-center text-center mb-24">
          <script src="https://gist.github.com/corbs/125fec345661f8259be5755a2243f2b5.js"></script> <!-- gist test -->
-            <div class="w-full lg:w-6/12 px-4">
-              <h2 class="text-4xl font-semibold">Here are our heroes</h2>
-              <p class="text-lg leading-relaxed m-4">
-                According to the National Oceanic and Atmospheric
-                Administration, Ted, Scambos, NSIDClead scentist, puts the
-                potentially record maximum.
-              </p>
-            </div>
-          </div>
-          <div class="flex flex-wrap">
-            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-              <div class="px-6">
-                <img
-                  alt="..."
-                  src="./assets/img/team-1-800x800.jpg"
-                  class="shadow-lg rounded-full max-w-full mx-auto"
-                  style="max-width: 120px;"
-                />
-                <div class="pt-6 text-center">
-                  <h5 class="text-xl font-bold">Ryan Tompson</h5>
-                  <p class="mt-1 text-sm text-light uppercase font-semibold">
-                    Web Developer
-                  </p>
-                  <div class="mt-6">
-                    <button
-                      class="bg-black text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-twitter"></i></button
-                    ><button
-                      class="bg-black text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-facebook-f"></i></button
-                    ><button
-                      class="bg-black text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-dribbble"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-              <div class="px-6">
-                <img
-                  alt="..."
-                  src="./assets/img/team-2-800x800.jpg"
-                  class="shadow-lg rounded-full max-w-full mx-auto"
-                  style="max-width: 120px;"
-                />
-                <div class="pt-6 text-center">
-                  <h5 class="text-xl font-bold">Romina Hadid</h5>
-                  <p class="mt-1 text-sm text-light uppercase font-semibold">
-                    Marketing Specialist
-                  </p>
-                  <div class="mt-6">
-                    <button
-                      class="bg-black text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-google"></i></button
-                    ><button
-                      class="bg-black text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-facebook-f"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-              <div class="px-6">
-                <img
-                  alt="..."
-                  src="./assets/img/team-3-800x800.jpg"
-                  class="shadow-lg rounded-full max-w-full mx-auto"
-                  style="max-width: 120px;"
-                />
-                <div class="pt-6 text-center">
-                  <h5 class="text-xl font-bold">Alexa Smith</h5>
-                  <p class="mt-1 text-sm text-light uppercase font-semibold">
-                    UI/UX Designer
-                  </p>
-                  <div class="mt-6">
-                    <button
-                      class="bg-black text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-google"></i></button
-                    ><button
-                      class="bg-black text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-twitter"></i></button
-                    ><button
-                      class="bg-black text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-instagram"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-              <div class="px-6">
-                <img
-                  alt="..."
-                  src="./assets/img/team-4-470x470.png"
-                  class="shadow-lg rounded-full max-w-full mx-auto"
-                  style="max-width: 120px;"
-                />
-                <div class="pt-6 text-center">
-                  <h5 class="text-xl font-bold">Jenna Kardi</h5>
-                  <p class="mt-1 text-sm text-light uppercase font-semibold">
-                    Founder and CEO
-                  </p>
-                  <div class="mt-6">
-                    <button
-                      class="bg-black text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-dribbble"></i></button
-                    ><button
-                      class="bg-black text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-google"></i></button
-                    ><button
-                      class="bg-black text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-twitter"></i></button
-                    ><button
-                      class="bg-black text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-instagram"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
+
       <section class="pb-20 relative block bg-dark">
-{% include divider-diagonal.html
-  colour="dark"
-%}
+
         <div class="container lg:pt-24 lg:pb-64">
           <div class="flex flex-wrap text-center justify-center">
             <div class="w-full lg:w-6/12 px-4">

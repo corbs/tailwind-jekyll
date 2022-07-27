@@ -1,1 +1,12 @@
-<a class="h6 cursor-pointer group inline-block rounded px-8 py-4 border-solid border-2 border-black hover:shadow-md {% if include.alt %}hover:bg-black hover:text-primary {% else %}bg-black text-primary{% endif %}   {{ include.style }}" href="{{ site.url }}/{{ include.url }}">{% if include.icopre %}<i class="mr-5 fas fa-{{ include.icopre }}" data-fa-transform="grow-4"></i>{% endif %}{{ include.text }}{% if include.icopost %}<i class="ml-5 fas fa-{{ include.icopost }} transition-transform duration-300 ease-in-out group-hover:translate-x-1" data-fa-transform="grow-2 down-1"></i>{% endif %}</a>
+<a 
+class="h6 cursor-pointer group inline-block rounded px-8 py-4 border-2 hover:shadow-md
+{{ include.style }}" 
+href="{{ site.url }}/{{ include.url }}">
+{% if include.icopre %}
+<i class="mr-5 fas fa-{{ include.icopre }}" data-fa-transform="grow-4"></i>
+{% endif %}
+{{ include.text }}
+{% if include.icopost %}
+<i class="ml-5 fas fa-{{ include.icopost }} transition-transform duration-300 ease-in-out group-hover:translate-x-1" data-fa-transform="grow-2 down-1"></i>
+{% endif %}
+</a>

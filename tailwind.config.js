@@ -16,6 +16,8 @@ module.exports = {
     extend: {
       colors: {
         primary: '#FFCA2E',
+        primaryDark: '#F7BC28',
+        primaryLight: '#FFCE55',
       },
       zIndex: {
      '-10': '-10',
