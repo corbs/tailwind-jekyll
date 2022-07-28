@@ -3,22 +3,29 @@ layout: default
 ---
 
 <section class="bg-primary">
+  <!-- hero -->
   <div class="container flex items-center">
-    <div class="w-full lg:w-1/3 lg:-mr-40 lg:ml-20 py-16 z-10">
-      <!-- Main Headline -->
+    <div class="lg:w-1/3 lg:-mr-40 lg:ml-20 py-16 z-10">
       <h1 class="">Stand out from the crowd.</h1>
-      <p class="">Protect your brand and deliver the best <span class="font-bold">consistent visuals</span> for your business, across <span class="font-bold">multiple platforms.</span></p>
-      <div class="py-4">
+      <p class="md:w-3/4 lg:w-full">An experienced graphic designer will deliver the best <span
+          class="font-bold">consistent visuals</span> for your business, across <span class="font-bold">multiple
+          platforms.</span></p>
+      <p class="py-4">
+        <a href="*" class="text-lg">
+          <i class="mx-2 fas fa-play-circle" data-fa-transform="grow-6"></i> Watch me work
+        </a>
+      </p>
+      <div class="">
         {% include partial/btn.html
-          url="assets/file/corbin_featherstone.pdf"
-          text="Get in touch"
-          style="my-2 mr-4 border-2 border-gray-900 bg-gray-900 text-primary hover:text-gray-50"
+        url="assets/file/corbin_featherstone.pdf"
+        text="Get in touch"
+        style="my-2 mr-4 border-2 border-gray-900 bg-gray-900 text-primary hover:text-gray-50"
         %}
         {% include partial/btn.html
-          url="assets/file/corbin_featherstone.pdf"
-          text="My work"
-          style="my-2 border-2 border-gray-900 hover:bg-primaryLight"
-          icopost="arrow-right"
+        url="assets/file/corbin_featherstone.pdf"
+        text="Download my portfolio"
+        style="my-2 border-2 border-gray-900 hover:bg-primaryLight"
+        icopost="arrow-right"
         %}
 
       </div>
@@ -27,8 +34,8 @@ layout: default
       {% include partial/img.html
       path="bad_juju_web4.jpg"
       resize="fit"
-      xl="w=900"
-      lg="w=600"
+      xl="h=800"
+      lg="h=700"
       md="w=20"
       sm="w=20"
       alt="Bad Juju, beer brand by Corbin Featherstone"
@@ -38,8 +45,9 @@ layout: default
   </div>
 </section>
 
+<!-- socmed links -->
 <section class="container -mt-12 ">
-  <p class="text-2xl lg:ml-20">
+  <p class="text-2xl">
     <a href="*" class="p-2"><i class="fab fa-twitter"></i></a>
     <a href="*" class="p-2"><i class="fab fa-behance"></i></a>
     <a href="*" class="p-2"><i class="fab fa-dribbble"></i></a>
@@ -48,124 +56,400 @@ layout: default
   </p>
 </section>
 
-<section class="container flex flex-wrap justify-between items-center py-20 ">
-    <div class="w-full lg:w-5/12 mx-auto">
-      {% include partial/icon-box.html
-        icon="user-friends"
-        style="block"
-      %}
-      <h2>Print & digital layout</h2>
-      <p class="text-lg">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
-      </p>
-      {% include partial/btn.html
-        url="assets/file/corbin_featherstone.pdf"
-        text="More print examples"
-        style="my-4 border border-gray-200 bg-white hover:border-gray-500"
-        icopost="angle-right"
-      %}
-    </div>
-    <div class="w-full md:w-1/2">
-      <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg">
-        <img
-          alt="..."
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
-          class="w-full align-middle rounded-t-lg"
-        />
-          <p class="text-md font-light mt-2">
-            The Arctic Ocean freezes every winter and much of the
-            sea-ice then thaws every summer.
-          </p>
-      </div>
-    </div>
+<!-- Recent work -->
+<section class="container flex flex-wrap py-20">
+  <div class="w-full">
+    <p class="font-bold text-4xl lg:text-5xl py-4">
+      Recent work
+    </p>
+    <p class="text-xl text-gray-500 pb-8">
+      Employ creative and engaging graphics that capture your customers and lift your brand.
+    </p>
+  </div>
+  <ul class="w-full grid grid-cols-4 gap-10">
+    <li class="bg-gray-200 row-span-2 col-span-2 text-center flex items-center content-center">
+      <h2 class="mx-auto py-28 ">1</h2>
+    </li>
+    <li class="bg-gray-200 row-span-2 text-center flex items-center content-center">
+      <h2 class="mx-auto py-28 ">2</h2>
+    </li>
+    <li class="bg-gray-200 text-center flex items-center content-center">
+      <h2 class="mx-auto py-28 ">3</h2>
+    </li>
+    <li class="bg-gray-200 text-center flex items-center content-center">
+      <h2 class="mx-auto py-28 ">4</h2>
+    </li>
+    <li class="bg-gray-200 row-span-2 text-center flex items-center content-center">
+      <h2 class="mx-auto py-28 ">5</h2>
+    </li>
+    <li class="bg-gray-200 col-span-2 text-center flex items-center content-center">
+      <h2 class="mx-auto py-28 ">6</h2>
+    </li>
+    <li class="bg-gray-200 text-center flex items-center content-center">
+      <h2 class="mx-auto py-28 ">7</h2>
+    </li>
+    <li class="bg-gray-200 text-center flex items-center content-center">
+      <h2 class="mx-auto py-28 ">8</h2>
+    </li>
+    <li class="bg-gray-200 col-span-2 text-center flex items-center content-center">
+      <h2 class="mx-auto py-28 ">9</h2>
+    </li>
+    <li class="bg-gray-200 text-center flex items-center content-center">
+      <h2 class="mx-auto py-28 ">10</h2>
+    </li>
+    <li class="bg-gray-200 col-span-2 text-center flex items-center content-center">
+      <h2 class="mx-auto py-28 ">11</h2>
+    </li>
+    <li class="bg-gray-200 text-center flex items-center content-center">
+      <h2 class="mx-auto py-28 ">12</h2>
+    </li>
+  </ul>
 </section>
 
-<section class="container flex flex-row-reverse flex-wrap justify-between items-center py-20 ">
+<!-- About me -->
+<section class=" w-full bg-white border-y my-32">
+  <div class="container flex flex-wrap">
+    <div class="bg-gray-200 border-8 border-white rounded shadow-md -my-16 lg:w-1/4">
+
+    </div>
+    <div class="p-12">
+      <h2>About me</h2>
+      <p class="text-gray-500">
+        Put the potentially record low maximum sea ice extent tihs year down to low ice.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- layout section -->
+<section class="container flex flex-wrap justify-between items-center py-20 ">
   <div class="w-full lg:w-5/12 mx-auto">
     {% include partial/icon-box.html
-      icon="user-friends"
-      style="block"
+    icon="user-friends"
+    style="block"
     %}
     <h2>Branding</h2>
     <p class="text-lg">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
     </p>
+    <p class="py-4"><a href="*" class="text-lg">
+        <i class="mx-2 fas fa-play-circle" data-fa-transform="grow-6"></i> Watch video
+      </a></p>
     {% include partial/btn.html
-      url="assets/file/corbin_featherstone.pdf"
-      text="More branding examples"
-      style="my-4 border border-gray-200 bg-white hover:border-gray-500"
-      icopost="angle-right"
+    url="assets/file/corbin_featherstone.pdf"
+    text="More branding"
+    style="my-3 border border-gray-200 bg-white hover:border-gray-500"
+    icopost="angle-right"
     %}
   </div>
-  <div class="w-full md:w-1/2">
+  <div class="w-full lg:w-1/2">
     <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg">
       <img
-        alt="..."
         src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
-        class="w-full align-middle rounded-t-lg"
-      />
-        <p class="text-md font-light mt-2">
-          The Arctic Ocean freezes every winter and much of the
-          sea-ice then thaws every summer.
-        </p>
+        class="w-full align-middle rounded-t-lg" />
+      <p class="text-md font-light mt-2">
+        The Arctic Ocean freezes every winter and much of the
+        sea-ice then thaws every summer.
+      </p>
     </div>
   </div>
 </section>
 
-<section class="container flex flex-wrap justify-between items-center py-20 ">
+<!-- brand section -->
+<section class="container flex flex-row-reverse flex-wrap justify-between items-center py-20 ">
   <div class="w-full lg:w-5/12 mx-auto">
     {% include partial/icon-box.html
-      icon="user-friends"
-      style="block"
+    icon="user-friends"
+    style="block"
+    %}
+    <h2>Print & digital layout</h2>
+    <p class="text-lg">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+    </p>
+    <p class="py-4"><a href="*" class="text-lg">
+        <i class="mx-2 fas fa-play-circle" data-fa-transform="grow-6"></i> Watch video
+      </a></p>
+    {% include partial/btn.html
+    url="assets/file/corbin_featherstone.pdf"
+    text="More layouts"
+    style="my-3 border border-gray-200 bg-white hover:border-gray-500"
+    icopost="angle-right"
+    %}
+  </div>
+  <div class="w-full lg:w-1/2">
+    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg">
+      <img alt="..."
+        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
+        class="w-full align-middle rounded-t-lg" />
+      <p class="text-md font-light mt-2">
+        The Arctic Ocean freezes every winter and much of the
+        sea-ice then thaws every summer.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- website section -->
+<section class="container flex flex-wrap justify-between items-center py-20 ">
+  <div class="w-full lg:w-1/4">
+    {% include partial/icon-box.html
+    icon="user-friends"
+    style="block"
     %}
     <h2>Website front-end</h2>
     <p class="text-lg">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
     </p>
+    <p>Framework list</p>
     {% include partial/btn.html
-      url="assets/file/corbin_featherstone.pdf"
-      text="More website examples"
-      style="my-4 border border-gray-200 bg-white hover:border-gray-500"
-      icopost="angle-right"
+    url="assets/file/corbin_featherstone.pdf"
+    text="More websites"
+    style="my-3 border border-gray-200 bg-white hover:border-gray-500"
+    icopost="angle-right"
     %}
   </div>
-  <div class="w-full md:w-1/2">
+  <div class="w-full lg:w-2/3">
     <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg">
-      <img
-        alt="..."
+      <img alt="..."
         src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
-        class="w-full align-middle rounded-t-lg"
-      />
-        <p class="text-md font-light mt-2">
-          The Arctic Ocean freezes every winter and much of the
-          sea-ice then thaws every summer.
-        </p>
+        class="w-full align-middle rounded-t-lg" />
+      <p class="text-md font-light mt-2">
+        The Arctic Ocean freezes every winter and much of the
+        sea-ice then thaws every summer.
+      </p>
     </div>
   </div>
 </section>
 
-<section class="py-36 w-full bg-white border-y">
-  <div class="container flex items-center ">
-  {% include partial/quote-lg.html
-  quote="...the truth is, it's not the idea, it's never the idea, it's always what you do with it."
-  attribute="Neil Gaiman "
-  %}
+<!-- Video editing and Motion graphics -->
+<section class="flex flex-wrap my-24">
+  <div class="flex-1 flex flex-col content-end bg-gray-700 h-96 p-20 text-gray-400">
+    <h2>Video editing</h2>
+    <p>Post my first case study video mashup</p>
+  </div>
+  <div class="flex-1 bg-gray-800 h-96 p-20 text-gray-200">
+    <h2 class="">Motion graphics</h2>
+    <p>Shed</p>
   </div>
 </section>
 
-<div class="container">
+<!-- Quote -->
+<section class="container text-center py-20">
+  <span class="inline-block w-20 border-2 border-t border-gray-600"></span>
+  {% include partial/quote-lg.html
+  quote="...the truth is, it's not the idea, it's never the idea, it's always what you do with it."
+  attribute="Neil Gaiman "
+  style="py-12"
+  %}
+  <span class="inline-block w-20 border-2 border-t border-gray-600"></span>
+</section>
 
-<h2>Website portfolio</h2>
-<h2>Colour processing portfolio</h2>
-<h2>Video creation portfolio</h2>
-<h2>Motion graphics portfolio</h2>
-<h2>Illustration portfolio</h2>
-<h2>Traditional artwork portfolio</h2>
-<h2>Packaging portfolio</h2>
-<h2>Image compositing portfolio</h2>
-<h2>Presentations portfolio</h2>
-</div>
+<!-- Image processing section -->
+<section class="container py-24 ">
+  <div class="flex flex-wrap items-stretch rounded">
+    <div class="bg-white border lg:w-1/4 p-12 lg:-mr-5 lg:-mt-6 lg:mb-6 z-10">
+      <h2>Image processing</h2>
+      <p class="pb-20">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </p>
+    </div>
+    <div class="bg-gray-200 flex-1 flex items-center">
+      <h2 class="mx-auto">Comparison slider</h2>
+    </div>
+  </div>
+</section>
+
+<!-- Packaging -->
+<section class="container flex flex-row-reverse flex-wrap justify-between items-center py-24 ">
+  <div class="w-full lg:w-1/4 mx-auto">
+    {% include partial/icon-box.html
+    icon="user-friends"
+    style="block"
+    %}
+    <h2>Packaging</h2>
+    <p class="text-lg">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+    </p>
+    {% include partial/btn.html
+    url="assets/file/corbin_featherstone.pdf"
+    text="More packaging"
+    style="my-3 border border-gray-200 bg-white hover:border-gray-500"
+    icopost="angle-right"
+    %}
+  </div>
+  <div class="w-full lg:w-2/3">
+    <ul class="w-full grid grid-cols-2 gap-8">
+      <li class="bg-gray-200 text-center flex items-center content-center">
+        <h2 class="mx-auto py-28 ">1</h2>
+      </li>
+      <li class="bg-gray-200 text-center flex items-center content-center">
+        <h2 class="mx-auto py-28 ">2</h2>
+      </li>
+      <li class="bg-gray-200 text-center flex items-center content-center">
+        <h2 class="mx-auto py-28 ">3</h2>
+      </li>
+      <li class="bg-gray-200 text-center flex items-center content-center">
+        <h2 class="mx-auto py-28 ">4</h2>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Events section -->
+<section class="container flex flex-wrap justify-between items-center py-24 ">
+  <div class="w-full lg:w-1/4 ">
+    {% include partial/icon-box.html
+    icon="user-friends"
+    style="block"
+    %}
+    <h2>Events</h2>
+    <p class="text-lg">
+      Trade shows and displays. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+    </p>
+    {% include partial/btn.html
+    url="assets/file/corbin_featherstone.pdf"
+    text="More events"
+    style="my-3 border border-gray-200 bg-white hover:border-gray-500"
+    icopost="angle-right"
+    %}
+  </div>
+  <div class="w-full lg:w-2/3">
+    <ul class="w-full grid grid-cols-3 gap-8">
+      <li class="bg-gray-200 text-center flex items-center content-center">
+        <h2 class="mx-auto py-20 ">1</h2>
+      </li>
+      <li class="bg-gray-200 text-center flex items-center content-center">
+        <h2 class="mx-auto py-20 ">2</h2>
+      </li>
+      <li class="bg-gray-200 text-center flex items-center content-center">
+        <h2 class="mx-auto py-20 ">3</h2>
+      </li>
+      <li class="bg-gray-200 text-center flex items-center content-center">
+        <h2 class="mx-auto py-20 ">4</h2>
+      </li>
+      <li class="bg-gray-200 text-center flex items-center content-center">
+        <h2 class="mx-auto py-20 ">5</h2>
+      </li>
+      <li class="bg-gray-200 text-center flex items-center content-center">
+        <h2 class="mx-auto py-20 ">6</h2>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA Points -->
+<section class="container flex flex-wrap items-center text-center py-24">
+  <div class="w-full">
+    <h2 class="">Build something</h2>
+    <p class="text-xl text-gray-500">
+      Put the potentially record low maximum sea ice extent tihs year down to low ice.
+    </p>
+  </div>
+  <div class="flex flex-wrap mt-12 justify-center">
+    <div class="w-full lg:w-3/12 px-4 text-center">
+      <div class="p-3 w-12 h-12 inline-block shadow-lg rounded-md items-center justify-center">
+        <i class="fas fa-medal text-xl"></i>
+      </div>
+      <h6 class="text-lg mt-5">
+        Excellent Services
+      </h6>
+      <p class="mt-2 mb-4">
+        Some quick example text to build on the card title and make up
+        the bulk of the card's content.
+      </p>
+    </div>
+    <div class="w-full lg:w-3/12 px-4 text-center">
+      <div class="p-3 w-12 h-12 inline-block shadow-lg rounded-md items-center justify-center">
+        <i class="fas fa-poll text-xl"></i>
+      </div>
+      <h6 class="text-lg mt-5">
+        Grow your market
+      </h6>
+      <p class="mt-2 mb-4">
+        Some quick example text to build on the card title and make up
+        the bulk of the card's content.
+      </p>
+    </div>
+    <div class="w-full lg:w-3/12 px-4 text-center">
+      <div class="p-3 w-12 h-12 inline-block shadow-lg rounded-md items-center justify-center">
+        <i class="fas fa-lightbulb"></i>
+      </div>
+      <h6 class="text-lg mt-5">Launch time</h6>
+      <p class="mt-2 mb-4">
+        Some quick example text to build on the card title and make up
+        the bulk of the card's content.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Image compositing section -->
+<section class="container py-24 ">
+  <div class="flex flex-wrap items-stretch rounded">
+    <div class="bg-white border lg:w-1/4 p-12 lg:-mr-5 lg:-mt-6 lg:mb-6 z-10">
+      <h2>Image compositing</h2>
+      <p class="pb-20">
+        Day / night, tractor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua.
+      </p>
+    </div>
+    <div class="bg-gray-200 flex-1 flex items-center">
+      <h2 class="mx-auto">Comparison slider</h2>
+    </div>
+  </div>
+</section>
+
+<!-- Quote -->
+<section class="container text-center py-20 ">
+  <span class="inline-block w-20 border-2 border-t border-gray-600"></span>
+  {% include partial/quote-lg.html
+  quote="...the truth is, it's not the idea, it's never the idea, it's always what you do with it."
+  attribute="Neil Gaiman "
+  style="py-12"
+  %}
+  <span class="inline-block w-20 border-2 border-t border-gray-600"></span>
+</section>
+
+<!-- Traditional -->
+<section class="container py-20">
+  <div class="w-full">
+    {% include partial/icon-box.html
+    icon="user-friends"
+    style="block"
+    %}
+    <h2>Traditional</h2>
+    <p class="text-lg md:w-1/2">
+      Trade shows and displays. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+    </p>
+  </div>
+  <ul class="w-full grid grid-cols-3 gap-8 my-8">
+    <li class="bg-gray-200 text-center flex items-center content-center">
+      <h2 class="mx-auto py-20 ">1</h2>
+    </li>
+    <li class="bg-gray-200 text-center flex items-center content-center">
+      <h2 class="mx-auto py-20 ">2</h2>
+    </li>
+    <li class="bg-gray-200 text-center flex items-center content-center">
+      <h2 class="mx-auto py-20 ">3</h2>
+    </li>
+    <li class="bg-gray-200 text-center flex items-center content-center">
+      <h2 class="mx-auto py-20 ">4</h2>
+    </li>
+    <li class="bg-gray-200 text-center flex items-center content-center">
+      <h2 class="mx-auto py-20 ">5</h2>
+    </li>
+    <li class="bg-gray-200 text-center flex items-center content-center">
+      <h2 class="mx-auto py-20 ">6</h2>
+    </li>
+  </ul>
+</section>
 
 
-
-  {% include schema_personal.json %}
+{% include schema_personal.json %}

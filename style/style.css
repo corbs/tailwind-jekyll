@@ -43,7 +43,7 @@ h6, .h6 {
   }
 
 .menu a:hover {
-  @apply border-black  ;
+  @apply border-gray-900  ;
   }
 
 .breadcrumbs li::after {
