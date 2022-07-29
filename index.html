@@ -66,7 +66,16 @@ layout: default
   </div>
   <ul class="w-full grid grid-cols-4 gap-10">
     <li class="bg-gray-200 row-span-2 col-span-2 text-center flex items-center content-center">
-      <h2 class="mx-auto py-28 ">1</h2>
+      {% include partial/img.html
+        path="test.jpg"
+        resize="fit"
+        xl="h=800"
+        lg="h=700"
+        md="w=20"
+        sm="w=20"
+        alt="Bad Juju, beer brand by Corbin Featherstone"
+        class=""
+        %}
     </li>
     <li class="bg-gray-200 row-span-2 text-center flex items-center content-center">
       <h2 class="mx-auto py-28 ">2</h2>
