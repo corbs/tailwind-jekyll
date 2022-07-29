@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [`_site/**/*.html`],
+  content: [`_site/**/*.html`],
   theme: {
     letterSpacing: {
       tighter: '-.05em',
