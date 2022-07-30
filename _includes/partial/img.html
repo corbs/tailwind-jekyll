@@ -1,22 +1,26 @@
 <picture>
   <source
-    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.xl }}"
+  srcset="https://agw.imgix.net/ad/cnz/{{ include.path }}?auto=format{{ include.2xl }}"
+  media="(min-width: 1536px)"
+  >
+  <source
+    srcset="https://agw.imgix.net/ad/cnz/{{ include.path }}?auto=format{{ include.xl }}"
     media="(min-width: 1280px)"
   >
   <source
-    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.lg }}"
+    srcset="https://agw.imgix.net/ad/cnz/{{ include.path }}?auto=format{{ include.lg }}"
     media="(min-width: 1024px)"
   >
   <source
-    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.md }}"
+    srcset="https://agw.imgix.net/ad/cnz/{{ include.path }}?auto=format{{ include.md }}"
     media="(min-width: 769px)"
   >
   <source
-    srcset="{{ site.url }}/assets/img/{{ include.path }}?nf_resize={{ include.resize }}&{{ include.sm }}"
-    media="(max-width: 768px)"
+    srcset="https://agw.imgix.net/ad/cnz/{{ include.path }}?auto=format{{ include.sm }}"
+    media="(min-width: 640px)"
   >
-  <img src="{{ site.url }}/assets/img/{{ include.path }}?nf_resize=fit&w=20"
+  <img src="https://agw.imgix.net/ad/cnz/{{ include.path }}?nf_resize=fit&w=20"
     alt="{% if include.imgalt %}{{ include.imgalt }}{% else %}Graphic Design Portfolio Work by Corbin Featherstone{% endif %}"
-    class="{{ include.class }}"
+    class="lazyload {{ include.class }}"
   >
 </picture>

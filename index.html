@@ -30,12 +30,12 @@ layout: default
     </div>
     <div class="hidden lg:block">
       {% include partial/img.html
-      path="bad_juju_web4.jpg"
-      resize="fit"
-      xl="h=800"
-      lg="h=700"
-      md="w=20"
-      sm="w=20"
+      path="home.jpg"
+      2xl="&h=800"
+      xl="&h=800"
+      lg="&h=700"
+      md="&w=20"
+      sm="&w=20"
       alt="Bad Juju, beer brand by Corbin Featherstone"
       class=""
       %}
@@ -65,50 +65,209 @@ layout: default
     </p>
   </div>
   <ul class="w-full grid grid-cols-4 gap-10">
-    <li class="bg-gray-200 row-span-2 col-span-2 text-center flex items-center content-center">
-      {% include partial/img.html
-        path="test.jpg"
-        resize="fit"
-        xl="h=800"
-        lg="h=700"
-        md="w=20"
-        sm="w=20"
-        alt="Bad Juju, beer brand by Corbin Featherstone"
-        class=""
-        %}
+    <li class="bg-pink-200 row-span-2 col-span-2 relative flex overflow-hidden">
+      {% assign recent1 = site.work | where: "tags", "recent1" %}
+      {% for work in recent1 %}
+          <span class="block absolute top-0 right-0 bg-white p-4">1</span>
+          <a href="{{ work.url }} ">
+            {% include partial/img.html
+              path=work.imghero
+              2xl="&w=750&h=555&fit=crop"
+              xl="&w=750&h=560&fit=crop"
+              lg="&w=200&h=200"
+              md="&w=200&h=200"
+              sm="&w=200&h=200"
+              class="p-2 bg-white"
+            %}
+          </a>
+      {% endfor %}
     </li>
-    <li class="bg-gray-200 row-span-2 text-center flex items-center content-center">
-      <h2 class="mx-auto py-28 ">2</h2>
+    <li class="bg-pink-200 row-span-2 relative flex overflow-hidden">
+      {% assign recent2 = site.work | where: "tags", "recent2" %}
+      {% for work in recent2 %}
+          <span class="block absolute top-0 right-0 bg-white p-4">2</span>
+          <a href="{{ work.url }} ">
+            {% include partial/img.html
+              path=work.imghero
+              2xl="&w=350&h=563&fit=crop"
+              xl="&w=350&h=579&fit=crop"
+              lg="&w=200&h=200"
+              md="&w=200&h=200"
+              sm="&w=200&h=200"
+              class="p-2 bg-white"
+            %}
+          </a>
+      {% endfor %}
     </li>
-    <li class="bg-gray-200 text-center flex items-center content-center">
-      <h2 class="mx-auto py-28 ">3</h2>
+    <li class="bg-pink-200 relative flex overflow-hidden">
+      {% assign recent3 = site.work | where: "tags", "recent2" %}
+      {% for work in recent3 %}
+          <span class="block absolute top-0 right-0 bg-white p-4">3</span>
+          <a href="{{ work.url }} ">
+            {% include partial/img.html
+              path=work.imghero
+              2xl="&w=350&h=251&fit=crop"
+              xl="&w=350&h=252&fit=crop"
+              lg="&w=200&h=200"
+              md="&w=200&h=200"
+              sm="&w=200&h=200"
+              class="p-2 bg-white"
+            %}
+          </a>
+      {% endfor %}
     </li>
-    <li class="bg-gray-200 text-center flex items-center content-center">
-      <h2 class="mx-auto py-28 ">4</h2>
+    <li class="bg-pink-200 relative flex overflow-hidden">
+      {% assign recent4 = site.work | where: "tags", "recent2" %}
+      {% for work in recent4 %}
+          <span class="block absolute top-0 right-0 bg-white p-4">4</span>
+          <a href="{{ work.url }} ">
+            {% include partial/img.html
+              path=work.imghero
+              2xl="&w=350&h=251&fit=crop"
+              xl="&w=350&h=252&fit=crop"
+              lg="&w=200&h=200"
+              md="&w=200&h=200"
+              sm="&w=200&h=200"
+              class="p-2 bg-white"
+            %}
+          </a>
+      {% endfor %}
     </li>
-    <li class="bg-gray-200 row-span-2 text-center flex items-center content-center">
-      <h2 class="mx-auto py-28 ">5</h2>
+    <li class="bg-pink-200 row-span-2 relative flex overflow-hidden">
+      {% assign recent5 = site.work | where: "tags", "recent2" %}
+      {% for work in recent5 %}
+          <span class="block absolute top-0 right-0 bg-white p-4">5</span>
+          <a href="{{ work.url }} ">
+            {% include partial/img.html
+              path=work.imghero
+              2xl="&w=350&h=663&fit=crop"
+              xl="&w=350&h=579&fit=crop"
+              lg="&w=200&h=200"
+              md="&w=200&h=200"
+              sm="&w=200&h=200"
+              class="p-2 bg-white"
+            %}
+          </a>
+      {% endfor %}
     </li>
-    <li class="bg-gray-200 col-span-2 text-center flex items-center content-center">
-      <h2 class="mx-auto py-28 ">6</h2>
+    <li class="bg-pink-200 col-span-2 relative flex overflow-hidden">
+      {% assign recent6 = site.work | where: "tags", "recent2" %}
+      {% for work in recent6 %}
+          <span class="block absolute top-0 right-0 bg-white p-4">6</span>
+          <a href="{{ work.url }} ">
+            {% include partial/img.html
+              path=work.imghero
+              2xl="&w=740&h=300&fit=crop"
+              xl="&w=350&h=579&fit=crop"
+              lg="&w=200&h=200"
+              md="&w=200&h=200"
+              sm="&w=200&h=200"
+              class="p-2 bg-white"
+            %}
+          </a>
+      {% endfor %}
     </li>
-    <li class="bg-gray-200 text-center flex items-center content-center">
-      <h2 class="mx-auto py-28 ">7</h2>
+    <li class="bg-pink-200 relative flex overflow-hidden">
+      {% assign recent7 = site.work | where: "tags", "recent2" %}
+      {% for work in recent7 %}
+          <span class="block absolute top-0 right-0 bg-white p-4">7</span>
+          <a href="{{ work.url }} ">
+            {% include partial/img.html
+              path=work.imghero
+              2xl="&w=200&h=200"
+              xl="&w=200&h=200"
+              lg="&w=200&h=200"
+              md="&w=200&h=200"
+              sm="&w=200&h=200"
+              class="p-2 bg-white"
+            %}
+          </a>
+      {% endfor %}
     </li>
-    <li class="bg-gray-200 text-center flex items-center content-center">
-      <h2 class="mx-auto py-28 ">8</h2>
+    <li class="bg-pink-200 relative flex overflow-hidden">
+      {% assign recent8 = site.work | where: "tags", "recent2" %}
+      {% for work in recent8 %}
+          <span class="block absolute top-0 right-0 bg-white p-4">8</span>
+          <a href="{{ work.url }} ">
+            {% include partial/img.html
+              path=work.imghero
+              2xl="&w=200&h=200"
+              xl="&w=200&h=200"
+              lg="&w=200&h=200"
+              md="&w=200&h=200"
+              sm="&w=200&h=200"
+              class="p-2 bg-white"
+            %}
+          </a>
+      {% endfor %}
     </li>
-    <li class="bg-gray-200 col-span-2 text-center flex items-center content-center">
-      <h2 class="mx-auto py-28 ">9</h2>
+    <li class="bg-pink-200 col-span-2 relative flex overflow-hidden">
+      {% assign recent9 = site.work | where: "tags", "recent2" %}
+      {% for work in recent9 %}
+          <span class="block absolute top-0 right-0 bg-white p-4">9</span>
+          <a href="{{ work.url }} ">
+            {% include partial/img.html
+              path=work.imghero
+              2xl="&w=200&h=200"
+              xl="&w=200&h=200"
+              lg="&w=200&h=200"
+              md="&w=200&h=200"
+              sm="&w=200&h=200"
+              class="p-2 bg-white"
+            %}
+          </a>
+      {% endfor %}
     </li>
-    <li class="bg-gray-200 text-center flex items-center content-center">
-      <h2 class="mx-auto py-28 ">10</h2>
+    <li class="bg-pink-200 relative flex overflow-hidden">
+      {% assign recent10 = site.work | where: "tags", "recent2" %}
+      {% for work in recent10 %}
+          <span class="block absolute top-0 right-0 bg-white p-4">10</span>
+          <a href="{{ work.url }} ">
+            {% include partial/img.html
+              path=work.imghero
+              2xl="&w=200&h=200"
+              xl="&w=200&h=200"
+              lg="&w=200&h=200"
+              md="&w=200&h=200"
+              sm="&w=200&h=200"
+              class="p-2 bg-white"
+            %}
+          </a>
+      {% endfor %}
     </li>
-    <li class="bg-gray-200 col-span-2 text-center flex items-center content-center">
-      <h2 class="mx-auto py-28 ">11</h2>
+    <li class="bg-pink-200 col-span-2 relative flex overflow-hidden">
+      {% assign recent11 = site.work | where: "tags", "recent2" %}
+      {% for work in recent11 %}
+          <span class="block absolute top-0 right-0 bg-white p-4">11</span>
+          <a href="{{ work.url }} ">
+            {% include partial/img.html
+              path=work.imghero
+              2xl="&w=200&h=200"
+              xl="&w=200&h=200"
+              lg="&w=200&h=200"
+              md="&w=200&h=200"
+              sm="&w=200&h=200"
+              class="p-2 bg-white"
+            %}
+          </a>
+      {% endfor %}
     </li>
-    <li class="bg-gray-200 text-center flex items-center content-center">
-      <h2 class="mx-auto py-28 ">12</h2>
+    <li class="bg-pink-200 relative flex overflow-hidden">
+      {% assign recent12 = site.work | where: "tags", "recent2" %}
+      {% for work in recent12 %}
+          <span class="block absolute top-0 right-0 bg-white p-4">12</span>
+          <a href="{{ work.url }} ">
+            {% include partial/img.html
+              path=work.imghero
+              2xl="&w=200&h=200"
+              xl="&w=200&h=200"
+              lg="&w=200&h=200"
+              md="&w=200&h=200"
+              sm="&w=200&h=200"
+              class="p-2 bg-white"
+            %}
+          </a>
+      {% endfor %}
     </li>
   </ul>
 </section>
@@ -253,8 +412,8 @@ layout: default
 <section class="container text-center py-20">
   <span class="inline-block w-20 border-2 border-t border-gray-600"></span>
   {% include partial/quote-lg.html
-  quote="...the truth is, it's not the idea, it's never the idea, it's always what you do with it."
-  attribute="Neil Gaiman "
+  quote="The alternative to good design is always bad design. There is no such thing as no design."
+  attribute="Adam Judge"
   style="py-12"
   %}
   <span class="inline-block w-20 border-2 border-t border-gray-600"></span>
