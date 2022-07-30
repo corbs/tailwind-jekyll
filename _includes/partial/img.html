@@ -17,9 +17,9 @@
   >
   <source
     srcset="https://agw.imgix.net/ad/cnz/{{ include.path }}?auto=format{{ include.sm }}"
-    media="(min-width: 640px)"
+    media="(max-width: 769px)"
   >
-  <img src="https://agw.imgix.net/ad/cnz/{{ include.path }}?nf_resize=fit&w=20"
+  <img src="https://agw.imgix.net/ad/cnz/{{ include.path }}?auto=format{{ include.xl }}"
     alt="{% if include.imgalt %}{{ include.imgalt }}{% else %}Graphic Design Portfolio Work by Corbin Featherstone{% endif %}"
     class="lazyload {{ include.class }}"
   >

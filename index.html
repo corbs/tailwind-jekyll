@@ -10,7 +10,7 @@ layout: default
       <p class="md:w-3/4 lg:w-full">An experienced graphic designer will deliver the best <span class="font-bold">consistent visuals</span> for your business, across <span class="font-bold">multiple platforms.</span>  </p>
       <p class="py-4">
         <a href="*" class="text-lg">
-          <i class="mx-2 fas fa-play-circle" data-fa-transform="grow-6"></i> Watch me work
+          <i class="mx-2 fas fa-play-circle" data-fa-transform="grow-6"></i> Watch video
         </a>
       </p>
       <div class="">
@@ -64,7 +64,7 @@ layout: default
       Employ creative and engaging graphics that capture your customers and lift your brand.
     </p>
   </div>
-  <ul class="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
+  <ul class="w-full grid grid-cols-2 xl:grid-cols-4 gap-10">
     <li class="bg-white shadow row-span-2 col-span-2 relative">
       {% assign recent1 = site.work | where: "tags", "recent1" %}
       {% for work in recent1 %}
@@ -75,8 +75,8 @@ layout: default
               2xl="&w=756&h=756&fit=crop"
               xl="&w=756&h=756&fit=crop"
               lg="&w=980&h=756&fit=crop"
-              md="&w=200&h=200&fit=crop"
-              sm="&w=200&h=200&fit=crop"
+              md="&w=710&h=600&fit=crop"
+              sm="&w=580&h=500&fit=crop"
               class="p-2"
             %}
           </a>
@@ -90,10 +90,10 @@ layout: default
             {% include partial/img.html
               path=work.imghero
               2xl="&w=378&h=821&fit=crop"
-              xl="&w=378&h=821&fit=crop"
-              lg="&w=756&h=756&fit=crop"
-              md="&w=200&h=200&fit=crop"
-              sm="&w=200&h=200&fit=crop"
+              xl="&w=378&h=835&fit=crop"
+              lg="&w=500&h=1062&fit=crop"
+              md="&w=350&h=760&fit=crop"
+              sm="&w=350&h=550&fit=crop"
               class="p-2"
             %}
           </a>
@@ -108,9 +108,9 @@ layout: default
               path=work.imghero
               2xl="&w=378&h=378&fit=crop"
               xl="&w=378&h=378&fit=crop"
-              lg="&w=378&h=378&fit=crop"
-              md="&w=200&h=200&fit=crop"
-              sm="&w=200&h=200&fit=crop"
+              lg="&w=500&h=500&fit=crop"
+              md="&w=350&h=350&fit=crop"
+              sm="&w=300&h=200&fit=crop"
               class="p-2"
             %}
           </a>
@@ -125,15 +125,15 @@ layout: default
               path=work.imghero
               2xl="&w=378&h=378&fit=crop"
               xl="&w=378&h=378&fit=crop"
-              lg="&w=378&h=378&fit=crop"
-              md="&w=200&h=200&fit=crop"
-              sm="&w=200&h=200&fit=crop"
+              lg="&w=500&h=500&fit=crop"
+              md="&w=350&h=350&fit=crop"
+              sm="&w=300&h=200&fit=crop"
               class="p-2"
             %}
           </a>
       {% endfor %}
     </li>
-    <li class="bg-white shadow row-span-2 relative">
+    <li class="bg-white shadow md:col-span-2 xl:col-span-1 lg:row-span-2 relative">
       {% assign recent5 = site.work | where: "tags", "recent2" %}
       {% for work in recent5 %}
           <span class="block absolute top-0 right-0 bg-white p-4">5</span>
@@ -141,16 +141,16 @@ layout: default
             {% include partial/img.html
               path=work.imghero
               2xl="&w=378&h=821&fit=crop"
-              xl="&w=378&h=821&fit=crop"
-              lg="&w=200&h=200&fit=crop"
-              md="&w=200&h=200&fit=crop"
-              sm="&w=200&h=200&fit=crop"
+              xl="&w=378&h=835&fit=crop"
+              lg="&w=1000&h=500&fit=crop"
+              md="&w=710&h=400&fit=crop"
+              sm="&w=300&h=200&fit=crop"
               class="p-2"
             %}
           </a>
       {% endfor %}
     </li>
-    <li class="bg-white shadow col-span-2 row-span-2 relative">
+    <li class="bg-white shadow md:col-span-2 md:row-span-2 relative">
       {% assign recent6 = site.work | where: "tags", "recent2" %}
       {% for work in recent6 %}
           <span class="block absolute top-0 right-0 bg-white p-4">6</span>
@@ -159,15 +159,15 @@ layout: default
               path=work.imghero
               2xl="&w=756&h=756&fit=crop"
               xl="&w=756&h=756&fit=crop"
-              lg="&w=200&h=200&fit=crop"
-              md="&w=200&h=200&fit=crop"
-              sm="&w=200&h=200&fit=crop"
+              lg="&w=1000&h=500&fit=crop"
+              md="&w=710&h=600&fit=crop"
+              sm="&w=300&h=200&fit=crop"
               class="p-2"
             %}
           </a>
       {% endfor %}
     </li>
-    <li class="bg-white shadow row-span-2 relative">
+    <li class="bg-white shadow md:row-span-2 relative">
       {% assign recent7 = site.work | where: "tags", "recent2" %}
       {% for work in recent7 %}
           <span class="block absolute top-0 right-0 bg-white p-4">7</span>
@@ -175,10 +175,10 @@ layout: default
             {% include partial/img.html
               path=work.imghero
               2xl="&w=378&h=821&fit=crop"
-              xl="&w=378&h=821&fit=crop"
-              lg="&w=200&h=200"
-              md="&w=200&h=200"
-              sm="&w=200&h=200"
+              xl="&w=378&h=835&fit=crop"
+              lg="&w=500&h=1062&fit=crop"
+              md="&w=350&h=560&fit=crop"
+              sm="&w=300&h=200&fit=crop"
               class="p-2"
             %}
           </a>
@@ -193,15 +193,15 @@ layout: default
               path=work.imghero
               2xl="&w=378&h=378&fit=crop"
               xl="&w=378&h=378&fit=crop"
-              lg="&w=200&h=200&fit=crop"
-              md="&w=200&h=200&fit=crop"
-              sm="&w=200&h=200&fit=crop"
+              lg="&w=500&h=500&fit=crop"
+              md="&w=350&h=250&fit=crop"
+              sm="&w=300&h=200&fit=crop"
               class="p-2"
             %}
           </a>
       {% endfor %}
     </li>
-    <li class="bg-white shadow relative">
+    <li class="bg-white shadow col-span-2 md:col-span-1 relative">
       {% assign recent9 = site.work | where: "tags", "recent2" %}
       {% for work in recent9 %}
           <span class="block absolute top-0 right-0 bg-white p-4">9</span>
@@ -210,9 +210,9 @@ layout: default
               path=work.imghero
               2xl="&w=378&h=378&fit=crop"
               xl="&w=378&h=378&fit=crop"
-              lg="&w=200&h=200&fit=crop"
-              md="&w=200&h=200&fit=crop"
-              sm="&w=200&h=200&fit=crop"
+              lg="&w=500&h=500&fit=crop"
+              md="&w=350&h=250&fit=crop"
+              sm="&w=580&h=300&fit=crop"
               class="p-2"
             %}
           </a>
@@ -227,9 +227,9 @@ layout: default
               path=work.imghero
               2xl="&w=756&h=756&fit=crop"
               xl="&w=756&h=756&fit=crop"
-              lg="&w=200&h=200&fit=crop"
-              md="&w=200&h=200&fit=crop"
-              sm="&w=200&h=200&fit=crop"
+              lg="&w=1000&h=800&fit=crop"
+              md="&w=710&h=400&fit=crop"
+              sm="&w=580&h=500&fit=crop"
               class="p-2"
             %}
           </a>
@@ -244,9 +244,9 @@ layout: default
               path=work.imghero
               2xl="&w=378&h=378&fit=crop"
               xl="&w=378&h=378&fit=crop"
-              lg="&w=200&h=200"
-              md="&w=200&h=200"
-              sm="&w=200&h=200"
+              lg="&w=500&h=500&fit=crop"
+              md="&w=350&h=250&fit=crop"
+              sm="&w=300&h=200&fit=crop"
               class="p-2"
             %}
           </a>
@@ -261,9 +261,9 @@ layout: default
               path=work.imghero
               2xl="&w=378&h=378&fit=crop"
               xl="&w=378&h=378&fit=crop"
-              lg="&w=200&h=200"
-              md="&w=200&h=200"
-              sm="&w=200&h=200"
+              lg="&w=500&h=500&fit=crop"
+              md="&w=350&h=250&fit=crop"
+              sm="&w=300&h=200&fit=crop"
               class="p-2"
             %}
           </a>
@@ -293,7 +293,7 @@ layout: default
   </div>
 </section>
 
-<!-- layout section -->
+<!-- Brand section -->
 <section class="container flex flex-wrap justify-between items-center py-20 ">
   <div class="w-full lg:w-5/12 mx-auto">
     {% include partial/icon-box.html
@@ -318,19 +318,25 @@ layout: default
     -->
   </div>
   <div class="w-full lg:w-1/2">
-    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg">
-      <img
-        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
-        class="w-full align-middle rounded-t-lg" />
-      <p class="text-md font-light mt-2">
-        The Arctic Ocean freezes every winter and much of the
-        sea-ice then thaws every summer.
-      </p>
-    </div>
+    {% assign branding = site.work | where: "tags", "feature-brand" %}
+    {% for work in branding %}
+        <span class="block absolute top-0 right-0 bg-white p-4">1</span>
+        <a href="{{ work.url }} ">
+          {% include partial/img.html
+            path=work.imghero
+            2xl="&w=756&h=556&fit=crop"
+            xl="&w=756&h=556&fit=crop"
+            lg="&w=500&h=700&fit=crop"
+            md="&w=720&h=500&fit=crop"
+            sm="&w=580&h=480&fit=crop"
+            class="my-3"
+          %}
+        </a>
+    {% endfor %}
   </div>
 </section>
 
-<!-- brand section -->
+<!-- Layout section -->
 <section class="container flex flex-row-reverse flex-wrap justify-between items-center py-20 ">
   <div class="w-full lg:w-5/12 mx-auto">
     {% include partial/icon-box.html
@@ -355,15 +361,21 @@ layout: default
     -->
   </div>
   <div class="w-full lg:w-1/2">
-    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg">
-      <img alt="..."
-        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
-        class="w-full align-middle rounded-t-lg" />
-      <p class="text-md font-light mt-2">
-        The Arctic Ocean freezes every winter and much of the
-        sea-ice then thaws every summer.
-      </p>
-    </div>
+    {% assign layout = site.work | where: "tags", "feature-layout" %}
+    {% for work in layout %}
+        <span class="block absolute top-0 right-0 bg-white p-4">1</span>
+        <a href="{{ work.url }} ">
+          {% include partial/img.html
+            path=work.imghero
+            2xl="&w=756&h=556&fit=crop"
+            xl="&w=756&h=556&fit=crop"
+            lg="&w=500&h=700&fit=crop"
+            md="&w=720&h=500&fit=crop"
+            sm="&w=580&h=480&fit=crop"
+            class="my-3"
+          %}
+        </a>
+    {% endfor %}
   </div>
 </section>
 
@@ -390,15 +402,21 @@ layout: default
     -->
   </div>
   <div class="w-full lg:w-2/3">
-    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg">
-      <img alt="..."
-        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
-        class="w-full align-middle rounded-t-lg" />
-      <p class="text-md font-light mt-2">
-        The Arctic Ocean freezes every winter and much of the
-        sea-ice then thaws every summer.
-      </p>
-    </div>
+    {% assign website = site.work | where: "tags", "feature-web" %}
+    {% for work in website %}
+        <span class="block absolute top-0 right-0 bg-white p-4">1</span>
+        <a href="{{ work.url }} ">
+          {% include partial/img.html
+            path=work.imghero
+            2xl="&w=756&h=556&fit=crop"
+            xl="&w=756&h=556&fit=crop"
+            lg="&w=500&h=700&fit=crop"
+            md="&w=720&h=500&fit=crop"
+            sm="&w=580&h=480&fit=crop"
+            class="my-3"
+          %}
+        </a>
+    {% endfor %}
   </div>
 </section>
 
