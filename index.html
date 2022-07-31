@@ -5,9 +5,9 @@ layout: default
 <section class="bg-primary">
   <!-- hero -->
   <div class="container flex items-center">
-    <div class="lg:w-1/3 lg:-mr-40 lg:ml-20 py-16 z-10">
+    <div class="lg:w-1/2 xl:w-1/3 lg:-mr-40 pt-6 pb-20 lg:pt-0 lg:pb-0 lg:ml-20 z-10">
       <h1 class="">Stand out from the crowd.</h1>
-      <p class="md:w-3/4 lg:w-full">An experienced graphic designer will deliver the best <span class="font-bold">consistent visuals</span> for your business, across <span class="font-bold">multiple platforms.</span>  </p>
+      <p class="md:w-3/4 lg:w-full">A talented graphic designer will deliver the best <span class="font-bold">consistent visuals</span> for your business, across <span class="font-bold">multiple platforms.</span>  </p>
       <p class="py-4">
         <a href="*" class="text-lg">
           <i class="mx-2 fas fa-play-circle" data-fa-transform="grow-6"></i> Watch video
@@ -21,7 +21,7 @@ layout: default
         %}
         {% include partial/btn.html
         url="assets/file/corbin_featherstone.pdf"
-        text="Download my portfolio"
+        text="My portfolio"
         style="my-2 border-2 border-gray-900 hover:bg-primaryLight"
         icopost="arrow-right"
         %}
@@ -32,8 +32,8 @@ layout: default
       {% include partial/img.html
       path="home.jpg"
       2xl="&h=800"
-      xl="&h=800"
-      lg="&h=700"
+      xl="&h=700"
+      lg="&h=550"
       md="&w=20"
       sm="&w=20"
       alt="Bad Juju, beer brand by Corbin Featherstone"
@@ -45,13 +45,10 @@ layout: default
 
 <!-- socmed links -->
 <section class="container -mt-12 ">
-  <p class="text-2xl">
-    <a href="*" class="p-2"><i class="fab fa-behance"></i></a>
-    <a href="*" class="p-2"><i class="fab fa-dribbble"></i></a>
-    <a href="*" class="p-2"><i class="fab fa-instagram"></i></a>
-    <a href="*" class="p-2"><i class="fab fa-github"></i></a>
-    <a href="*" class="p-2"><i class="fab fa-twitter"></i></a>
-  </p>
+  {% include partial/socmed.html
+    style=""
+    linkStyle=""
+    %}
 </section>
 
 <!-- Recent work -->
@@ -64,7 +61,7 @@ layout: default
       Employ creative and engaging graphics that capture your customers and lift your brand.
     </p>
   </div>
-  <ul class="w-full grid grid-cols-2 xl:grid-cols-4 gap-10">
+  <ul class="w-full grid grid-cols-4 gap-8 xl:gap-14">
     <li class="bg-white shadow row-span-2 col-span-2 relative">
       {% assign recent1 = site.work | where: "tags", "recent1" %}
       {% for work in recent1 %}
@@ -72,8 +69,8 @@ layout: default
           <a href="{{ work.url }} ">
             {% include partial/img.html
               path=work.imghero
-              2xl="&w=756&h=756&fit=crop"
-              xl="&w=756&h=756&fit=crop"
+              2xl="&w=756&h=556&fit=crop"
+              xl="&w=756&h=456&fit=crop"
               lg="&w=980&h=756&fit=crop"
               md="&w=710&h=600&fit=crop"
               sm="&w=580&h=500&fit=crop"
@@ -89,8 +86,8 @@ layout: default
           <a href="{{ work.url }} ">
             {% include partial/img.html
               path=work.imghero
-              2xl="&w=378&h=821&fit=crop"
-              xl="&w=378&h=835&fit=crop"
+              2xl="&w=378&h=621&fit=crop"
+              xl="&w=378&h=535&fit=crop"
               lg="&w=500&h=1062&fit=crop"
               md="&w=350&h=760&fit=crop"
               sm="&w=350&h=550&fit=crop"
@@ -106,8 +103,8 @@ layout: default
           <a href="{{ work.url }} ">
             {% include partial/img.html
               path=work.imghero
-              2xl="&w=378&h=378&fit=crop"
-              xl="&w=378&h=378&fit=crop"
+              2xl="&w=378&h=278&fit=crop"
+              xl="&w=378&h=258&fit=crop"
               lg="&w=500&h=500&fit=crop"
               md="&w=350&h=350&fit=crop"
               sm="&w=300&h=200&fit=crop"
@@ -123,8 +120,8 @@ layout: default
           <a href="{{ work.url }} ">
             {% include partial/img.html
               path=work.imghero
-              2xl="&w=378&h=378&fit=crop"
-              xl="&w=378&h=378&fit=crop"
+              2xl="&w=378&h=278&fit=crop"
+              xl="&w=378&h=258&fit=crop"
               lg="&w=500&h=500&fit=crop"
               md="&w=350&h=350&fit=crop"
               sm="&w=300&h=200&fit=crop"
@@ -140,8 +137,8 @@ layout: default
           <a href="{{ work.url }} ">
             {% include partial/img.html
               path=work.imghero
-              2xl="&w=378&h=821&fit=crop"
-              xl="&w=378&h=835&fit=crop"
+              2xl="&w=378&h=420&fit=crop"
+              xl="&w=378&h=378&fit=crop"
               lg="&w=1000&h=500&fit=crop"
               md="&w=710&h=400&fit=crop"
               sm="&w=300&h=200&fit=crop"
@@ -157,7 +154,7 @@ layout: default
           <a href="{{ work.url }} ">
             {% include partial/img.html
               path=work.imghero
-              2xl="&w=756&h=756&fit=crop"
+              2xl="&w=856&h=420&fit=crop"
               xl="&w=756&h=756&fit=crop"
               lg="&w=1000&h=500&fit=crop"
               md="&w=710&h=600&fit=crop"
@@ -174,95 +171,10 @@ layout: default
           <a href="{{ work.url }} ">
             {% include partial/img.html
               path=work.imghero
-              2xl="&w=378&h=821&fit=crop"
+              2xl="&w=378&h=420&fit=crop"
               xl="&w=378&h=835&fit=crop"
               lg="&w=500&h=1062&fit=crop"
               md="&w=350&h=560&fit=crop"
-              sm="&w=300&h=200&fit=crop"
-              class="p-2"
-            %}
-          </a>
-      {% endfor %}
-    </li>
-    <li class="bg-white shadow relative">
-      {% assign recent8 = site.work | where: "tags", "recent2" %}
-      {% for work in recent8 %}
-          <span class="block absolute top-0 right-0 bg-white p-4">8</span>
-          <a href="{{ work.url }} ">
-            {% include partial/img.html
-              path=work.imghero
-              2xl="&w=378&h=378&fit=crop"
-              xl="&w=378&h=378&fit=crop"
-              lg="&w=500&h=500&fit=crop"
-              md="&w=350&h=250&fit=crop"
-              sm="&w=300&h=200&fit=crop"
-              class="p-2"
-            %}
-          </a>
-      {% endfor %}
-    </li>
-    <li class="bg-white shadow col-span-2 md:col-span-1 relative">
-      {% assign recent9 = site.work | where: "tags", "recent2" %}
-      {% for work in recent9 %}
-          <span class="block absolute top-0 right-0 bg-white p-4">9</span>
-          <a href="{{ work.url }} ">
-            {% include partial/img.html
-              path=work.imghero
-              2xl="&w=378&h=378&fit=crop"
-              xl="&w=378&h=378&fit=crop"
-              lg="&w=500&h=500&fit=crop"
-              md="&w=350&h=250&fit=crop"
-              sm="&w=580&h=300&fit=crop"
-              class="p-2"
-            %}
-          </a>
-      {% endfor %}
-    </li>
-    <li class="bg-white col-span-2 row-span-2 shadow relative">
-      {% assign recent10 = site.work | where: "tags", "recent2" %}
-      {% for work in recent10 %}
-          <span class="block absolute top-0 right-0 bg-white p-4">10</span>
-          <a href="{{ work.url }} ">
-            {% include partial/img.html
-              path=work.imghero
-              2xl="&w=756&h=756&fit=crop"
-              xl="&w=756&h=756&fit=crop"
-              lg="&w=1000&h=800&fit=crop"
-              md="&w=710&h=400&fit=crop"
-              sm="&w=580&h=500&fit=crop"
-              class="p-2"
-            %}
-          </a>
-      {% endfor %}
-    </li>
-    <li class="bg-white shadow relative">
-      {% assign recent11 = site.work | where: "tags", "recent2" %}
-      {% for work in recent11 %}
-          <span class="block absolute top-0 right-0 bg-white p-4">11</span>
-          <a href="{{ work.url }} ">
-            {% include partial/img.html
-              path=work.imghero
-              2xl="&w=378&h=378&fit=crop"
-              xl="&w=378&h=378&fit=crop"
-              lg="&w=500&h=500&fit=crop"
-              md="&w=350&h=250&fit=crop"
-              sm="&w=300&h=200&fit=crop"
-              class="p-2"
-            %}
-          </a>
-      {% endfor %}
-    </li>
-    <li class="bg-white shadow relative">
-      {% assign recent12 = site.work | where: "tags", "recent2" %}
-      {% for work in recent12 %}
-          <span class="block absolute top-0 right-0 bg-white p-4">12</span>
-          <a href="{{ work.url }} ">
-            {% include partial/img.html
-              path=work.imghero
-              2xl="&w=378&h=378&fit=crop"
-              xl="&w=378&h=378&fit=crop"
-              lg="&w=500&h=500&fit=crop"
-              md="&w=350&h=250&fit=crop"
               sm="&w=300&h=200&fit=crop"
               class="p-2"
             %}
