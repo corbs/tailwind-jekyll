@@ -42,8 +42,8 @@ layout: default
 <!-- socmed links -->
 <section class="container -mt-12">
   {% include partial/socmed.html
-    style=""
-    linkStyle=""
+    style="-mx-2"
+    linkStyle="hover:border-b-2 border-current"
     %}
 </section>
 
@@ -51,40 +51,48 @@ layout: default
 <section class=" container py-20">
   <div class="w-full text-center">
     <p class="font-bold text-4xl lg:text-5xl py-4">
-      My work process
+      Creative design
     </p>
     <p class="text-xl text-gray-500 pb-8">
       Branding, photoshop, traditional: Here's some examples of <span class="border-b-2 border-current">how</span> I work.
     </p>
   </div>
       <div class="flex flex-wrap lg:flex-row justify-between items-stretch -mx-6">
-        <div class="mx-6 mt-6 bg-white flex-1 pt-10 pb-6 px-12 shadow-lg z-50">
-          {% include partial/icon-box.html
-            icon="play-circle mx-auto"
-          %}
-          <h4>Awarded Agency</h4>
+        <div class="mx-6 mt-6 bg-white flex-1 shadow-lg z-50">
+          {% include partial/vimeo.html
+            id="350871445"
+            style=""
+            %}
+          <div class="pt-10 pb-6 px-12">
+          <h4>Brand design</h4>
           <p class="mt-2 mb-4 text-gray-500">
             Divide details about your product or agency work into parts.
-            A paragraph describing a feature will be enough. A paragraph describing a feature will be enough. Keep you user engaged!
           </p>
+          </div>
         </div>
-        <div class="mx-6 mt-6 bg-white flex-1 pt-10 pb-6 px-12 shadow-lg z-50">
-          {% include partial/icon-box.html
-            icon="play-circle mx-auto"
-          %}
-          <h4>Free Revisions</h4>
+        <div class="mx-6 mt-6 bg-white flex-1 shadow-lg z-50">
+          {% include partial/vimeo.html
+            id="350871445"
+            style=""
+            %}
+          <div class="pt-10 pb-6 px-12">
+          <h4>Image processing</h4>
           <p class="mt-2 mb-4 text-gray-500">
-            Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious.
+            Keep you user engaged by providing meaningful information.
           </p>
+          </div>
         </div>
-        <div class="mx-6 mt-6 bg-white flex-1 pt-10 pb-6 px-12 shadow-lg z-50">
-          {% include partial/icon-box.html
-            icon="play-circle mx-auto"
-          %}
-          <h4>Verified Company</h4>
+        <div class="mx-6 mt-6 bg-white flex-1 shadow-lg z-50">
+          {% include partial/vimeo.html
+            id="350871445"
+            style=""
+            %}
+          <div class="pt-10 pb-6 px-12">
+          <h4>Hand crafted</h4>
           <p class="mt-2 mb-4 text-gray-500">
             Write a few lines about each one. 
           </p>
+          </div>
         </div>
       </div>
 </section>
@@ -231,14 +239,24 @@ layout: default
     </div>
     <div class="p-12 w-full lg:w-3/4">
       <h5>Solving problems visually</h5>
-      <h2>My story</h2>
+      <h2>About me</h2>
       <p class="text-gray-500">
-        I did some stuff a while back, then some more stuff. Around this time some important stuff came up so I went and did that. Then it was a slow cruise along doing some different stuff, which brings us to today.
+        I'm a process oriented graphic designer with decades of experience, working nearly every role in the industry. 
       </p>
+      <ul class="py-5 text-sm">
+        <li class="pb-4">
+          <h6 class="text-base">Productive under pressure</h6>
+          <p class="text-gray-500">Juggling Familiar with the entire design process, from ideation to print.</p></li>
+        <li class="pb-4"><h6 class="text-base">Front-line big brand experience</h6>
+          <p class="text-gray-500">I've done my time in the trenches and know what it takes to push a project home.</p></li>
+        <li><h6 class="text-base">Flexible and supportive</h6>
+          <p class="text-gray-500">I've worked nearly every role in the industry and naturally adapt to the needs of the team.</p></li>
+
+      </ul>
       {% include partial/btn.html
         url="assets/file/corbin_featherstone.pdf"
-        text="Tell me more!"
-        style="my-3 border border-gray-200 bg-white hover:border-gray-500"
+        text="My history"
+        style="my-5 border-2 border-gray-900 bg-white hover:bg-gray-900 hover:text-primary"
         icopost="angle-right"
         %}
     </div>
@@ -451,8 +469,43 @@ layout: default
   </div>
 </section>
 
+<!-- Illustration -->
+<section class="container flex  flex-wrap justify-between items-center py-24 ">
+  <div class="w-full lg:w-1/4 mx-auto">
+    {% include partial/icon-box.html
+    icon="user-friends"
+    style="block"
+    %}
+    <h2>Illustration</h2>
+    <p class="text-lg">
+      Cloud data ad illustration. US flag row crop illustration. Connecting the dots illustration
+    </p>
+    <!-- 
+    {% include partial/btn.html
+    url="assets/file/corbin_featherstone.pdf"
+    text="More packaging"
+    style="my-3 border border-gray-200 bg-white hover:border-gray-500"
+    icopost="angle-right"
+    %}
+    -->
+  </div>
+  <div class="w-full lg:w-2/3">
+    <ul class="w-full grid grid-cols-3 gap-8">
+      <li class="bg-gray-200 text-center flex items-center content-center">
+        <h2 class="mx-auto py-28 ">1</h2>
+      </li>
+      <li class="bg-gray-200 text-center flex items-center content-center">
+        <h2 class="mx-auto py-28 ">2</h2>
+      </li>
+      <li class="bg-gray-200 text-center flex items-center content-center">
+        <h2 class="mx-auto py-28 ">3</h2>
+      </li>
+    </ul>
+  </div>
+</section>
+
 <!-- Events section -->
-<section class="container flex flex-wrap justify-between items-center py-24 ">
+<section class="container flex-row-reverse flex flex-wrap justify-between items-center py-24 ">
   <div class="w-full lg:w-1/4 ">
     {% include partial/icon-box.html
     icon="user-friends"
