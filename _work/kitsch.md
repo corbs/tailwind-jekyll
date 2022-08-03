@@ -1,10 +1,10 @@
 ---
 layout: work
 title: Kitsch
-imghero: work/kitsch.jpg
+imghero: test.jpg
 imgalt: test2
 categories:
-tags: work
+tags: [featured, work]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus imperdiet nulla malesuada pellentesque elit eget gravida. Nibh tortor id aliquet lectus. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Amet nulla facilisi morbi tempus iaculis urna id. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus.

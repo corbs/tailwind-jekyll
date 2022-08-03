@@ -50,12 +50,12 @@ layout: default
 <!-- CTA video -->
 <section class=" container py-20">
   <div class="w-full text-center">
-    <h5>Branding / image processing / traditional</h5>
+    <h5>Corbin Featherstone</h5>
     <p class="font-bold text-4xl lg:text-5xl py-4">
       Creative design
     </p>
     <p class="text-xl text-gray-500 pb-8">
-      The process is more important than the finished product. Here's a few examples of <span class="border-b-2 border-current">how</span> I work.
+      Here's a few examples of <span class="border-b-2 border-current">how</span> I work.
     </p>
   </div>
       <div class="flex flex-col lg:flex-row justify-between items-stretch -mx-6">
@@ -102,17 +102,15 @@ layout: default
 <!-- Gallery -->
 <section class="container flex flex-wrap py-20">
   <div class="w-full">
-    <p class="font-bold text-2xl lg:text-3xl py-4">
-      Gallery
-    </p>
-    <p class="text-lg text-gray-500 pb-8">
-      All projects on this site have been entirely designed by myself. Copyrights belong to the companies they were designed for. 
+    <h2>Recent work</h2>
+    <p class="text-lg text-gray-500 pb-8 lg:w-1/2">
+      All projects on this site have been entirely designed by myself, from concept to completion. Copyright belongs to the company they were designed for. 
     </p>
   </div>
   <ul class="w-full grid grid-cols-4 gap-8 xl:gap-14">
-    <li class="row-span-2 col-span-2 relative">
-      {% assign recent1 = site.work | where: "tags", "recent1" %}
-      {% for work in recent1 %}
+    {% assign featured = site.work | where: "tags", "featured" %}
+    {% for work in featured %}
+    <li class="relative">
           <span class="block absolute top-0 right-0 bg-white p-4">1</span>
           <a href="{{ work.url }} ">
             {% include partial/img.html
@@ -125,110 +123,8 @@ layout: default
               class=""
             %}
           </a>
+        </li>
       {% endfor %}
-    </li>
-    <li class="row-span-2 relative">
-      {% assign recent2 = site.work | where: "tags", "recent2" %}
-      {% for work in recent2 %}
-          <span class="block absolute top-0 right-0 bg-white p-4">2</span>
-          <a href="{{ work.url }} ">
-            {% include partial/img.html
-              path=work.imghero
-              2xl="&w=378&h=621&fit=crop"
-              xl="&w=378&h=535&fit=crop"
-              lg="&w=500&h=1062&fit=crop"
-              md="&w=350&h=760&fit=crop"
-              sm="&w=350&h=550&fit=crop"
-              class=""
-            %}
-          </a>
-      {% endfor %}
-    </li>
-    <li class="relative">
-      {% assign recent3 = site.work | where: "tags", "recent2" %}
-      {% for work in recent3 %}
-          <span class="block absolute top-0 right-0 bg-white p-4">3</span>
-          <a href="{{ work.url }} ">
-            {% include partial/img.html
-              path=work.imghero
-              2xl="&w=378&h=278&fit=crop"
-              xl="&w=378&h=258&fit=crop"
-              lg="&w=500&h=500&fit=crop"
-              md="&w=350&h=350&fit=crop"
-              sm="&w=300&h=200&fit=crop"
-              class=""
-            %}
-          </a>
-      {% endfor %}
-    </li>
-    <li class="relative">
-      {% assign recent4 = site.work | where: "tags", "recent2" %}
-      {% for work in recent4 %}
-          <span class="block absolute top-0 right-0 bg-white p-4">4</span>
-          <a href="{{ work.url }} ">
-            {% include partial/img.html
-              path=work.imghero
-              2xl="&w=378&h=278&fit=crop"
-              xl="&w=378&h=258&fit=crop"
-              lg="&w=500&h=500&fit=crop"
-              md="&w=350&h=350&fit=crop"
-              sm="&w=300&h=200&fit=crop"
-              class=""
-            %}
-          </a>
-      {% endfor %}
-    </li>
-    <li class="md:col-span-2 xl:col-span-1 lg:row-span-2 relative">
-      {% assign recent5 = site.work | where: "tags", "recent2" %}
-      {% for work in recent5 %}
-          <span class="block absolute top-0 right-0 bg-white p-4">5</span>
-          <a href="{{ work.url }} ">
-            {% include partial/img.html
-              path=work.imghero
-              2xl="&w=378&h=420&fit=crop"
-              xl="&w=378&h=378&fit=crop"
-              lg="&w=1000&h=500&fit=crop"
-              md="&w=710&h=400&fit=crop"
-              sm="&w=300&h=200&fit=crop"
-              class=""
-            %}
-          </a>
-      {% endfor %}
-    </li>
-    <li class="md:col-span-2 md:row-span-2 relative">
-      {% assign recent6 = site.work | where: "tags", "recent2" %}
-      {% for work in recent6 %}
-          <span class="block absolute top-0 right-0 bg-white p-4">6</span>
-          <a href="{{ work.url }} ">
-            {% include partial/img.html
-              path=work.imghero
-              2xl="&w=856&h=420&fit=crop"
-              xl="&w=756&h=756&fit=crop"
-              lg="&w=1000&h=500&fit=crop"
-              md="&w=710&h=600&fit=crop"
-              sm="&w=300&h=200&fit=crop"
-              class=""
-            %}
-          </a>
-      {% endfor %}
-    </li>
-    <li class="md:row-span-2 relative">
-      {% assign recent7 = site.work | where: "tags", "recent2" %}
-      {% for work in recent7 %}
-          <span class="block absolute top-0 right-0 bg-white p-4">7</span>
-          <a href="{{ work.url }} ">
-            {% include partial/img.html
-              path=work.imghero
-              2xl="&w=378&h=420&fit=crop"
-              xl="&w=378&h=835&fit=crop"
-              lg="&w=500&h=1062&fit=crop"
-              md="&w=350&h=560&fit=crop"
-              sm="&w=300&h=200&fit=crop"
-              class=""
-            %}
-          </a>
-      {% endfor %}
-    </li>
   </ul>
 </section>
 
@@ -237,12 +133,12 @@ layout: default
   <div class="container flex flex-wrap">
     <span class="-mt-16 lg:w-1/4">
       {% include partial/img.html 
-        path="avatar.jpg"
-        2xl="&w=500"
-        xl="&w=500"
-        lg="&w=500"
-        md="&w=500"
-        sm="&w=500"
+        path="avatar3.jpg"
+        2xl="&w=400"
+        xl="&w=320"
+        lg="&w=250"
+        md="&w=150"
+        sm="&w=150"
         class="p-12 bg-primary border-8 border-white rounded shadow-md "
         %}
     </span>
@@ -253,13 +149,27 @@ layout: default
         I'm a process oriented graphic designer with decades of experience, working nearly every role in the industry. 
       </p>
       <ul class="py-5 text-sm">
-        <li class="pb-4">
+        <li class="pb-4 flex flex-row items-center">
+          <div class="hidden md:block font-bold text-5xl pr-5 text-gray-300">1</div>
+          <div>
           <h6 class="text-base">Productive under pressure</h6>
-          <p class="text-gray-500">Juggling Familiar with the entire design process, from ideation to print.</p></li>
-        <li class="pb-4"><h6 class="text-base">Front-line big brand experience</h6>
-          <p class="text-gray-500">I've done my time in the trenches and know what it takes to push a project home.</p></li>
-        <li><h6 class="text-base">Flexible and supportive</h6>
-          <p class="text-gray-500">I've worked nearly every role in the industry and naturally adapt to the needs of the team.</p></li>
+          <p class="text-gray-500">Juggling Familiar with the entire design process, from ideation to print.</p>
+          </div>
+        </li>
+        <li class="pb-4 flex flex-row items-center">
+          <div class="hidden md:block font-bold text-5xl pr-5 text-gray-300">2</div>
+          <div>
+          <h6 class="text-base">Front-line big brand experience</h6>
+          <p class="text-gray-500">I've done my time in the trenches and know what it takes to push a project home.</p>
+          </div>
+        </li>
+        <li class="pb-4 flex flex-row items-center">
+          <div class="hidden md:block font-bold text-5xl pr-5 text-gray-300">3</div>
+          <div>
+          <h6 class="text-base">Flexible and supportive</h6>
+          <p class="text-gray-500">I've worked nearly every role in the industry and naturally adapt to the needs of the team.</p>
+          </div>
+        </li>
 
       </ul>
       {% include partial/btn.html
@@ -413,11 +323,11 @@ layout: default
 </section>
 
 <!-- Quote -->
-<section class="container text-center py-20">
+<section class="container text-center py-20 ">
   <span class="inline-block w-20 border-2 border-t border-gray-600"></span>
   {% include partial/quote-lg.html
-  quote="The alternative to good design is always bad design. There is no such thing as no design."
-  attribute="Adam Judge"
+  quote="...the truth is, it's not the idea, it's never the idea, it's always what you do with it."
+  attribute="Neil Gaiman "
   style="py-12"
   %}
   <span class="inline-block w-20 border-2 border-t border-gray-600"></span>
@@ -513,6 +423,23 @@ layout: default
   </div>
 </section>
 
+<!-- What does a graphic designer do? -->
+<section class="container py-24 ">
+  <h2>What does a graphic designer do?</h2>
+  <p>Communicates. Information. Visually.</p>
+  <p>You have at most three seconds to make an impression. If the purpose of your design isn't immediately apparent you've lost the chance to connect with your target audience.
+    The hard truth is that almost everyone who looks at your company is going to glance at it. You need to make the absolute most of those few seconds.</p>
+  <p>It's nearly impossible to meet this need with text alone</p>
+  <p>Properly designed visuals impart tons of information at a glance. The moment you look at something you've already retained an impression about 
+    <ul>
+      <li>What is the purpose / message</li>
+      <li>How does this relate to me? Is it important?</li>
+      <li>Who is communicating this message</li>
+    </ul>
+    Not to mention next level intangibles like: 'Have I seen something like this before', 'How serious are the people who made this'
+</p>
+  </section>
+
 <!-- Business case -->
 <section class="container py-24 ">
 <h2>Business case for hiring a senior designer</h2>
@@ -524,9 +451,9 @@ layout: default
 
 <!-- Business case -->
 <section class="container py-24 ">
-  <h2>Business case for hiring a senior designer</h2>
-  <p>Everyone is a designer, people who admit they have no talent for it will weigh in and judge work with reckless abandon</p>
-  <p>It's easy to listen to the loudest voice when they say they know what's best.</p>
+  <h2>What I'm looking for</h2>
+  <p>First up I don't care whether you are a small company. I'm simply looking for a place where I can add the most value.</p>
+  <p>Somewhere that already recognizes the advantages to having processes, with strong tracking, visibility and accountability.</p>
   <p>Getting someone who really knows the industry, who knows how to motivate and level up a team can be a scary jump to make when things are moving forward as they are.</p>
   <p>But you have a problem that needs solving. Start with the right people, give them the right tools, then watch your problems melt away.</p>
   </section>
@@ -682,11 +609,11 @@ layout: default
 </section>
 
 <!-- Quote -->
-<section class="container text-center py-20 ">
+<section class="container text-center py-20">
   <span class="inline-block w-20 border-2 border-t border-gray-600"></span>
   {% include partial/quote-lg.html
-  quote="...the truth is, it's not the idea, it's never the idea, it's always what you do with it."
-  attribute="Neil Gaiman "
+  quote="The alternative to good design is always bad design. There is no such thing as no design."
+  attribute="Adam Judge"
   style="py-12"
   %}
   <span class="inline-block w-20 border-2 border-t border-gray-600"></span>
