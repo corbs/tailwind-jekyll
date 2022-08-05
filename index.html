@@ -48,7 +48,7 @@ layout: default
 </section>
 
 <!-- CTA video -->
-<section class=" container py-20">
+<section class=" container pt-24 pb-10">
   <div class="w-full text-center">
     <h5>Corbin Featherstone</h5>
     <p class="font-bold text-4xl lg:text-5xl py-4">
@@ -106,8 +106,14 @@ layout: default
     <p class="text-lg text-gray-500 pb-8 lg:w-1/2">
       All projects on this site have been entirely designed by myself, from concept to completion. Copyright belongs to the company they were designed for. 
     </p>
+    {% include partial/btn.html
+      url="assets/file/corbin_featherstone.pdf"
+      text="All work"
+      style="my-3 border border-gray-200 bg-white hover:border-gray-500"
+      icopost="angle-right"
+      %}
   </div>
-  <ul class="w-full grid grid-cols-4 gap-8 xl:gap-14">
+  <ul class="w-full grid grid-cols-3 gap-1">
     {% assign featured = site.work | where: "tags", "featured" %}
     {% for work in featured %}
     <li class="relative">
@@ -115,8 +121,8 @@ layout: default
           <a href="{{ work.url }} ">
             {% include partial/img.html
               path=work.imghero
-              2xl="&w=756&h=556&fit=crop"
-              xl="&w=756&h=456&fit=crop"
+              2xl="&w=700&h=700&fit=crop"
+              xl="&w=600&h=600&fit=crop"
               lg="&w=980&h=756&fit=crop"
               md="&w=710&h=600&fit=crop"
               sm="&w=580&h=500&fit=crop"
@@ -129,11 +135,11 @@ layout: default
 </section>
 
 <!-- About me -->
-<section class=" w-full bg-white border-y my-32">
+<section class=" w-full bg-white border-y mt-40 mb-12">
   <div class="container flex flex-wrap">
     <span class="-mt-16 lg:w-1/4">
       {% include partial/img.html 
-        path="avatar4.jpg"
+        path="avatar5.jpg"
         2xl="&w=400"
         xl="&w=320"
         lg="&w=250"
@@ -150,24 +156,31 @@ layout: default
       </p>
       <ul class="py-5 text-sm">
         <li class="pb-4 flex flex-row items-center">
-          <div class="hidden md:block font-bold text-5xl pr-5 text-gray-300">1</div>
+          <div class="hidden md:flex font-bold text-5xl text-gray-300 w-12">1</div>
           <div>
           <h6 class="text-base">Productive under pressure</h6>
+          <p class="text-gray-500">I've done my time in the trenches and know what it takes to push a project home with my sense of humour intact.</p>
+          </div>
+        </li>
+        <li class="pb-4 flex flex-row items-center">
+          <div class="hidden md:flex font-bold text-5xl text-gray-300 w-12">2</div>
+          <div>
+          <h6 class="text-base">Front-line big brand experience</h6>
           <p class="text-gray-500">Juggling Familiar with the entire design process, from ideation to print.</p>
           </div>
         </li>
         <li class="pb-4 flex flex-row items-center">
-          <div class="hidden md:block font-bold text-5xl pr-5 text-gray-300">2</div>
+          <div class="hidden md:flex font-bold text-5xl text-gray-300 w-12">3</div>
           <div>
-          <h6 class="text-base">Front-line big brand experience</h6>
-          <p class="text-gray-500">I've done my time in the trenches and know what it takes to push a project home.</p>
+          <h6 class="text-base">Diverse skillset</h6>
+          <p class="text-gray-500">I work well with other teams as I've almost certainly been in the role that I'm working with. Giving me insight into decisions that are easy to accomplish with an easy win, and the frustrations and blockers.</p>
           </div>
         </li>
         <li class="pb-4 flex flex-row items-center">
-          <div class="hidden md:block font-bold text-5xl pr-5 text-gray-300">3</div>
+          <div class="hidden md:flex font-bold text-5xl text-gray-300 w-12">4</div>
           <div>
           <h6 class="text-base">Flexible and supportive</h6>
-          <p class="text-gray-500">I've worked nearly every role in the industry and naturally adapt to the needs of the team.</p>
+          <p class="text-gray-500">I don't have an ego that needs stroking and focus on decisions that are sensible for the whole company, this usually means adapting to the needs of the team. Providing useful contributions, mentoring and support.</p>
           </div>
         </li>
 
@@ -182,34 +195,45 @@ layout: default
   </div>
 </section>
 
-<!-- Brand section -->
-<section class="container flex flex-wrap justify-between items-center py-20 ">
-  <div class="w-full lg:w-5/12 mx-auto">
+<!-- Featured -->
+<section class="container pt-20 pb-8 ">
+<h2>Featured</h2>
+<p class="text-lg text-gray-500 pb-8 lg:w-1/2">
+  All projects on this site have been entirely designed by myself, from concept to completion. Copyright belongs to the company they were designed for. 
+</p>
+{% include partial/btn.html
+  url="assets/file/corbin_featherstone.pdf"
+  text="All work"
+  style="my-3 border border-gray-200 bg-white hover:border-gray-500"
+  icopost="angle-right"
+  %}
+</section>
+
+<!-- website section -->
+<section class="container flex flex-wrap justify-between items-center pb-20 ">
+  <div class="w-full lg:w-1/4">
     {% include partial/icon-box.html
     icon="user-friends"
     style="block"
     %}
-    <h2>Branding</h2>
+    <h2>Website front-end</h2>
     <p class="text-lg">
-      On image hover, have link to work AND link to video. 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+      <strong>Don't forget to add a bit about Tailwind being awesome for illustrations</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
     </p>
-    <p class="py-4"><a href="*" class="text-lg">
-        <i class="mx-2 fas fa-play-circle" data-fa-transform="grow-6"></i> Watch video
-      </a></p>
-    <!-- 
+    <p>Framework list</p>
+
     {% include partial/btn.html
     url="assets/file/corbin_featherstone.pdf"
-    text="More branding"
+    text="View project"
     style="my-3 border border-gray-200 bg-white hover:border-gray-500"
     icopost="angle-right"
     %}
-    -->
+
   </div>
-  <div class="w-full lg:w-1/2">
-    {% assign branding = site.work | where: "tags", "feature-brand" %}
-    {% for work in branding %}
+  <div class="w-full lg:w-2/3">
+    {% assign website = site.work | where: "tags", "feature-web" %}
+    {% for work in website %}
         <span class="block absolute top-0 right-0 bg-white p-4">1</span>
         <a href="{{ work.url }} ">
           {% include partial/img.html
@@ -238,17 +262,13 @@ layout: default
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
       magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
     </p>
-    <p class="py-4"><a href="*" class="text-lg">
-        <i class="mx-2 fas fa-play-circle" data-fa-transform="grow-6"></i> Watch video
-      </a></p>
-      <!-- 
-    {% include partial/btn.html
-    url="assets/file/corbin_featherstone.pdf"
-    text="More layouts"
-    style="my-3 border border-gray-200 bg-white hover:border-gray-500"
-    icopost="angle-right"
-    %}
-    -->
+
+      {% include partial/btn.html
+        url="assets/file/corbin_featherstone.pdf"
+        text="View project"
+        style="my-3 border border-gray-200 bg-white hover:border-gray-500"
+        icopost="angle-right"
+        %}
   </div>
   <div class="w-full lg:w-1/2">
     {% assign layout = site.work | where: "tags", "feature-layout" %}
@@ -269,31 +289,30 @@ layout: default
   </div>
 </section>
 
-<!-- website section -->
+<!-- Brand section -->
 <section class="container flex flex-wrap justify-between items-center py-20 ">
-  <div class="w-full lg:w-1/4">
+  <div class="w-full lg:w-5/12 mx-auto">
     {% include partial/icon-box.html
     icon="user-friends"
     style="block"
     %}
-    <h2>Website front-end</h2>
+    <h2>Branding</h2>
     <p class="text-lg">
+      On image hover, have link to work AND link to video. 
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
     </p>
-    <p>Framework list</p>
-    <!-- 
-    {% include partial/btn.html
-    url="assets/file/corbin_featherstone.pdf"
-    text="More websites"
-    style="my-3 border border-gray-200 bg-white hover:border-gray-500"
-    icopost="angle-right"
-    %}
-    -->
+
+      {% include partial/btn.html
+        url="assets/file/corbin_featherstone.pdf"
+        text="View project"
+        style="my-3 border border-gray-200 bg-white hover:border-gray-500"
+        icopost="angle-right"
+        %}
   </div>
-  <div class="w-full lg:w-2/3">
-    {% assign website = site.work | where: "tags", "feature-web" %}
-    {% for work in website %}
+  <div class="w-full lg:w-1/2">
+    {% assign branding = site.work | where: "tags", "feature-brand" %}
+    {% for work in branding %}
         <span class="block absolute top-0 right-0 bg-white p-4">1</span>
         <a href="{{ work.url }} ">
           {% include partial/img.html
@@ -423,24 +442,7 @@ layout: default
   </div>
 </section>
 
-<!-- What does a graphic designer do? -->
-<section class="container py-24 ">
-  <h2>What does a graphic designer do?</h2>
-  <p>Communicates. Information. Visually.</p>
-  <p>You have at most three seconds to make an impression. If the purpose of your design isn't immediately apparent you've lost the chance to connect with your target audience.
-    The hard truth is that almost everyone who looks at your company is going to glance at it. You need to make the absolute most of those few seconds.</p>
-  <p>It's nearly impossible to meet this need with text alone</p>
-  <p>Properly designed visuals impart tons of information at a glance. The moment you look at something you've already retained an impression about 
-    <ul>
-      <li>What is the purpose / message</li>
-      <li>How does this relate to me? Is it important?</li>
-      <li>Who is communicating this message</li>
-    </ul>
-    Not to mention next level intangibles like: 'Have I seen something like this before', 'How serious are the people who made this'
-</p>
-  </section>
-
-<!-- Business case -->
+<!-- Business case 
 <section class="container py-24 ">
 <h2>Business case for hiring a senior designer</h2>
 <p>Everyone is a designer, people who admit they have no talent for it will weigh in and judge work with reckless abandon</p>
@@ -448,23 +450,16 @@ layout: default
 <p>Getting someone who really knows the industry, who knows how to motivate and level up a team can be a scary jump to make when things are moving forward as they are.</p>
 <p>But you have a problem that needs solving. Start with the right people, give them the right tools, then watch your problems melt away.</p>
 </section>
+-->
 
-<!-- Business case -->
+<!-- How to utilize your design team
 <section class="container py-24 ">
-  <h2>What I'm looking for</h2>
-  <p>First up I don't care whether you are a small company. I'm simply looking for a place where I can add the most value.</p>
-  <p>Somewhere that already recognizes the advantages to having processes, with strong tracking, visibility and accountability.</p>
-  <p>Getting someone who really knows the industry, who knows how to motivate and level up a team can be a scary jump to make when things are moving forward as they are.</p>
-  <p>But you have a problem that needs solving. Start with the right people, give them the right tools, then watch your problems melt away.</p>
-  </section>
-
-<!-- Design on rails -->
-<section class="container py-24 ">
-  <h2>Design on rails</h2>
+  <h2>How to use your design team</h2>
   <p>It's a waste of time designing something unique every task. It's frustrating for the designers and it takes away valuable time for new work. Unchecked it creates a huge amount of stress and frustration with the output being a hodge-podge of semi-completed, pushed out the door rubbish.</p> 
   <p>However, it takes very little time to put together a task from existing working files. The added benefit being that the work is going to be uniform and on-brand. Fast turn around time and little to no revisions needed.</p>
   <p>Therefore: It's always worth spending the time and energy to create a template that is superb, then churn through the work using this template. In other words, it takes lots of time to lay down the track, very little time to send a train along it.</p>
-  </section>
+</section>
+ -->
 
 <!-- Events section -->
 <section class="container flex-row-reverse flex flex-wrap justify-between items-center py-24 ">
@@ -511,12 +506,12 @@ layout: default
   </div>
 </section>
 
-<!-- CTA Points -->
+<!-- What makes a good designer? 
 <section class="container flex flex-wrap items-center text-center py-24">
   <div class="w-full">
-    <h2 class="">What makes a good designer tick</h2>
+    <h2 class="">What makes a good designer?</h2>
     <p class="text-xl text-gray-500">
-      How to keep the work flowing through thick and thin
+      There are a number of skills necessary to qualify as a Senior Designer / Art Director
     </p>
   </div>
   <div class="flex flex-wrap mt-12 justify-center">
@@ -525,10 +520,10 @@ layout: default
         <i class="fas fa-medal text-xl"></i>
       </div>
       <h6 class="text-lg mt-5">
-        Process driven
+        Consistent
       </h6>
       <p class="mt-2 mb-4">
-        The key to consistent design
+        Process driven The key to consistent design
       </p>
     </div>
     <div class="w-full lg:w-3/12 px-4 text-center">
@@ -555,6 +550,25 @@ layout: default
     </div>
   </div>
 </section>
+-->
+
+<!-- What does a designer do for my company? -->
+<section class="container py-24 ">
+  <h2>What does a designer do for my company?</h2>
+  <p>Communicates. Information. Visually.</p>
+  <p>You have at most three seconds to make an impression. If the purpose of your design isn't immediately apparent you've lost the chance to connect with your target audience.
+    The hard truth is that almost everyone who looks at your company is going to glance at it. You need to make the absolute most of those few seconds.</p>
+  <p>It's nearly impossible to meet this need with text alone</p>
+  <p>Properly designed visuals impart tons of information at a glance. The moment you look at something you've already retained an impression about 
+    <ul>
+      <li>What is the purpose, or message being relayed</li>
+      <li>How does this relate to what I'm currently doing?</li>
+      <li>Do I recognize this as being part of something else?</li>
+      <li>Who is communicating this message</li>
+    </ul>
+    Not to mention next level intangibles like: 'How much effort was put into this'
+</p>
+  </section>
 
 <!-- Image compositing section -->
 <section class="container py-24 ">
@@ -606,6 +620,15 @@ layout: default
       <h2 class="mx-auto py-20 ">6</h2>
     </li>
   </ul>
+</section>
+
+<!-- What am I looking for? -->
+<section class="container my-24 p-12 border rounded bg-white ">
+  <h5></h5>
+  <h2>What am I looking for?</h2>
+  <p>In a nutshell I'm looking for opportunities where I can add the most value.</p>
+  <p>Continuing to develop my skills across the board, this means working with people who are better than me.</p>
+  <p>Somewhere that recognizes the advantages of an agile methodology: Having solid task tracking, with visibility and accountability. Or at the least are willing to put in the work implementing such a system.</p>
 </section>
 
 <!-- Quote -->
