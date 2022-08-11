@@ -1,7 +1,8 @@
 ---
 layout: work
-title: Bad Juju
-imghero: us-flag2.jpg
+title: Keeping Farmers Independent
+description: Ad campaign rolled out to digital and merchandise.
+imghero: advertising-double.jpg
 imgalt: test1
 categories: compare
 before: work/compare/img_01.jpg

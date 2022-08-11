@@ -1,7 +1,8 @@
 ---
 layout: work
 title: Galileo
-imghero: galileo.jpg
+description: Stylised eye as seen reflected in a telescope. Image created using the planets of the solar system. Each planet is correctly proportional in size.
+imghero: galileo-2.jpg
 imgalt: test3
 categories:
 tags: [ feature-brand ]

@@ -11,7 +11,7 @@ layout: default
  
       <div class="py-3">
         {% include partial/btn.html
-        url="assets/file/corbin_featherstone.pdf"
+        url="/contact"
         text="Get in touch"
         style="my-2 mr-4 border-2 border-gray-900 bg-gray-900 text-primary hover:text-gray-50"
         %}
@@ -98,8 +98,7 @@ layout: default
       </div>
 </section>
 
-
-<!-- Gallery -->
+<!-- Recent work Gallery -->
 <section class="container flex flex-wrap py-20">
   <div class="w-full">
     <h2>Recent work</h2>
@@ -107,7 +106,7 @@ layout: default
       All projects on this site have been entirely designed by myself, from concept to completion. Copyright belongs to the company they were designed for. 
     </p>
     {% include partial/btn.html
-      url="assets/file/corbin_featherstone.pdf"
+      url="/work"
       text="All work"
       style="my-3 border border-gray-200 bg-white hover:border-gray-500"
       icopost="angle-right"
@@ -116,9 +115,19 @@ layout: default
   <ul class="w-full grid grid-cols-3 gap-1">
     {% assign featured = site.work | where: "tags", "featured" %}
     {% for work in featured %}
-    <li class="relative">
-          <span class="block absolute top-0 right-0 bg-white p-4">1</span>
-          <a href="{{ work.url }} ">
+    <li class="relative group">
+      <span class="absolute w-full h-full hidden group-hover:flex bg-gray-900 opacity-25"></span>
+      <div class="absolute w-full h-full hidden group-hover:flex items-center">
+        <div class="mx-auto text-center text-white">
+          <p class="font-bold text-2xl shadow-lg">{{ work.title }}</p>
+          <p class="px-5 py-2 shadow-lg">{{ work.description }}</p>
+          {% include partial/btn.html
+            url=work.url
+            text="View project"
+            style="my-3 py-2 text-gray-900 border border-primaryDark bg-primary hover:bg-primaryLight"
+            %}
+        </div>
+      </div>
             {% include partial/img.html
               path=work.imghero
               2xl="&w=700&h=700&fit=crop"
@@ -128,7 +137,6 @@ layout: default
               sm="&w=580&h=500&fit=crop"
               class=""
             %}
-          </a>
         </li>
       {% endfor %}
   </ul>
@@ -185,14 +193,6 @@ layout: default
         </li>
 
       </ul>
-      <!-- 
-      {% include partial/btn.html
-        url="assets/file/corbin_featherstone.pdf"
-        text="My history"
-        style="my-5 border-2 border-gray-900 bg-white hover:bg-gray-900 hover:text-primary"
-        icopost="angle-right"
-        %}
-        -->
     </div>
   </div>
 </section>
@@ -204,7 +204,7 @@ layout: default
   All projects on this site have been entirely designed by myself, from concept to completion. Copyright belongs to the company they were designed for. 
 </p>
 {% include partial/btn.html
-  url="assets/file/corbin_featherstone.pdf"
+  url="/work"
   text="All work"
   style="my-3 border border-gray-200 bg-white hover:border-gray-500"
   icopost="angle-right"
@@ -226,18 +226,28 @@ layout: default
     <p>Framework list</p>
 
     {% include partial/btn.html
-    url="assets/file/corbin_featherstone.pdf"
-    text="View project"
+    url="/assets/file/corbin_featherstone.pdf"
+    text="All Websites"
     style="my-5 border border-gray-200 bg-white hover:border-gray-500"
     icopost="angle-right"
     %}
 
   </div>
-  <div class="w-full lg:w-2/3">
+  <div class="w-full lg:w-2/3 my-3 group relative">
     {% assign website = site.work | where: "tags", "feature-web" %}
     {% for work in website %}
-        <span class="block absolute top-0 right-0 bg-white p-4">1</span>
-        <a href="{{ work.url }} ">
+        <span class="absolute w-full h-full hidden group-hover:flex bg-gray-900 opacity-25 rounded-lg"></span>
+          <div class="absolute w-full h-full hidden group-hover:flex items-center">
+            <div class="mx-auto text-center text-white">
+              <p class="font-bold text-2xl">{{ work.title }}</p>
+              <p class="px-5 py-2">{{ work.description }}</p>
+              {% include partial/btn.html
+                url=work.url
+                text="View project"
+                style="my-3 py-2 text-gray-900 border border-primaryDark bg-primary hover:bg-primaryLight"
+                %}
+            </div>
+          </div>
           {% include partial/img.html
             path=work.imghero
             2xl="&w=1000"
@@ -245,9 +255,8 @@ layout: default
             lg="&w=500"
             md="&w=720"
             sm="&w=580"
-            class="my-3"
+            class="rounded-lg"
           %}
-        </a>
     {% endfor %}
   </div>
 </section>
@@ -265,17 +274,27 @@ layout: default
     </p>
 
       {% include partial/btn.html
-        url="assets/file/corbin_featherstone.pdf"
-        text="View project"
+        url="/assets/file/corbin_featherstone.pdf"
+        text="All Branding"
         style="my-5 border border-gray-200 bg-white hover:border-gray-500"
         icopost="angle-right"
         %}
   </div>
-  <div class="w-full lg:w-1/2">
+  <div class="w-full lg:w-1/2 my-3 group relative">
     {% assign branding = site.work | where: "tags", "feature-brand" %}
     {% for work in branding %}
-        <span class="block absolute top-0 right-0 bg-white p-4">1</span>
-        <a href="{{ work.url }} ">
+    <span class="absolute w-full h-full hidden group-hover:flex bg-gray-900 opacity-25 rounded-lg"></span>
+    <div class="absolute w-full h-full hidden group-hover:flex items-center">
+      <div class="mx-auto text-center text-white">
+        <p class="font-bold text-2xl">{{ work.title }}</p>
+        <p class="px-5 py-2">{{ work.description }}</p>
+        {% include partial/btn.html
+          url=work.url
+          text="View project"
+          style="my-3 py-2 text-gray-900 border border-primaryDark bg-primary hover:bg-primaryLight"
+          %}
+      </div>
+    </div>
           {% include partial/img.html
             path=work.imghero
             2xl="&h=756"
@@ -283,9 +302,8 @@ layout: default
             lg="&w=500&h=700&fit=crop"
             md="&w=720&h=500&fit=crop"
             sm="&w=580&h=480&fit=crop"
-            class="mx-auto my-3 rounded-lg"
+            class="mx-auto rounded-lg"
           %}
-        </a>
     {% endfor %}
   </div>
 </section>
@@ -304,17 +322,27 @@ layout: default
     </p>
 
       {% include partial/btn.html
-        url="assets/file/corbin_featherstone.pdf"
-        text="View project"
+        url="/work"
+        text="All Layout"
         style="my-5 border border-gray-200 bg-white hover:border-gray-500"
         icopost="angle-right"
         %}
   </div>
-  <div class="w-full lg:w-1/2">
+  <div class="w-full lg:w-1/2 my-3 group relative">
     {% assign layout = site.work | where: "tags", "feature-layout" %}
     {% for work in layout %}
-        <span class="block absolute top-0 right-0 bg-white p-4">1</span>
-        <a href="{{ work.url }} ">
+        <span class="absolute w-full h-full hidden group-hover:flex bg-gray-900 opacity-25 rounded-lg"></span>
+        <div class="absolute w-full h-full hidden group-hover:flex items-center">
+          <div class="mx-auto text-center text-white">
+            <p class="font-bold text-2xl">{{ work.title }}</p>
+            <p class="px-5 py-2">{{ work.description }}</p>
+            {% include partial/btn.html
+              url=work.url
+              text="View project"
+              style="my-3 py-2 text-gray-900 border border-primaryDark bg-primary hover:bg-primaryLight"
+              %}
+          </div>
+        </div>
           {% include partial/img.html
             path=work.imghero
             2xl="h=560"
@@ -322,9 +350,8 @@ layout: default
             lg="&w=500&h=700&fit=crop"
             md="&w=720&h=500&fit=crop"
             sm="&w=580&h=480&fit=crop"
-            class="my-3 rounded-lg"
+            class="rounded-lg"
           %}
-        </a>
     {% endfor %}
   </div>
 </section>
@@ -342,17 +369,27 @@ layout: default
     </p>
 
       {% include partial/btn.html
-        url="assets/file/corbin_featherstone.pdf"
-        text="View project"
+        url="/work"
+        text="All Advertising"
         style="my-5 border border-gray-200 bg-white hover:border-gray-500"
         icopost="angle-right"
         %}
   </div>
-  <div class="w-full lg:w-7/12">
+  <div class="w-full lg:w-7/12 my-3 group relative">
     {% assign advertising = site.work | where: "tags", "feature-advertising" %}
     {% for work in advertising %}
-        <span class="block absolute top-0 right-0 bg-white p-4">1</span>
-        <a href="{{ work.url }} ">
+        <span class="absolute w-full h-full hidden group-hover:flex bg-gray-900 opacity-25 rounded-lg"></span>
+        <div class="absolute w-full h-full hidden group-hover:flex items-center">
+          <div class="mx-auto text-center text-white">
+            <p class="font-bold text-2xl">{{ work.title }}</p>
+            <p class="px-5 py-2">{{ work.description }}</p>
+            {% include partial/btn.html
+              url=work.url
+              text="View project"
+              style="my-3 py-2 text-gray-900 border border-primaryDark bg-primary hover:bg-primaryLight"
+              %}
+          </div>
+        </div>
           {% include partial/img.html
             path=work.imghero
             2xl="h=560"
@@ -360,9 +397,8 @@ layout: default
             lg="&w=500&h=700&fit=crop"
             md="&w=720&h=500&fit=crop"
             sm="&w=580&h=480&fit=crop"
-            class="my-3 rounded-lg"
+            class="rounded-lg"
           %}
-        </a>
     {% endfor %}
   </div>
 </section>
@@ -430,8 +466,6 @@ layout: default
   </div>
 </section>
 
-
-
 <!-- Image processing section -->
 <section class="container py-24 ">
   <div class="flex flex-wrap items-stretch rounded">
@@ -449,76 +483,97 @@ layout: default
 </section>
 
 <!-- Packaging -->
-<section class="container flex flex-row-reverse flex-wrap justify-between items-center py-24 ">
-  <div class="w-full lg:w-1/4 mx-auto">
+<section class="container flex flex-row-reverse justify-between items-center py-20 ">
+  <div class="w-full lg:w-5/12 mx-auto">
     {% include partial/icon-box.html
     icon="user-friends"
     style="block"
     %}
     <h2>Packaging</h2>
     <p class="text-lg">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+      Stylised eye as seen reflected in a telescope. Image created using the planets of the solar system. Each planet is correctly proportional in size.
     </p>
-    <!-- 
-    {% include partial/btn.html
-    url="assets/file/corbin_featherstone.pdf"
-    text="More packaging"
-    style="my-3 border border-gray-200 bg-white hover:border-gray-500"
-    icopost="angle-right"
-    %}
-    -->
+
+      {% include partial/btn.html
+        url="/assets/file/corbin_featherstone.pdf"
+        text="All Branding"
+        style="my-5 border border-gray-200 bg-white hover:border-gray-500"
+        icopost="angle-right"
+        %}
   </div>
-  <div class="w-full lg:w-2/3">
-    <ul class="w-full grid grid-cols-2 gap-8">
-      <li class="bg-gray-200 text-center flex items-center content-center">
-        <h2 class="mx-auto py-28 ">1</h2>
-      </li>
-      <li class="bg-gray-200 text-center flex items-center content-center">
-        <h2 class="mx-auto py-28 ">2</h2>
-      </li>
-      <li class="bg-gray-200 text-center flex items-center content-center">
-        <h2 class="mx-auto py-28 ">3</h2>
-      </li>
-      <li class="bg-gray-200 text-center flex items-center content-center">
-        <h2 class="mx-auto py-28 ">4</h2>
-      </li>
-    </ul>
+  <div class="w-full lg:w-1/2 my-3 group relative">
+    {% assign branding = site.work | where: "tags", "feature-brand" %}
+    {% for work in branding %}
+    <span class="absolute w-full h-full hidden group-hover:flex bg-gray-900 opacity-25 rounded-lg"></span>
+    <div class="absolute w-full h-full hidden group-hover:flex items-center">
+      <div class="mx-auto text-center text-white">
+        <p class="font-bold text-2xl">{{ work.title }}</p>
+        <p class="px-5 py-2">{{ work.description }}</p>
+        {% include partial/btn.html
+          url=work.url
+          text="View project"
+          style="my-3 py-2 text-gray-900 border border-primaryDark bg-primary hover:bg-primaryLight"
+          %}
+      </div>
+    </div>
+          {% include partial/img.html
+            path=work.imghero
+            2xl="&h=756"
+            xl="&w=756&h=556&fit=crop"
+            lg="&w=500&h=700&fit=crop"
+            md="&w=720&h=500&fit=crop"
+            sm="&w=580&h=480&fit=crop"
+            class="mx-auto rounded-lg"
+          %}
+    {% endfor %}
   </div>
 </section>
 
 <!-- Illustration -->
-<section class="container flex  flex-wrap justify-between items-center py-24 ">
-  <div class="w-full lg:w-1/4 mx-auto">
+<section class="container flex lex-wrap justify-between items-center py-20 ">
+  <div class="w-full lg:w-5/12 mx-auto">
     {% include partial/icon-box.html
     icon="user-friends"
     style="block"
     %}
     <h2>Illustration</h2>
     <p class="text-lg">
-      Cloud data ad illustration. US flag row crop illustration. Connecting the dots illustration
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
     </p>
-    <!-- 
-    {% include partial/btn.html
-    url="assets/file/corbin_featherstone.pdf"
-    text="More packaging"
-    style="my-3 border border-gray-200 bg-white hover:border-gray-500"
-    icopost="angle-right"
-    %}
-    -->
+
+      {% include partial/btn.html
+        url="/work"
+        text="All Layout"
+        style="my-5 border border-gray-200 bg-white hover:border-gray-500"
+        icopost="angle-right"
+        %}
   </div>
-  <div class="w-full lg:w-2/3">
-    <ul class="w-full grid grid-cols-3 gap-8">
-      <li class="bg-gray-200 text-center flex items-center content-center">
-        <h2 class="mx-auto py-28 ">1</h2>
-      </li>
-      <li class="bg-gray-200 text-center flex items-center content-center">
-        <h2 class="mx-auto py-28 ">2</h2>
-      </li>
-      <li class="bg-gray-200 text-center flex items-center content-center">
-        <h2 class="mx-auto py-28 ">3</h2>
-      </li>
-    </ul>
+  <div class="w-full lg:w-1/2 my-3 group relative">
+    {% assign layout = site.work | where: "tags", "feature-layout" %}
+    {% for work in layout %}
+        <span class="absolute w-full h-full hidden group-hover:flex bg-gray-900 opacity-25 rounded-lg"></span>
+        <div class="absolute w-full h-full hidden group-hover:flex items-center">
+          <div class="mx-auto text-center text-white">
+            <p class="font-bold text-2xl">{{ work.title }}</p>
+            <p class="px-5 py-2">{{ work.description }}</p>
+            {% include partial/btn.html
+              url=work.url
+              text="View project"
+              style="my-3 py-2 text-gray-900 border border-primaryDark bg-primary hover:bg-primaryLight"
+              %}
+          </div>
+        </div>
+          {% include partial/img.html
+            path=work.imghero
+            2xl="h=560"
+            xl="&w=756&h=556&fit=crop"
+            lg="&w=500&h=700&fit=crop"
+            md="&w=720&h=500&fit=crop"
+            sm="&w=580&h=480&fit=crop"
+            class="rounded-lg"
+          %}
+    {% endfor %}
   </div>
 </section>
 
@@ -542,47 +597,49 @@ layout: default
  -->
 
 <!-- Events section -->
-<section class="container flex-row-reverse flex flex-wrap justify-between items-center py-24 ">
-  <div class="w-full lg:w-1/4 ">
+<section class="container flex flex-row-reverse flex-wrap justify-between items-center py-20 ">
+  <div class="w-full lg:w-1/4 mx-auto">
     {% include partial/icon-box.html
     icon="user-friends"
     style="block"
     %}
     <h2>Events</h2>
     <p class="text-lg">
-      Trade shows and displays. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+      Trade shows and displays
     </p>
-    <!-- 
-    {% include partial/btn.html
-    url="assets/file/corbin_featherstone.pdf"
-    text="More events"
-    style="my-3 border border-gray-200 bg-white hover:border-gray-500"
-    icopost="angle-right"
-    %}
-    -->
+
+      {% include partial/btn.html
+        url="/work"
+        text="All Advertising"
+        style="my-5 border border-gray-200 bg-white hover:border-gray-500"
+        icopost="angle-right"
+        %}
   </div>
-  <div class="w-full lg:w-2/3">
-    <ul class="w-full grid grid-cols-3 gap-8">
-      <li class="bg-gray-200 text-center flex items-center content-center">
-        <h2 class="mx-auto py-20 ">1</h2>
-      </li>
-      <li class="bg-gray-200 text-center flex items-center content-center">
-        <h2 class="mx-auto py-20 ">2</h2>
-      </li>
-      <li class="bg-gray-200 text-center flex items-center content-center">
-        <h2 class="mx-auto py-20 ">3</h2>
-      </li>
-      <li class="bg-gray-200 text-center flex items-center content-center">
-        <h2 class="mx-auto py-20 ">4</h2>
-      </li>
-      <li class="bg-gray-200 text-center flex items-center content-center">
-        <h2 class="mx-auto py-20 ">5</h2>
-      </li>
-      <li class="bg-gray-200 text-center flex items-center content-center">
-        <h2 class="mx-auto py-20 ">6</h2>
-      </li>
-    </ul>
+  <div class="w-full lg:w-7/12 my-3 group relative">
+    {% assign advertising = site.work | where: "tags", "feature-advertising" %}
+    {% for work in advertising %}
+        <span class="absolute w-full h-full hidden group-hover:flex bg-gray-900 opacity-25 rounded-lg"></span>
+        <div class="absolute w-full h-full hidden group-hover:flex items-center">
+          <div class="mx-auto text-center text-white">
+            <p class="font-bold text-2xl">{{ work.title }}</p>
+            <p class="px-5 py-2">{{ work.description }}</p>
+            {% include partial/btn.html
+              url=work.url
+              text="View project"
+              style="my-3 py-2 text-gray-900 border border-primaryDark bg-primary hover:bg-primaryLight"
+              %}
+          </div>
+        </div>
+          {% include partial/img.html
+            path=work.imghero
+            2xl="h=560"
+            xl="&w=756&h=556&fit=crop"
+            lg="&w=500&h=700&fit=crop"
+            md="&w=720&h=500&fit=crop"
+            sm="&w=580&h=480&fit=crop"
+            class="rounded-lg"
+          %}
+    {% endfor %}
   </div>
 </section>
 

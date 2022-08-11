@@ -1,7 +1,8 @@
 ---
 layout: work
 title: Bad Juju
-imghero: website-front-end.jpg
+description: This is a small website that's based on Middleman and Jamstack.
+imghero: website-front-end2.jpg
 imgalt: test1
 categories: compare
 before: work/compare/img_01.jpg

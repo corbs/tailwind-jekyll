@@ -1,6 +1,7 @@
 ---
 layout: work
-title: Bad Juju
+title: Tiverton Case Study
+description: One of the case studies from around the world
 imghero: case-study-tiverton4.jpg
 imgalt: test1
 categories: compare
