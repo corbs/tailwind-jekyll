@@ -116,6 +116,7 @@ layout: default
     {% assign featured = site.work | where: "tags", "featured" %}
     {% for work in featured %}
     <li class="relative group overflow-hidden">
+      <div class="absolute top-0 left-0 right-0 bottom-0 hidden group-hover:flex bg-gray-900 opacity-20 transition duration-500 ease-in-out "></div>
       <div class="absolute w-full h-full hidden group-hover:flex items-center">
         <div class="mx-auto text-center text-white z-10">
           <p class="font-bold text-2xl">{{ work.title }}</p>
@@ -134,7 +135,7 @@ layout: default
         lg="&w=500"
         md="&w=720"
         sm="&w=580"
-        class="transition duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75 "
+        class=""
       %}
         </li>
       {% endfor %}
