@@ -58,38 +58,38 @@ layout: default
       I'm a senior graphic designer with a long history creating top quality work that solves problems. Here's a few examples of <span class="border-b-2 border-current">how</span> I work.
     </p>
   </div>
-      <div class="flex flex-col lg:flex-row justify-between items-stretch -mx-6">
-        <div class="flex-1 m-6 bg-white shadow-lg z-50">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-10 flex items-stretch">
+        <div class="flex-1 bg-white shadow-lg col-span-2 lg:col-span-1 z-30 ">
           {% include partial/vimeo.html
             id="737271966"
             style=""
             %}
-          <div class="pt-10 pb-6 px-12">
-          <h4>Brand design</h4>
+          <div class="py-4 lg:py-6 px-8 lg:px-12">
+          <h4 class="pt-2">Brand design</h4>
           <p class="mt-2 mb-4 text-gray-500">
             Identity packages, logos, emblems
           </p>
           </div>
         </div>
-        <div class="flex-1 m-6 bg-white shadow-lg z-50">
+        <div class="flex-1 bg-white shadow-lg col-span-2 md:col-span-1 z-30">
           {% include partial/vimeo.html
             id="350871445"
             style=""
             %}
-          <div class="pt-10 pb-6 px-12">
-          <h4>Image processing</h4>
+          <div class="py-4 lg:py-6 px-8 lg:px-12">
+          <h4 class="pt-2">Image processing</h4>
           <p class="mt-2 mb-4 text-gray-500">
             Keep you user engaged by providing meaningful information.
           </p>
           </div>
         </div>
-        <div class="flex-1 m-6 bg-white shadow-lg z-50">
+        <div class="flex-1 bg-white shadow-lg col-span-2 md:col-span-1 z-30">
           {% include partial/vimeo.html
             id="737118704"
             style=""
             %}
-          <div class="pt-10 pb-6 px-12">
-          <h4>Hand crafted</h4>
+          <div class="py-4 lg:py-6 px-8 lg:px-12">
+          <h4 class="pt-2">Hand crafted</h4>
           <p class="mt-2 mb-4 text-gray-500">
             I still enjoy picking up the pencil or paintbrush to create original illustrations.
           </p>
@@ -112,9 +112,9 @@ layout: default
       icopost="angle-right"
       %}
   </div>
-  <ul class="w-full grid grid-cols-3 gap-1">
-    {% assign featured = site.work | where: "tags", "featured" %}
-    {% for work in featured %}
+  <ul class="w-full grid grid-cols-2 xl:grid-cols-3 gap-1">
+    {% assign recent = site.work | where: "tags", "recent" %}
+    {% for work in recent %}
     <li class="relative group overflow-hidden">
       <div class="absolute top-0 left-0 right-0 bottom-0 hidden group-hover:flex bg-gray-900 opacity-20 z-20"></div>
       <div class="absolute w-full h-full hidden group-hover:flex items-center z-30">
@@ -130,11 +130,11 @@ layout: default
       </div>
       {% include partial/img.html
         path=work.imghero
-        2xl="&w=1000&h=1000&fit=crop"
-        xl="&w=756"
-        lg="&w=500"
-        md="&w=720"
-        sm="&w=580"
+        2xl="&w=500&h=500&fit=crop"
+        xl="&w=420&h=500&fit=crop"
+        lg="&w=500&h=450&fit=crop"
+        md="&w=400&h=400&fit=crop"
+        sm="&w=320&h=400&fit=crop"
         class="transition duration-500 ease-in-out group-hover:scale-105"
       %}
         </li>
@@ -152,11 +152,11 @@ layout: default
         xl="&w=320"
         lg="&w=250"
         md="&w=150"
-        sm="&w=150"
-        class="p-12 bg-primary border-8 border-white rounded shadow-md "
+        sm="&w=80"
+        class="p-6 md:p-8 lg:p-12 bg-primary border-8 border-white rounded shadow-md "
         %}
     </span>
-    <div class="p-12 w-full lg:w-3/4">
+    <div class="p-8 lg:p-12 w-full lg:w-3/4">
       <h5>Solving problems visually</h5>
       <h2>About me</h2>
       <p class="text-gray-500">
@@ -234,7 +234,7 @@ layout: default
 
   </div>
   <div class="w-full lg:w-2/3 my-3 group relative overflow-hidden rounded-lg">
-    {% assign website = site.work | where: "tags", "feature-web" %}
+    {% assign website = site.work | where: "tags", "featured-website" %}
     {% for work in website %}
         <div class="absolute top-0 left-0 right-0 bottom-0 hidden group-hover:flex bg-gray-900 opacity-20 z-20"></div>
           <div class="absolute w-full h-full hidden group-hover:flex items-center">
@@ -251,18 +251,19 @@ layout: default
           {% include partial/img.html
             path=work.imghero
             2xl="&w=1000"
-            xl="&w=756"
-            lg="&w=500"
-            md="&w=720"
-            sm="&w=580"
+            xl="&w=850&h=500&fit=crop"
+            lg="&w=700&h=600&fit=crop"
+            md="&w=750&h=400&fit=crop"
+            sm="&w=600&h=350&fit=crop"
             class="transition duration-500 ease-in-out group-hover:scale-105"
           %}
     {% endfor %}
   </div>
+
 </section>
 
 <!-- Brand section -->
-<section class="container flex flex-row-reverse justify-between items-center py-20 ">
+<section class="container flex flex-wrap flex-row-reverse justify-between items-center py-20 ">
   <div class="w-full lg:w-5/12 mx-auto">
     {% include partial/icon-box.html
     icon="user-friends"
@@ -281,7 +282,7 @@ layout: default
         %}
   </div>
   <div class="w-full lg:w-1/2 my-3 group relative overflow-hidden rounded-lg">
-    {% assign branding = site.work | where: "tags", "feature-brand" %}
+    {% assign branding = site.work | where: "tags", "featured-branding" %}
     {% for work in branding %}
     <div class="absolute top-0 left-0 right-0 bottom-0 hidden group-hover:flex bg-gray-900 opacity-20 z-20"></div>
     <div class="absolute w-full h-full hidden group-hover:flex items-center">
@@ -298,10 +299,10 @@ layout: default
     {% include partial/img.html
       path=work.imghero
       2xl="&w=1000"
-      xl="&w=756"
-      lg="&w=500"
-      md="&w=720"
-      sm="&w=580"
+      xl="&w=850&h=500&fit=crop"
+      lg="&w=700&h=600&fit=crop"
+      md="&w=750&h=400&fit=crop"
+      sm="&w=600&h=350&fit=crop"
       class="transition duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75 "
     %}
     {% endfor %}
@@ -309,7 +310,7 @@ layout: default
 </section>
 
 <!-- Layout section -->
-<section class="container flex lex-wrap justify-between items-center py-20 ">
+<section class="container flex flex-wrap justify-between items-center py-20 ">
   <div class="w-full lg:w-5/12 mx-auto">
     {% include partial/icon-box.html
     icon="user-friends"
@@ -329,7 +330,7 @@ layout: default
         %}
   </div>
   <div class="w-full lg:w-1/2 my-3 group relative overflow-hidden rounded-lg">
-    {% assign layout = site.work | where: "tags", "feature-layout" %}
+    {% assign layout = site.work | where: "tags", "featured-layout" %}
     {% for work in layout %}
     <div class="absolute top-0 left-0 right-0 bottom-0 hidden group-hover:flex bg-gray-900 opacity-20 z-20"></div>
     <div class="absolute w-full h-full hidden group-hover:flex items-center">
@@ -346,10 +347,10 @@ layout: default
     {% include partial/img.html
       path=work.imghero
       2xl="&w=1000"
-      xl="&w=756"
-      lg="&w=500"
-      md="&w=720"
-      sm="&w=580"
+      xl="&w=850&h=500&fit=crop"
+      lg="&w=700&h=600&fit=crop"
+      md="&w=750&h=400&fit=crop"
+      sm="&w=600&h=350&fit=crop"
       class="transition duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75 "
     %}
     {% endfor %}
@@ -376,7 +377,7 @@ layout: default
         %}
   </div>
   <div class="w-full lg:w-7/12 my-3 group relative overflow-hidden rounded-lg">
-    {% assign advertising = site.work | where: "tags", "feature-advertising" %}
+    {% assign advertising = site.work | where: "tags", "featured-advertising" %}
     {% for work in advertising %}
     <div class="absolute top-0 left-0 right-0 bottom-0 hidden group-hover:flex bg-gray-900 opacity-20 z-20"></div>
     <div class="absolute w-full h-full hidden group-hover:flex items-center">
@@ -393,10 +394,10 @@ layout: default
     {% include partial/img.html
       path=work.imghero
       2xl="&w=1000"
-      xl="&w=756"
-      lg="&w=500"
-      md="&w=720"
-      sm="&w=580"
+      xl="&w=850&h=500&fit=crop"
+      lg="&w=700&h=600&fit=crop"
+      md="&w=750&h=400&fit=crop"
+      sm="&w=600&h=350&fit=crop"
       class="transition duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75 "
     %}
     {% endfor %}
@@ -496,14 +497,14 @@ layout: default
 
       {% include partial/btn.html
         url="/assets/file/corbin_featherstone.pdf"
-        text="All Branding"
+        text="All Packaging"
         style="my-5 border border-gray-200 bg-white hover:border-gray-500"
         icopost="angle-right"
         %}
   </div>
   <div class="w-full lg:w-1/2 my-3 group relative overflow-hidden rounded-lg">
-    {% assign branding = site.work | where: "tags", "feature-brand" %}
-    {% for work in branding %}
+    {% assign packaging = site.work | where: "tags", "featured-packaging" %}
+    {% for work in packaging %}
     <div class="absolute top-0 left-0 right-0 bottom-0 hidden group-hover:flex bg-gray-900 opacity-20 z-20"></div>
     <div class="absolute w-full h-full hidden group-hover:flex items-center">
       <div class="mx-auto text-center text-white z-30">
@@ -519,10 +520,10 @@ layout: default
     {% include partial/img.html
       path=work.imghero
       2xl="&w=1000"
-      xl="&w=756"
-      lg="&w=500"
-      md="&w=720"
-      sm="&w=580"
+      xl="&w=850&h=500&fit=crop"
+      lg="&w=700&h=600&fit=crop"
+      md="&w=750&h=400&fit=crop"
+      sm="&w=600&h=350&fit=crop"
       class="transition duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75 "
     %}
     {% endfor %}
@@ -544,14 +545,14 @@ layout: default
 
       {% include partial/btn.html
         url="/work"
-        text="All Layout"
+        text="All Illustration"
         style="my-5 border border-gray-200 bg-white hover:border-gray-500"
         icopost="angle-right"
         %}
   </div>
   <div class="w-full lg:w-1/2 my-3 group relative overflow-hidden rounded-lg">
-    {% assign layout = site.work | where: "tags", "feature-layout" %}
-    {% for work in layout %}
+    {% assign illustration = site.work | where: "tags", "featured-illustration" %}
+    {% for work in illustration %}
     <div class="absolute top-0 left-0 right-0 bottom-0 hidden group-hover:flex bg-gray-900 opacity-20 z-20"></div>
     <div class="absolute w-full h-full hidden group-hover:flex items-center">
       <div class="mx-auto text-center text-white z-30">
@@ -567,10 +568,10 @@ layout: default
     {% include partial/img.html
       path=work.imghero
       2xl="&w=1000"
-      xl="&w=756"
-      lg="&w=500"
-      md="&w=720"
-      sm="&w=580"
+      xl="&w=850&h=500&fit=crop"
+      lg="&w=700&h=600&fit=crop"
+      md="&w=750&h=400&fit=crop"
+      sm="&w=600&h=350&fit=crop"
       class="transition duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75 "
     %}
     {% endfor %}
@@ -610,13 +611,13 @@ layout: default
 
       {% include partial/btn.html
         url="/work"
-        text="All Advertising"
+        text="All Events"
         style="my-5 border border-gray-200 bg-white hover:border-gray-500"
         icopost="angle-right"
         %}
   </div>
   <div class="w-full lg:w-7/12 my-3 group relative overflow-hidden rounded-lg">
-    {% assign advertising = site.work | where: "tags", "feature-advertising" %}
+    {% assign events = site.work | where: "tags", "featured-events" %}
     {% for work in advertising %}
     <div class="absolute top-0 left-0 right-0 bottom-0 hidden group-hover:flex bg-gray-900 opacity-20 z-20"></div>
     <div class="absolute w-full h-full hidden group-hover:flex items-center">
@@ -633,10 +634,10 @@ layout: default
     {% include partial/img.html
       path=work.imghero
       2xl="&w=1000"
-      xl="&w=756"
-      lg="&w=500"
-      md="&w=720"
-      sm="&w=580"
+      xl="&w=850&h=500&fit=crop"
+      lg="&w=700&h=600&fit=crop"
+      md="&w=750&h=400&fit=crop"
+      sm="&w=600&h=350&fit=crop"
       class="transition duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75 "
     %}
     {% endfor %}
