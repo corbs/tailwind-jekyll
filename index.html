@@ -116,7 +116,7 @@ layout: default
     {% assign featured = site.work | where: "tags", "featured" %}
     {% for work in featured %}
     <li class="relative group overflow-hidden">
-      <div class="absolute top-0 left-0 right-0 bottom-0 hidden group-hover:flex bg-gray-900 opacity-20 transition duration-500 ease-in-out "></div>
+      <div class="absolute top-0 left-0 right-0 bottom-0 hidden group-hover:flex bg-gray-900 opacity-20"></div>
       <div class="absolute w-full h-full hidden group-hover:flex items-center">
         <div class="mx-auto text-center text-white z-10">
           <p class="font-bold text-2xl">{{ work.title }}</p>
@@ -236,8 +236,9 @@ layout: default
   <div class="w-full lg:w-2/3 my-3 group relative overflow-hidden rounded-lg">
     {% assign website = site.work | where: "tags", "feature-web" %}
     {% for work in website %}
+        <div class="absolute top-0 left-0 right-0 bottom-0 hidden group-hover:flex bg-gray-900 opacity-20 z-20"></div>
           <div class="absolute w-full h-full hidden group-hover:flex items-center">
-            <div class="mx-auto text-center text-white z-10">
+            <div class="mx-auto text-center text-white z-30">
               <p class="font-bold text-2xl">{{ work.title }}</p>
               <p class="px-5 py-2">{{ work.description }}</p>
               {% include partial/btn.html
@@ -254,7 +255,7 @@ layout: default
             lg="&w=500"
             md="&w=720"
             sm="&w=580"
-            class="transition duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75 "
+            class="transition duration-500 ease-in-out group-hover:scale-105"
           %}
     {% endfor %}
   </div>
