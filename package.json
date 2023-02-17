@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "alpinejs": "^2.5.0",
-    "netlify-cli": "^6.14.18",
+    "netlify-cli": "^12.12.1",
     "ruby": "^0.6.1"
   }
 }
